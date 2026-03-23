@@ -234,4 +234,47 @@ https://apps.apple.com/app/random-run/id[YOUR_APP_ID]
 
 You'll get this URL from App Store Connect after your app is approved.
 
+---
 
+## Analytics (Umami)
+
+The site uses [Umami](https://umami.is) for privacy-friendly analytics. No cookies, no personal data, GDPR-compliant.
+
+### Setup
+
+1. Sign up at [cloud.umami.is](https://cloud.umami.is) (free Hobby plan)
+2. Add your website (`playintraffic.ca`)
+3. Copy the `data-website-id` value from the tracking snippet
+4. The website ID (`70251b7d-b076-42d7-82d0-01856cd589fa`) is already set in all 5 HTML files
+
+### What's tracked automatically
+
+- **Page views** on all pages (built into Umami)
+- **Download clicks**: `download-click-random-run`, `download-click-bikeright`
+- **Android interest**: `android-interest-random-run`, `android-interest-bikeright`
+- **Hub card clicks**: `hub-card-random-run`, `hub-card-bikeright`
+- **Section visibility**: `section-view-hero`, `section-view-how-it-works`, `section-view-screenshots`, `section-view-specs`, `section-view-cta` (each with an `app` property of `random-run` or `bikeright`)
+
+### Funnel configurations
+
+Set these up in the Umami dashboard under **Funnels**:
+
+**Index → Random Run Download**
+1. URL: `/index.html`
+2. Event: `hub-card-random-run`
+3. URL: `/random-run.html`
+4. Event: `download-click-random-run`
+
+**Index → BikeRight Download**
+1. URL: `/index.html`
+2. Event: `hub-card-bikeright`
+3. URL: `/bikeright.html`
+4. Event: `download-click-bikeright`
+
+**Direct → Random Run Download**
+1. URL: `/random-run.html`
+2. Event: `download-click-random-run`
+
+**Direct → BikeRight Download**
+1. URL: `/bikeright.html`
+2. Event: `download-click-bikeright`
