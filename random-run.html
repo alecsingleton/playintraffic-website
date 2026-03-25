@@ -220,6 +220,22 @@
         </div>
     </section>
 
+    <section class="blog-section">
+        <div class="section-header">
+            <span class="section-tag">Latest news</span>
+            <h2>What's new</h2>
+        </div>
+
+        <div class="blog-cards">
+            <a href="blog/random-run/live-activities-and-localization.html" class="blog-card">
+                <div class="blog-card-date">March 25, 2026</div>
+                <div class="blog-card-title">Live Activities, Dynamic Island & Now in French and German</div>
+                <div class="blog-card-excerpt">Run with your screen locked. Plus, Random Run is now fully localized in French and German.</div>
+                <span class="blog-card-read-more">Read more →</span>
+            </a>
+        </div>
+    </section>
+
     <section class="cta">
         <div class="cta-content">
             <h2>Your next run<br>starts here.</h2>
@@ -240,6 +256,7 @@
             </div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
+                <a href="blog/random-run/live-activities-and-localization.html">Blog</a>
                 <a href="bikeright.html">BikeRight</a>
                 <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
             </div>
@@ -314,7 +331,7 @@
                     }
                 });
             }, { threshold: 0.3 });
-            document.querySelectorAll('header.hero, section.how-it-works, section.screenshots, section.specs, section.cta')
+            document.querySelectorAll('header.hero, section.how-it-works, section.screenshots, section.specs, section.blog-section, section.cta')
                 .forEach((el) => sectionObserver.observe(el));
         });
     </script>

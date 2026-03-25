@@ -1490,3 +1490,194 @@ footer {
 .rider-dot {
     filter: drop-shadow(0 0 10px rgba(218, 180, 60, 0.6));
 }
+
+/* ==========================================================================
+   Blog Section (on app landing pages)
+   ========================================================================== */
+
+.blog-section {
+    padding: var(--space-2xl) var(--space-lg);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.blog-cards {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.blog-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    border-color: transparent;
+    background: var(--gradient-subtle);
+    box-shadow: 0 8px 30px rgba(107, 77, 230, 0.1);
+    transform: translateY(-2px);
+}
+
+.bikeright-theme .blog-card:hover {
+    background: var(--gradient-br-subtle);
+    box-shadow: 0 8px 30px rgba(218, 180, 60, 0.15);
+}
+
+.blog-card-date {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-400);
+    margin-bottom: var(--space-xs);
+}
+
+.blog-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-xs);
+    line-height: 1.3;
+}
+
+.blog-card-excerpt {
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+}
+
+.blog-card-read-more {
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bikeright-theme .blog-card-read-more {
+    background: var(--gradient-br-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================================================
+   Blog Post Page
+   ========================================================================== */
+
+.blog-post-page {
+    background: var(--color-white);
+}
+
+.blog-post-header {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.blog-post-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.blog-post-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.blog-post-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-gray-400);
+    margin-bottom: var(--space-sm);
+}
+
+.blog-post-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--color-gray-900);
+}
+
+.blog-post-body {
+    padding-bottom: var(--space-2xl);
+}
+
+.blog-post-body h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+    color: var(--color-gray-900);
+}
+
+.blog-post-body p {
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-md);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.blog-post-body strong {
+    color: var(--color-gray-800);
+}
+
+.blog-post-body a {
+    color: var(--color-purple);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.bikeright-theme .blog-post-body a {
+    color: #B8860B;
+}
+
+.blog-post-body a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.blog-post-cta {
+    margin-top: var(--space-xl);
+    padding: var(--space-xl);
+    background: var(--gradient-subtle);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.bikeright-theme .blog-post-cta {
+    background: var(--gradient-br-subtle);
+}
+
+.blog-post-cta p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.blog-post-cta .download-btn {
+    display: inline-flex;
+}
+
+.blog-post-back {
+    display: inline-block;
+    margin-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-400);
+    transition: color 0.2s ease;
+}
+
+.blog-post-back:hover {
+    color: var(--color-gray-600);
+}

@@ -263,6 +263,22 @@
         </div>
     </section>
 
+    <section class="blog-section">
+        <div class="section-header">
+            <span class="section-tag">Latest news</span>
+            <h2>What's new</h2>
+        </div>
+
+        <div class="blog-cards">
+            <a href="blog/bikeright/out-of-beta-with-live-activities.html" class="blog-card">
+                <div class="blog-card-date">March 25, 2026</div>
+                <div class="blog-card-title">BikeRight Is Out of Beta — Plus Live Activities & Dynamic Island</div>
+                <div class="blog-card-excerpt">Beta testing is done. BikeRight is now available to everyone, with Live Activities and Dynamic Island support.</div>
+                <span class="blog-card-read-more">Read more →</span>
+            </a>
+        </div>
+    </section>
+
     <section class="cta">
         <div class="cta-content">
             <h2>Your safest ride<br>starts here.</h2>
@@ -283,6 +299,7 @@
             </div>
             <div class="footer-links">
                 <a href="bikeright-privacy.html">Privacy Policy</a>
+                <a href="blog/bikeright/out-of-beta-with-live-activities.html">Blog</a>
                 <a href="random-run.html">Random Run</a>
                 <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
             </div>
@@ -357,7 +374,7 @@
                     }
                 });
             }, { threshold: 0.3 });
-            document.querySelectorAll('header.hero, section.how-it-works, section.screenshots, section.specs, section.cta')
+            document.querySelectorAll('header.hero, section.how-it-works, section.screenshots, section.specs, section.blog-section, section.cta')
                 .forEach((el) => sectionObserver.observe(el));
         });
     </script>
