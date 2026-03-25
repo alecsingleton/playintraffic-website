@@ -1643,6 +1643,15 @@ footer {
     text-decoration-thickness: 2px;
 }
 
+.blog-post-body .download-btn {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.bikeright-theme .blog-post-body .download-btn {
+    color: var(--color-white);
+}
+
 .blog-post-cta {
     margin-top: var(--space-xl);
     padding: var(--space-xl);
