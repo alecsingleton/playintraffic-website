@@ -1643,13 +1643,13 @@ footer {
     text-decoration-thickness: 2px;
 }
 
-.blog-post-body .download-btn {
+.blog-post-body a.download-btn,
+.blog-post-body a.download-btn:hover,
+.bikeright-theme .blog-post-body a.download-btn,
+.bikeright-theme .blog-post-body a.download-btn:hover {
     color: var(--color-white);
     text-decoration: none;
-}
-
-.bikeright-theme .blog-post-body .download-btn {
-    color: var(--color-white);
+    -webkit-text-fill-color: unset;
 }
 
 .blog-post-cta {
