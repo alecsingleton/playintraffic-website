@@ -21,6 +21,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://playintraffic.ca/blog/bikeright/a-blog-and-a-few-fixes.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://playintraffic.ca/blog/bikeright/out-of-beta-with-live-activities.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
