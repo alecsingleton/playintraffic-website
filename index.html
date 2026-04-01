@@ -51,14 +51,14 @@
                  xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="bgRunGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%"   style="stop-color:#0099FF; stop-opacity:0.35"/>
-                    <stop offset="50%"  style="stop-color:#6B4DE6; stop-opacity:0.35"/>
-                    <stop offset="100%" style="stop-color:#D6006D; stop-opacity:0"/>
+                    <stop offset="0%"   style="stop-color:#448AFF; stop-opacity:0.3"/>
+                    <stop offset="50%"  style="stop-color:#00E676; stop-opacity:0.3"/>
+                    <stop offset="100%" style="stop-color:#FFAB00; stop-opacity:0"/>
                 </linearGradient>
                 <linearGradient id="bgBikeGrad" x1="100%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%"   style="stop-color:#DAB43C; stop-opacity:0.45"/>
-                    <stop offset="60%"  style="stop-color:#F0D264; stop-opacity:0.3"/>
-                    <stop offset="100%" style="stop-color:#FAF0C8; stop-opacity:0"/>
+                    <stop offset="0%"   style="stop-color:#34B87A; stop-opacity:0.2"/>
+                    <stop offset="50%"  style="stop-color:#E5A63E; stop-opacity:0.12"/>
+                    <stop offset="100%" style="stop-color:#E05045; stop-opacity:0"/>
                 </linearGradient>
             </defs>
             <!-- Random Run trace — winding, upper area -->
@@ -107,16 +107,16 @@
                 <svg viewBox="0 0 420 180" class="hub-visual-svg">
                     <defs>
                         <linearGradient id="runGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                            <stop offset="0%"   style="stop-color:#0099FF"/>
-                            <stop offset="50%"  style="stop-color:#6B4DE6"/>
-                            <stop offset="100%" style="stop-color:#D6006D"/>
+                            <stop offset="0%"   style="stop-color:#448AFF"/>
+                            <stop offset="50%"  style="stop-color:#00E676"/>
+                            <stop offset="100%" style="stop-color:#FFAB00"/>
                         </linearGradient>
                     </defs>
                     <path class="hub-route-path hub-run-path"
                           d="M30,150 Q70,110 110,128 T195,88 T268,52 T340,78 T395,58"
                           fill="none" stroke="url(#runGrad)" stroke-width="3.5" stroke-linecap="round"/>
-                    <circle class="hub-runner-dot" cx="30" cy="150" r="7" fill="#6B4DE6"/>
-                    <circle cx="395" cy="58" r="5" fill="#D6006D" opacity="0.55"/>
+                    <circle class="hub-runner-dot" cx="30" cy="150" r="7" fill="#00E676"/>
+                    <circle cx="395" cy="58" r="5" fill="#FFAB00" opacity="0.55"/>
                 </svg>
             </div>
 
@@ -138,18 +138,21 @@
             <div class="hub-app-visual" aria-hidden="true">
                 <svg viewBox="0 0 420 180" class="hub-visual-svg">
                     <defs>
-                        <linearGradient id="bikeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                            <stop offset="0%"   style="stop-color:#FAF0C8"/>
-                            <stop offset="50%"  style="stop-color:#F0D264"/>
-                            <stop offset="100%" style="stop-color:#DAB43C"/>
+                        <linearGradient id="bikeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%"   style="stop-color:#34B87A"/>
+                            <stop offset="35%"  style="stop-color:#34B87A"/>
+                            <stop offset="50%"  style="stop-color:#E5A63E"/>
+                            <stop offset="70%"  style="stop-color:#E05045"/>
+                            <stop offset="85%"  style="stop-color:#34B87A"/>
+                            <stop offset="100%" style="stop-color:#34B87A"/>
                         </linearGradient>
                     </defs>
                     <path class="hub-route-path hub-bike-path"
                           d="M55,148 L95,98 L158,114 L222,68 L300,82 L355,44 L398,62 L380,122 L305,148 L198,138 L118,152 Z"
                           fill="none" stroke="url(#bikeGrad)" stroke-width="3.5"
                           stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle class="hub-biker-dot" cx="55" cy="148" r="7" fill="#DAB43C"/>
-                    <circle cx="55" cy="148" r="13" fill="none" stroke="#DAB43C" stroke-width="1.5" opacity="0.4"/>
+                    <circle class="hub-biker-dot" cx="55" cy="148" r="7" fill="#34B87A"/>
+                    <circle cx="55" cy="148" r="13" fill="none" stroke="#1B2536" stroke-width="1.5" opacity="0.4"/>
                 </svg>
             </div>
 

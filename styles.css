@@ -1,16 +1,23 @@
 /* ==========================================================================
    Play in Traffic – Website Styles
-   Random Run: blue-purple-magenta gradient
-   BikeRight: green-teal-cyan gradient
+   Random Run: dark theme, green #00E676, blue #448AFF, amber #FFAB00
+   BikeRight: warm cream #FAF8F5, navy #1B2536, dusty rose #D4627A
    ========================================================================== */
 
 :root {
-    /* Color Palette - App gradient colors */
-    --color-blue: #0099FF;
-    --color-purple: #6B4DE6;
-    --color-magenta: #D6006D;
+    /* Random Run palette – dark surface, green primary */
+    --color-green: #00E676;
+    --color-blue: #448AFF;
+    --color-amber: #FFAB00;
+    --color-warm: #FF6D00;
     --color-white: #FFFFFF;
     --color-off-white: #F8F9FC;
+
+    --color-surface: #121212;
+    --color-surface2: #1E1E1E;
+    --color-surface3: #2A2A2A;
+    --color-card-border: rgba(255, 255, 255, 0.08);
+
     --color-gray-50: #F9FAFB;
     --color-gray-100: #F3F4F6;
     --color-gray-200: #E5E7EB;
@@ -19,14 +26,15 @@
     --color-gray-800: #1F2937;
     --color-gray-900: #111827;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--color-blue) 0%, var(--color-purple) 50%, var(--color-magenta) 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(0, 153, 255, 0.08) 0%, rgba(107, 77, 230, 0.08) 50%, rgba(214, 0, 109, 0.08) 100%);
-    --gradient-text: linear-gradient(135deg, var(--color-blue) 0%, var(--color-purple) 50%, var(--color-magenta) 100%);
+    /* Gradients – blue → green → amber */
+    --gradient-primary: linear-gradient(135deg, var(--color-blue) 0%, var(--color-green) 50%, var(--color-amber) 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(68, 138, 255, 0.1) 0%, rgba(0, 230, 118, 0.1) 50%, rgba(255, 171, 0, 0.1) 100%);
+    --gradient-text: linear-gradient(135deg, var(--color-blue) 0%, var(--color-green) 50%, var(--color-amber) 100%);
     
     /* Typography */
     --font-primary: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
     
     /* Spacing */
     --space-xs: 0.5rem;
@@ -128,12 +136,12 @@ nav {
 
 .nav-link {
     font-size: 0.9rem;
-    color: var(--color-gray-600);
+    color: var(--color-gray-400);
     transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-    color: var(--color-purple);
+    color: #059652;
 }
 
 /* ==========================================================================
@@ -145,9 +153,9 @@ nav {
     display: flex;
     flex-direction: column;
     background: 
-        radial-gradient(ellipse 100% 80% at 20% 0%, rgba(0, 153, 255, 0.12), transparent 50%),
-        radial-gradient(ellipse 80% 60% at 80% 20%, rgba(214, 0, 109, 0.1), transparent 50%),
-        radial-gradient(ellipse 60% 40% at 50% 80%, rgba(107, 77, 230, 0.08), transparent 50%),
+        radial-gradient(ellipse 80% 60% at 10% 5%, rgba(0, 230, 118, 0.12), transparent 50%),
+        radial-gradient(ellipse 70% 50% at 90% 15%, rgba(68, 138, 255, 0.10), transparent 50%),
+        radial-gradient(ellipse 60% 50% at 50% 80%, rgba(255, 171, 0, 0.08), transparent 50%),
         var(--color-white);
     position: relative;
     overflow: hidden;
@@ -228,32 +236,32 @@ nav {
 }
 
 .route-path {
-    filter: drop-shadow(0 4px 20px rgba(107, 77, 230, 0.3));
+    filter: drop-shadow(0 4px 20px rgba(0, 230, 118, 0.25));
 }
 
 .runner-dot {
-    filter: drop-shadow(0 0 10px rgba(107, 77, 230, 0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.4));
 }
 
-/* Download Button */
+/* Download Button – green primary CTA matching app */
 .download-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
     padding: 0.875rem 1.75rem;
-    background: var(--gradient-primary);
-    color: var(--color-white);
+    background: var(--color-surface);
+    color: var(--color-green);
     border-radius: 50px;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(107, 77, 230, 0.25);
+    box-shadow: 0 4px 20px rgba(18, 18, 18, 0.15);
 }
 
 .download-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(107, 77, 230, 0.35);
+    box-shadow: 0 8px 30px rgba(18, 18, 18, 0.25);
 }
 
 .download-btn .apple-icon {
@@ -317,7 +325,7 @@ nav {
 .step:hover {
     border-color: transparent;
     background: var(--gradient-subtle);
-    box-shadow: 0 8px 30px rgba(107, 77, 230, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 230, 118, 0.08);
 }
 
 .step-number {
@@ -376,7 +384,7 @@ nav {
 
 .specs {
     padding: var(--space-2xl) var(--space-lg);
-    background: var(--gradient-primary);
+    background: var(--color-surface);
     color: var(--color-white);
 }
 
@@ -453,8 +461,8 @@ nav {
     padding: var(--space-2xl) var(--space-lg);
     text-align: center;
     background: 
-        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(107, 77, 230, 0.1), transparent 60%),
-        radial-gradient(ellipse 60% 40% at 30% 50%, rgba(0, 153, 255, 0.08), transparent 50%),
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 230, 118, 0.08), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 30% 50%, rgba(68, 138, 255, 0.06), transparent 50%),
         var(--color-white);
 }
 
@@ -522,7 +530,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--color-purple);
+    color: #059652;
 }
 
 .footer-copy {
@@ -623,7 +631,7 @@ footer {
 }
 
 .policy-section a {
-    color: var(--color-purple);
+    color: #059652;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -659,7 +667,7 @@ footer {
 .contact-email a {
     font-family: var(--font-mono);
     font-size: 1.1rem;
-    color: var(--color-purple);
+    color: #059652;
 }
 
 /* ==========================================================================
@@ -714,7 +722,7 @@ footer {
 .scroll-arrow {
     width: 28px;
     height: 28px;
-    color: var(--color-purple);
+    color: #059652;
     opacity: 0.6;
 }
 
@@ -880,22 +888,22 @@ footer {
     z-index: 0;
 }
 
-/* Run glow – blue/purple, top-left */
+/* Run glow – green/blue, top-left */
 .hub-bg-run {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 70% at -10% 10%, rgba(0, 153, 255, 0.18), transparent 55%),
-        radial-gradient(ellipse 60% 50% at 15% 60%, rgba(107, 77, 230, 0.12), transparent 50%);
+        radial-gradient(ellipse 80% 70% at -10% 10%, rgba(0, 230, 118, 0.10), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 15% 60%, rgba(68, 138, 255, 0.08), transparent 50%);
 }
 
-/* Bike glow – gold/amber, bottom-right */
+/* Bike glow – rose/navy, bottom-right */
 .hub-bg-bike {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 70% at 110% 90%, rgba(240, 210, 100, 0.3), transparent 55%),
-        radial-gradient(ellipse 60% 50% at 85% 30%, rgba(218, 180, 60, 0.15), transparent 50%);
+        radial-gradient(ellipse 80% 70% at 110% 90%, rgba(212, 98, 122, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 85% 30%, rgba(27, 37, 54, 0.05), transparent 50%);
 }
 
 /* Dot-grid map texture */
@@ -952,7 +960,7 @@ footer {
     display: inline-block;
     padding: 0.08em 0.12em;
     margin: -0.08em -0.12em;
-    background: linear-gradient(135deg, #0099FF 0%, #6B4DE6 45%, #D6006D 70%, #DAB43C 100%);
+    background: linear-gradient(135deg, #448AFF 0%, #00E676 40%, #FFAB00 65%, #D4627A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1026,11 +1034,11 @@ footer {
 }
 
 .hub-app-card--run:hover {
-    box-shadow: 0 24px 70px rgba(107, 77, 230, 0.18);
+    box-shadow: 0 24px 70px rgba(0, 230, 118, 0.15);
 }
 
 .hub-app-card--bike:hover {
-    box-shadow: 0 24px 70px rgba(218, 180, 60, 0.28);
+    box-shadow: 0 24px 70px rgba(52, 184, 122, 0.12);
 }
 
 /* Coloured top accent bar */
@@ -1038,7 +1046,7 @@ footer {
     content: '';
     display: block;
     height: 4px;
-    background: linear-gradient(90deg, #0099FF, #6B4DE6, #D6006D);
+    background: linear-gradient(90deg, #448AFF, #00E676, #FFAB00);
     flex-shrink: 0;
 }
 
@@ -1046,7 +1054,7 @@ footer {
     content: '';
     display: block;
     height: 4px;
-    background: linear-gradient(90deg, #FAF0C8, #F0D264, #DAB43C);
+    background: linear-gradient(90deg, #34B87A, #E5A63E, #E05045);
     flex-shrink: 0;
 }
 
@@ -1078,14 +1086,14 @@ footer {
 }
 
 .hub-app-name--run {
-    background: linear-gradient(135deg, #0099FF, #6B4DE6, #D6006D);
+    background: linear-gradient(135deg, #448AFF, #00E676, #FFAB00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .hub-app-name--bike {
-    background: linear-gradient(135deg, #B8860B, #8B6300);
+    background: linear-gradient(135deg, #1B2536, #D4627A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1133,13 +1141,13 @@ footer {
 }
 
 .hub-app-pill--run {
-    background: linear-gradient(135deg, rgba(0,153,255,0.1), rgba(107,77,230,0.1));
-    color: var(--color-purple);
+    background: rgba(0, 230, 118, 0.1);
+    color: #059652;
 }
 
 .hub-app-pill--bike {
-    background: linear-gradient(135deg, rgba(250,240,200,0.6), rgba(218,180,60,0.2));
-    color: #8B6300;
+    background: rgba(52, 184, 122, 0.1);
+    color: #2A9D6A;
 }
 
 .hub-app-cta {
@@ -1150,11 +1158,11 @@ footer {
 }
 
 .hub-app-card--run:hover .hub-app-cta {
-    color: var(--color-purple);
+    color: #059652;
 }
 
 .hub-app-card--bike:hover .hub-app-cta {
-    color: #B8860B;
+    color: #2A9D6A;
 }
 
 /* ── Hub Footer ── */
@@ -1201,7 +1209,7 @@ footer {
 }
 
 .bike-icon-placeholder {
-    background: linear-gradient(135deg, #FAF0C8 0%, #F0D264 50%, #DAB43C 100%);
+    background: linear-gradient(135deg, #1B2536 0%, #D4627A 100%);
 }
 
 .app-icon-img {
@@ -1318,10 +1326,6 @@ footer {
     line-height: 1.45;
 }
 
-/* BikeRight theme overrides for screenshots fade edge */
-.bikeright-theme .screenshots-track-wrap::after {
-    background: linear-gradient(to left, var(--color-white), transparent);
-}
 
 @media (max-width: 768px) {
     .screenshot-item {
@@ -1340,19 +1344,46 @@ footer {
 }
 
 /* ==========================================================================
-   BikeRight Theme — exact app gradient: #FAF0C8 → #F0D264 → #DAB43C
-   Text gradients use darker ambers for legibility on white backgrounds
-   CTA buttons / specs band use #1C1C1E (matching app's dark button)
+   BikeRight Theme — warm cream #FAF8F5, navy #1B2536, dusty rose #D4627A
+   Serif headlines, warm surfaces, safety-color route accents
    ========================================================================== */
 
 .bikeright-theme {
-    --br-cream: #FAF0C8;
-    --br-gold: #F0D264;
-    --br-amber: #DAB43C;
-    --br-dark: #1C1C1E;
-    --gradient-br-primary: linear-gradient(135deg, #FAF0C8 0%, #F0D264 50%, #DAB43C 100%);
-    --gradient-br-subtle: linear-gradient(135deg, rgba(250, 240, 200, 0.45) 0%, rgba(240, 210, 100, 0.3) 50%, rgba(218, 180, 60, 0.2) 100%);
-    --gradient-br-text: linear-gradient(135deg, #B8860B 0%, #8B6300 100%);
+    --br-surface: #FAF8F5;
+    --br-elevated: #FFFFFF;
+    --br-subtle: #F2F0EB;
+    --br-navy: #1B2536;
+    --br-rose: #D4627A;
+    --br-blush: #F8F0F2;
+    --br-border: rgba(27, 37, 54, 0.1);
+    --br-text-secondary: #736E66;
+    --gradient-br-text: linear-gradient(135deg, #1B2536 0%, #D4627A 100%);
+    --gradient-br-subtle: linear-gradient(135deg, rgba(212, 98, 122, 0.06) 0%, rgba(27, 37, 54, 0.04) 100%);
+
+    --br-safety-green: #34B87A;
+    --br-safety-amber: #E5A63E;
+    --br-safety-red: #E05045;
+    --gradient-br-safety: linear-gradient(90deg, #34B87A 0%, #E5A63E 50%, #E05045 100%);
+
+    background: var(--br-surface);
+    color: var(--br-navy);
+}
+
+/* Override dark-theme text and surface colors */
+.bikeright-theme .hero-title,
+.bikeright-theme .section-header h2,
+.bikeright-theme .step-content h3,
+.bikeright-theme .cta h2,
+.bikeright-theme .blog-card-title,
+.bikeright-theme .screenshot-caption-title {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .hero-description,
+.bikeright-theme .step-content p,
+.bikeright-theme .blog-card-excerpt,
+.bikeright-theme .screenshot-caption-sub {
+    color: var(--br-text-secondary);
 }
 
 .bikeright-theme .title-accent {
@@ -1363,14 +1394,10 @@ footer {
 }
 
 .bikeright-theme .section-tag {
-    background: var(--gradient-br-text);
+    background: linear-gradient(135deg, var(--br-rose) 0%, var(--br-navy) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
-
-.bikeright-theme .section-header h2 {
-    color: var(--color-gray-900);
 }
 
 .bikeright-theme .step-number {
@@ -1380,80 +1407,149 @@ footer {
     background-clip: text;
 }
 
+.bikeright-theme .step {
+    background: var(--br-elevated);
+    border-color: var(--br-border);
+}
+
 .bikeright-theme .step:hover {
-    background: var(--gradient-br-subtle);
-    box-shadow: 0 8px 30px rgba(218, 180, 60, 0.15);
+    background: var(--br-blush);
+    border-color: rgba(212, 98, 122, 0.2);
+    box-shadow: 0 8px 30px rgba(27, 37, 54, 0.08);
 }
 
 .bikeright-theme .duration-note {
-    background: var(--gradient-br-subtle);
+    background: var(--br-blush);
+    border-image: var(--gradient-br-safety) 1;
 }
 
-/* Download buttons match the app's dark CTA style */
+.bikeright-theme .duration-note p {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .duration-note strong {
+    color: var(--br-navy);
+}
+
+/* Download buttons – navy fill matching app's buttonPrimaryFill */
 .bikeright-theme .download-btn,
 .bikeright-theme .download-btn-large {
-    background: var(--br-dark);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: var(--br-navy);
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(27, 37, 54, 0.2);
 }
 
 .bikeright-theme .download-btn:hover,
 .bikeright-theme .download-btn-large:hover {
-    background: #2d2d2f;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    background: #263548;
+    box-shadow: 0 8px 30px rgba(27, 37, 54, 0.3);
 }
 
-/* Specs band uses dark background — brand gradient is too light for white text */
+/* Specs band – deep navy */
 .bikeright-theme .specs {
-    background: var(--br-dark);
+    background: var(--br-navy);
+    border-top: none;
+    border-bottom: none;
 }
 
 .bikeright-theme .cta {
     background:
-        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(240, 210, 100, 0.2), transparent 60%),
-        radial-gradient(ellipse 60% 40% at 30% 50%, rgba(250, 240, 200, 0.25), transparent 50%),
-        var(--color-white);
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(212, 98, 122, 0.08), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 30% 50%, rgba(248, 240, 242, 0.5), transparent 50%),
+        var(--br-surface);
 }
 
 .bikeright-theme .hero {
     background:
-        radial-gradient(ellipse 100% 80% at 20% 0%, rgba(250, 240, 200, 0.6), transparent 50%),
-        radial-gradient(ellipse 80% 60% at 80% 20%, rgba(240, 210, 100, 0.35), transparent 50%),
-        radial-gradient(ellipse 60% 40% at 50% 80%, rgba(218, 180, 60, 0.2), transparent 50%),
-        var(--color-white);
+        radial-gradient(ellipse 100% 80% at 20% 0%, rgba(248, 240, 242, 0.8), transparent 50%),
+        radial-gradient(ellipse 80% 60% at 80% 20%, rgba(212, 98, 122, 0.08), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 50% 80%, rgba(27, 37, 54, 0.04), transparent 50%),
+        var(--br-surface);
 }
 
 .bikeright-theme .scroll-arrow {
-    color: var(--br-amber);
+    color: var(--br-safety-green);
 }
 
 .bikeright-theme .runner-dot,
 .bikeright-theme .rider-dot {
-    fill: var(--br-amber);
-    filter: drop-shadow(0 0 10px rgba(218, 180, 60, 0.6));
+    fill: var(--br-safety-green);
+    filter: drop-shadow(0 0 10px rgba(52, 184, 122, 0.5));
 }
 
 .bikeright-theme .start-marker {
-    stroke: var(--br-amber);
+    stroke: var(--br-navy);
 }
 
 .bikeright-theme .end-marker {
-    fill: var(--br-gold);
+    fill: var(--br-navy);
 }
 
 .bikeright-theme .route-path {
-    filter: drop-shadow(0 4px 20px rgba(218, 180, 60, 0.4));
+    filter: drop-shadow(0 4px 16px rgba(52, 184, 122, 0.2));
 }
 
 .bikeright-theme .nav-link:hover {
-    color: #B8860B;
+    color: var(--br-rose);
+}
+
+.bikeright-theme .back-link {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .back-link:hover {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .sibling-app-link {
+    border-color: var(--br-border);
+}
+
+.bikeright-theme .sibling-app-link:hover {
+    border-color: rgba(27, 37, 54, 0.2);
+    background: var(--br-blush);
+}
+
+.bikeright-theme .sibling-name {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .sibling-label {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .footer-links a {
+    color: var(--br-text-secondary);
 }
 
 .bikeright-theme .footer-links a:hover {
-    color: #B8860B;
+    color: var(--br-rose);
+}
+
+.bikeright-theme footer {
+    background: var(--br-subtle);
+    border-top-color: var(--br-border);
+}
+
+.bikeright-theme .footer-brand {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .footer-copy p {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .footer-copy {
+    border-top-color: var(--br-border);
 }
 
 .bikeright-theme .highlight-box {
-    background: var(--gradient-br-subtle);
+    background: var(--br-blush);
+    border-color: var(--br-border);
+}
+
+.bikeright-theme .highlight-box p {
+    color: var(--br-navy);
 }
 
 .bikeright-theme .privacy-hero h1 {
@@ -1461,6 +1557,18 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.bikeright-theme .policy-section h2 {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .policy-section p {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .policy-section li {
+    color: var(--br-text-secondary);
 }
 
 .bikeright-theme .policy-section li::before {
@@ -1471,24 +1579,36 @@ footer {
 }
 
 .bikeright-theme .policy-section a {
-    color: #B8860B;
+    color: var(--br-rose);
 }
 
 .bikeright-theme .contact-email a {
-    color: #B8860B;
+    color: var(--br-rose);
 }
 
-.bikeright-theme .sibling-name {
-    color: var(--color-gray-800);
+.bikeright-theme .privacy-header {
+    border-bottom-color: var(--br-border);
+}
+
+/* Screenshots fade edge on warm background */
+.bikeright-theme .screenshots-track-wrap::after {
+    background: linear-gradient(to left, var(--br-surface), transparent);
+}
+
+/* Serif headlines for brand personality */
+.bikeright-theme .hero-title,
+.bikeright-theme .section-header h2,
+.bikeright-theme .cta h2 {
+    font-family: var(--font-serif);
 }
 
 /* BikeRight loop animation */
 .bike-loop-path {
-    filter: drop-shadow(0 4px 20px rgba(218, 180, 60, 0.4));
+    filter: drop-shadow(0 4px 16px rgba(52, 184, 122, 0.2));
 }
 
 .rider-dot {
-    filter: drop-shadow(0 0 10px rgba(218, 180, 60, 0.6));
+    filter: drop-shadow(0 0 10px rgba(52, 184, 122, 0.5));
 }
 
 /* ==========================================================================
@@ -1518,13 +1638,23 @@ footer {
 .blog-card:hover {
     border-color: transparent;
     background: var(--gradient-subtle);
-    box-shadow: 0 8px 30px rgba(107, 77, 230, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 230, 118, 0.08);
     transform: translateY(-2px);
 }
 
+.bikeright-theme .blog-card {
+    background: var(--br-elevated);
+    border-color: var(--br-border);
+}
+
 .bikeright-theme .blog-card:hover {
-    background: var(--gradient-br-subtle);
-    box-shadow: 0 8px 30px rgba(218, 180, 60, 0.15);
+    background: var(--br-blush);
+    border-color: rgba(212, 98, 122, 0.2);
+    box-shadow: 0 8px 30px rgba(27, 37, 54, 0.08);
+}
+
+.bikeright-theme .blog-card-date {
+    color: var(--br-text-secondary);
 }
 
 .blog-card-date {
@@ -1561,10 +1691,45 @@ footer {
 }
 
 .bikeright-theme .blog-card-read-more {
-    background: var(--gradient-br-text);
+    background: linear-gradient(135deg, var(--br-rose), var(--br-navy));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* BikeRight blog post pages */
+.bikeright-theme.blog-post-page,
+.bikeright-theme .blog-post-page {
+    background: var(--br-surface);
+}
+
+.bikeright-theme .blog-post-header {
+    border-bottom-color: var(--br-border);
+}
+
+.bikeright-theme .blog-post-hero h1 {
+    color: var(--br-navy);
+    font-family: var(--font-serif);
+}
+
+.bikeright-theme .blog-post-date {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .blog-post-body h2 {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .blog-post-body p {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .blog-post-body strong {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .blog-post-body a {
+    color: var(--br-rose);
 }
 
 /* ==========================================================================
@@ -1630,14 +1795,11 @@ footer {
 }
 
 .blog-post-body a {
-    color: var(--color-purple);
+    color: #059652;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.bikeright-theme .blog-post-body a {
-    color: #B8860B;
-}
 
 .blog-post-body a:hover {
     text-decoration-thickness: 2px;
