@@ -56,10 +56,28 @@
                     <span class="logo-text">Random Run</span>
                 </div>
             </div>
-            <a href="bikeright.html" class="sibling-app-link">
-                <span class="sibling-label">Also by us</span>
-                <span class="sibling-name">BikeRight →</span>
-            </a>
+            <div class="sibling-dropdown">
+                <button class="sibling-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span class="sibling-dropdown-label">Also by us</span>
+                    <span class="sibling-dropdown-title">Our Apps ▾</span>
+                </button>
+                <div class="sibling-dropdown-menu" role="menu">
+                    <a href="bikeright.html" class="sibling-dropdown-item" role="menuitem">
+                        <img src="bikeright-icon.png" alt="BikeRight">
+                        <div class="sibling-dropdown-item-text">
+                            <span class="sibling-dropdown-item-name">BikeRight</span>
+                            <span class="sibling-dropdown-item-desc">Safe bike loops for your city</span>
+                        </div>
+                    </a>
+                    <a href="go-for-a-walk.html" class="sibling-dropdown-item" role="menuitem">
+                        <img src="walk-icon.png" alt="Go for a Walk">
+                        <div class="sibling-dropdown-item-text">
+                            <span class="sibling-dropdown-item-name">Go for a Walk</span>
+                            <span class="sibling-dropdown-item-desc">Explore new walks near you</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </nav>
         
         <div class="hero-content">
@@ -187,6 +205,16 @@
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Run complete.</div>
                         <div class="screenshot-caption-sub">Time, distance, pace—everything you want to see right after you finish.</div>
+                    </div>
+                </div>
+
+                <div class="screenshot-item">
+                    <div class="screenshot-img-wrap">
+                        <img src="screenshots/random-run/05_Live_Activity.png" alt="Random Run Live Activity on lock screen" loading="lazy">
+                    </div>
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Live Activity & Dynamic Island</div>
+                        <div class="screenshot-caption-sub">Track your run from the lock screen or Dynamic Island. Eyes on the road.</div>
                     </div>
                 </div>
 
@@ -323,6 +351,20 @@
             checkScrollHint();
             window.addEventListener('scroll', checkScrollHint);
             window.addEventListener('resize', checkScrollHint);
+
+            const dropdown = document.querySelector('.sibling-dropdown');
+            const toggle = document.querySelector('.sibling-dropdown-toggle');
+            if (dropdown && toggle) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const open = dropdown.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', open);
+                });
+                document.addEventListener('click', () => {
+                    dropdown.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            }
 
             const appName = 'random-run';
             const sectionObserver = new IntersectionObserver((entries) => {

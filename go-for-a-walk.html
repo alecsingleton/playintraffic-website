@@ -56,10 +56,28 @@
                     <span class="logo-text">Go for a Walk</span>
                 </div>
             </div>
-            <a href="random-run.html" class="sibling-app-link">
-                <span class="sibling-label">Also by us</span>
-                <span class="sibling-name">Random Run →</span>
-            </a>
+            <div class="sibling-dropdown">
+                <button class="sibling-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span class="sibling-dropdown-label">Also by us</span>
+                    <span class="sibling-dropdown-title">Our Apps ▾</span>
+                </button>
+                <div class="sibling-dropdown-menu" role="menu">
+                    <a href="random-run.html" class="sibling-dropdown-item" role="menuitem">
+                        <img src="app-icon.png" alt="Random Run">
+                        <div class="sibling-dropdown-item-text">
+                            <span class="sibling-dropdown-item-name">Random Run</span>
+                            <span class="sibling-dropdown-item-desc">Random running routes, anywhere</span>
+                        </div>
+                    </a>
+                    <a href="bikeright.html" class="sibling-dropdown-item" role="menuitem">
+                        <img src="bikeright-icon.png" alt="BikeRight">
+                        <div class="sibling-dropdown-item-text">
+                            <span class="sibling-dropdown-item-name">BikeRight</span>
+                            <span class="sibling-dropdown-item-desc">Safe bike loops for your city</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </nav>
         
         <div class="hero-content">
@@ -333,6 +351,20 @@
             checkScrollHint();
             window.addEventListener('scroll', checkScrollHint);
             window.addEventListener('resize', checkScrollHint);
+
+            const dropdown = document.querySelector('.sibling-dropdown');
+            const toggle = document.querySelector('.sibling-dropdown-toggle');
+            if (dropdown && toggle) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const open = dropdown.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', open);
+                });
+                document.addEventListener('click', () => {
+                    dropdown.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            }
 
             const appName = 'go-for-a-walk';
             const sectionObserver = new IntersectionObserver((entries) => {
