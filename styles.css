@@ -1000,8 +1000,14 @@ footer {
     margin: 0 auto;
     padding: var(--space-2xl) var(--space-lg);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+    .hub-apps {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1028,6 +1034,10 @@ footer {
     animation-delay: 0.12s;
 }
 
+.hub-app-card:nth-child(3) {
+    animation-delay: 0.24s;
+}
+
 .hub-app-card:hover {
     transform: translateY(-6px);
     border-color: transparent;
@@ -1039,6 +1049,10 @@ footer {
 
 .hub-app-card--bike:hover {
     box-shadow: 0 24px 70px rgba(52, 184, 122, 0.12);
+}
+
+.hub-app-card--walk:hover {
+    box-shadow: 0 24px 70px rgba(107, 144, 128, 0.15);
 }
 
 /* Coloured top accent bar */
@@ -1055,6 +1069,14 @@ footer {
     display: block;
     height: 4px;
     background: linear-gradient(90deg, #34B87A, #E5A63E, #E05045);
+    flex-shrink: 0;
+}
+
+.hub-app-card--walk::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, #6B9080, #C4836A, #D4A574);
     flex-shrink: 0;
 }
 
@@ -1094,6 +1116,13 @@ footer {
 
 .hub-app-name--bike {
     background: linear-gradient(135deg, #1B2536, #D4627A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hub-app-name--walk {
+    background: linear-gradient(135deg, #2D4A3E, #6B9080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1150,6 +1179,11 @@ footer {
     color: #2A9D6A;
 }
 
+.hub-app-pill--walk {
+    background: rgba(107, 144, 128, 0.1);
+    color: #4A7A68;
+}
+
 .hub-app-cta {
     font-size: 0.9rem;
     font-weight: 600;
@@ -1163,6 +1197,10 @@ footer {
 
 .hub-app-card--bike:hover .hub-app-cta {
     color: #2A9D6A;
+}
+
+.hub-app-card--walk:hover .hub-app-cta {
+    color: #4A7A68;
 }
 
 /* ── Hub Footer ── */
@@ -1609,6 +1647,261 @@ footer {
 
 .rider-dot {
     filter: drop-shadow(0 0 10px rgba(52, 184, 122, 0.5));
+}
+
+/* ==========================================================================
+   Go for a Walk Theme — warm off-white #FAF7F2, deep forest #2D4A3E,
+   sage #6B9080, terracotta #C4836A, soft gold #D4A574
+   Serif headlines, earthy surfaces, nature-inspired accents
+   ========================================================================== */
+
+.walk-theme {
+    --wk-surface: #FAF7F2;
+    --wk-elevated: #FFFFFF;
+    --wk-subtle: #F0EDE7;
+    --wk-forest: #2D4A3E;
+    --wk-sage: #6B9080;
+    --wk-terracotta: #C4836A;
+    --wk-gold: #D4A574;
+    --wk-blush: #F5F0EB;
+    --wk-border: rgba(45, 74, 62, 0.1);
+    --wk-text-secondary: #706B63;
+    --gradient-wk-text: linear-gradient(135deg, #2D4A3E 0%, #6B9080 100%);
+    --gradient-wk-subtle: linear-gradient(135deg, rgba(107, 144, 128, 0.06) 0%, rgba(196, 131, 106, 0.04) 100%);
+    --gradient-wk-accent: linear-gradient(135deg, #6B9080 0%, #C4836A 50%, #D4A574 100%);
+
+    background: var(--wk-surface);
+    color: var(--wk-forest);
+}
+
+.walk-theme .hero-title,
+.walk-theme .section-header h2,
+.walk-theme .step-content h3,
+.walk-theme .cta h2,
+.walk-theme .screenshot-caption-title {
+    color: var(--wk-forest);
+}
+
+.walk-theme .hero-description,
+.walk-theme .step-content p,
+.walk-theme .screenshot-caption-sub {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .title-accent {
+    background: var(--gradient-wk-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.walk-theme .section-tag {
+    background: linear-gradient(135deg, var(--wk-sage) 0%, var(--wk-terracotta) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.walk-theme .step-number {
+    background: var(--gradient-wk-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.walk-theme .step {
+    background: var(--wk-elevated);
+    border-color: var(--wk-border);
+}
+
+.walk-theme .step:hover {
+    background: var(--wk-blush);
+    border-color: rgba(107, 144, 128, 0.2);
+    box-shadow: 0 8px 30px rgba(45, 74, 62, 0.08);
+}
+
+.walk-theme .duration-note {
+    background: var(--wk-blush);
+    border-image: var(--gradient-wk-accent) 1;
+}
+
+.walk-theme .duration-note p {
+    color: var(--wk-forest);
+}
+
+.walk-theme .duration-note strong {
+    color: var(--wk-forest);
+}
+
+.walk-theme .download-btn,
+.walk-theme .download-btn-large {
+    background: var(--wk-forest);
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(45, 74, 62, 0.2);
+}
+
+.walk-theme .download-btn:hover,
+.walk-theme .download-btn-large:hover {
+    background: #3A5C4E;
+    box-shadow: 0 8px 30px rgba(45, 74, 62, 0.3);
+}
+
+.walk-theme .specs {
+    background: var(--wk-forest);
+    border-top: none;
+    border-bottom: none;
+}
+
+.walk-theme .cta {
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(107, 144, 128, 0.08), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 30% 50%, rgba(245, 240, 235, 0.5), transparent 50%),
+        var(--wk-surface);
+}
+
+.walk-theme .hero {
+    background:
+        radial-gradient(ellipse 100% 80% at 20% 0%, rgba(245, 240, 235, 0.8), transparent 50%),
+        radial-gradient(ellipse 80% 60% at 80% 20%, rgba(107, 144, 128, 0.08), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 50% 80%, rgba(196, 131, 106, 0.05), transparent 50%),
+        var(--wk-surface);
+}
+
+.walk-theme .scroll-arrow {
+    color: var(--wk-sage);
+}
+
+.walk-theme .runner-dot,
+.walk-theme .walker-dot {
+    fill: var(--wk-sage);
+    filter: drop-shadow(0 0 10px rgba(107, 144, 128, 0.5));
+}
+
+.walk-theme .start-marker {
+    stroke: var(--wk-forest);
+}
+
+.walk-theme .route-path {
+    filter: drop-shadow(0 4px 16px rgba(107, 144, 128, 0.2));
+}
+
+.walk-theme .nav-link:hover {
+    color: var(--wk-sage);
+}
+
+.walk-theme .back-link {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .back-link:hover {
+    color: var(--wk-forest);
+}
+
+.walk-theme .sibling-app-link {
+    border-color: var(--wk-border);
+}
+
+.walk-theme .sibling-app-link:hover {
+    border-color: rgba(45, 74, 62, 0.2);
+    background: var(--wk-blush);
+}
+
+.walk-theme .sibling-name {
+    color: var(--wk-forest);
+}
+
+.walk-theme .sibling-label {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .footer-links a {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .footer-links a:hover {
+    color: var(--wk-sage);
+}
+
+.walk-theme footer {
+    background: var(--wk-subtle);
+    border-top-color: var(--wk-border);
+}
+
+.walk-theme .footer-brand {
+    color: var(--wk-forest);
+}
+
+.walk-theme .footer-copy p {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .footer-copy {
+    border-top-color: var(--wk-border);
+}
+
+.walk-theme .highlight-box {
+    background: var(--wk-blush);
+    border-color: var(--wk-border);
+}
+
+.walk-theme .highlight-box p {
+    color: var(--wk-forest);
+}
+
+.walk-theme .privacy-hero h1 {
+    background: var(--gradient-wk-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.walk-theme .policy-section h2 {
+    color: var(--wk-forest);
+}
+
+.walk-theme .policy-section p {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .policy-section li {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .policy-section li::before {
+    background: var(--gradient-wk-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.walk-theme .policy-section a {
+    color: var(--wk-sage);
+}
+
+.walk-theme .contact-email a {
+    color: var(--wk-sage);
+}
+
+.walk-theme .privacy-header {
+    border-bottom-color: var(--wk-border);
+}
+
+.walk-theme .screenshots-track-wrap::after {
+    background: linear-gradient(to left, var(--wk-surface), transparent);
+}
+
+.walk-theme .hero-title,
+.walk-theme .section-header h2,
+.walk-theme .cta h2 {
+    font-family: var(--font-serif);
+}
+
+.walk-loop-path {
+    filter: drop-shadow(0 4px 16px rgba(107, 144, 128, 0.2));
+}
+
+.walker-dot {
+    filter: drop-shadow(0 0 10px rgba(107, 144, 128, 0.5));
 }
 
 /* ==========================================================================

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play in Traffic – Apps for Getting Outside</title>
-    <meta name="description" content="Apps for runners and cyclists who want to explore somewhere new. Random Run and BikeRight, by Play in Traffic.">
+    <meta name="description" content="Apps for runners, cyclists, and walkers who want to explore somewhere new. Random Run, BikeRight, and Go for a Walk, by Play in Traffic.">
     <link rel="canonical" href="https://playintraffic.ca/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Play in Traffic">
     <meta property="og:title" content="Play in Traffic – Apps for Getting Outside">
-    <meta property="og:description" content="Apps for runners and cyclists who want to explore somewhere new. Random Run and BikeRight, by Play in Traffic.">
+    <meta property="og:description" content="Apps for runners, cyclists, and walkers who want to explore somewhere new. Random Run, BikeRight, and Go for a Walk, by Play in Traffic.">
     <meta property="og:url" content="https://playintraffic.ca/">
     <meta property="og:image" content="https://playintraffic.ca/app-icon.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Play in Traffic – Apps for Getting Outside">
-    <meta name="twitter:description" content="Apps for runners and cyclists who want to explore somewhere new. Random Run and BikeRight, by Play in Traffic.">
+    <meta name="twitter:description" content="Apps for runners, cyclists, and walkers who want to explore somewhere new. Random Run, BikeRight, and Go for a Walk, by Play in Traffic.">
     <meta name="twitter:image" content="https://playintraffic.ca/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
         "url": "https://playintraffic.ca",
         "logo": "https://playintraffic.ca/app-icon.png",
         "email": "playintraffic.ca@gmail.com",
-        "description": "Apps for runners and cyclists who want to explore somewhere new."
+        "description": "Apps for runners, cyclists, and walkers who want to explore somewhere new."
     }
     </script>
 </head>
@@ -80,7 +80,7 @@
                 <span class="hub-headline-line">Made for people</span>
                 <span class="hub-headline-line hub-headline-accent">to go outside.</span>
             </h1>
-            <p class="hub-subhead">Two apps. Infinite adventures.</p>
+            <p class="hub-subhead">Three apps. Infinite adventures.</p>
         </div>
 
         <div class="hub-scroll-hint" aria-hidden="true">
@@ -162,6 +162,40 @@
             </div>
         </a>
 
+        <a href="go-for-a-walk.html" class="hub-app-card hub-app-card--walk" data-umami-event="hub-card-walk">
+            <div class="hub-app-card-top">
+                <img src="walk-icon.png" alt="Go for a Walk app icon" class="hub-app-icon">
+                <div class="hub-app-meta">
+                    <h2 class="hub-app-name hub-app-name--walk">Go for a Walk</h2>
+                    <p class="hub-app-tagline">Personalized walking routes through parts of your neighborhood you haven't seen.</p>
+                </div>
+            </div>
+
+            <div class="hub-app-visual" aria-hidden="true">
+                <svg viewBox="0 0 420 180" class="hub-visual-svg">
+                    <defs>
+                        <linearGradient id="walkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%"   style="stop-color:#6B9080"/>
+                            <stop offset="40%"  style="stop-color:#C4836A"/>
+                            <stop offset="70%"  style="stop-color:#D4A574"/>
+                            <stop offset="100%" style="stop-color:#6B9080"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="hub-route-path hub-walk-path"
+                          d="M45,148 Q80,100 125,118 Q170,136 200,95 Q230,54 280,72 Q330,90 360,58 Q375,95 355,132 Q330,160 275,152 Q210,142 145,155 Z"
+                          fill="none" stroke="url(#walkGrad)" stroke-width="3.5"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle class="hub-walker-dot" cx="45" cy="148" r="7" fill="#6B9080"/>
+                    <circle cx="45" cy="148" r="13" fill="none" stroke="#2D4A3E" stroke-width="1.5" opacity="0.4"/>
+                </svg>
+            </div>
+
+            <div class="hub-app-card-footer">
+                <span class="hub-app-pill hub-app-pill--walk">iOS · Free</span>
+                <span class="hub-app-cta">Learn more →</span>
+            </div>
+        </a>
+
     </main>
 
     <footer class="hub-footer">
@@ -198,6 +232,7 @@
 
             animatePath(document.querySelector('.hub-run-path'),  document.querySelector('.hub-runner-dot'));
             animatePath(document.querySelector('.hub-bike-path'), document.querySelector('.hub-biker-dot'));
+            animatePath(document.querySelector('.hub-walk-path'), document.querySelector('.hub-walker-dot'));
 
             // Animate large background decorative paths
             function animateBgPath(selector, delay) {
