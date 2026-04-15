@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go for a Walk – Discover Walking Routes Near You (Free iOS App)</title>
-    <meta name="description" content="Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation. Free for iOS — coming soon.">
+    <meta name="description" content="Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation. Free for iOS.">
     <link rel="canonical" href="https://playintraffic.ca/go-for-a-walk.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Play in Traffic">
     <meta property="og:title" content="Go for a Walk – Discover Walking Routes Near You (Free iOS App)">
-    <meta property="og:description" content="Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation. Free for iOS — coming soon.">
+    <meta property="og:description" content="Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation. Free for iOS.">
     <meta property="og:url" content="https://playintraffic.ca/go-for-a-walk.html">
     <meta property="og:image" content="https://playintraffic.ca/walk-icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Go for a Walk – Discover Walking Routes Near You (Free iOS App)">
-    <meta name="twitter:description" content="Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation. Free for iOS — coming soon.">
+    <meta name="twitter:description" content="Generate personalized walking routes from wherever you are. Free for iOS.">
     <meta name="twitter:image" content="https://playintraffic.ca/walk-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=DM+Sans:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/route-lines.css">
+    <link rel="stylesheet" href="css/product-page.css">
     <link rel="apple-touch-icon" sizes="180x180" href="walk-icon.png">
     <link rel="icon" type="image/png" href="walk-icon.png">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="70251b7d-b076-42d7-82d0-01856cd589fa"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -30,18 +33,10 @@
         "name": "Go for a Walk",
         "operatingSystem": "iOS 17.0+",
         "applicationCategory": "HealthApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "description": "Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation. Free for iOS — coming soon.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Generate personalized walking routes from wherever you are. Customize with parks, coffee stops, and landmarks. Voice-guided navigation.",
         "url": "https://playintraffic.ca/go-for-a-walk.html",
-        "author": {
-            "@type": "Organization",
-            "name": "Play in Traffic",
-            "url": "https://playintraffic.ca"
-        }
+        "author": { "@type": "Organization", "name": "Play in Traffic", "url": "https://playintraffic.ca" }
     }
     </script>
     <script type="application/ld+json">
@@ -52,323 +47,299 @@
             {
                 "@type": "Question",
                 "name": "Is Go for a Walk free?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is included from the start."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is included from the start." }
             },
             {
                 "@type": "Question",
                 "name": "When does Go for a Walk launch?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Go for a Walk is coming soon to the App Store. Email playintraffic.ca@gmail.com to get notified the moment it's available."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Go for a Walk is coming soon to the App Store. Email playintraffic.ca@gmail.com to get notified the moment it's available." }
             },
             {
                 "@type": "Question",
                 "name": "Does Go for a Walk track my location or collect data?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. Your walk history, preferences, and route data stay on your device. We don't have servers, we don't run analytics, and we don't collect any personal information."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Your walk history, preferences, and route data stay on your device. We don't have servers, we don't run analytics, and we don't collect any personal information." }
             },
             {
                 "@type": "Question",
                 "name": "Can I customize my walking routes?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. You can add parks, coffee stops, dog parks, landmarks, and playgrounds to your route. You can also choose between flat or hilly terrain, and set your preferred distance or duration."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can add parks, coffee stops, dog parks, landmarks, and playgrounds to your route. You can also choose between flat or hilly terrain, and set your preferred distance or duration." }
             },
             {
                 "@type": "Question",
                 "name": "Is there an Android version?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Not yet — Go for a Walk is iOS only for now. If you'd like to see an Android version, let us know at playintraffic.ca@gmail.com. Your voice matters."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Not yet — Go for a Walk is iOS only for now. If you'd like to see an Android version, let us know at playintraffic.ca@gmail.com." }
             }
         ]
     }
     </script>
 </head>
-<body class="walk-theme">
-    <header class="hero">
-        <nav>
-            <div class="nav-left">
-                <a href="index.html" class="back-link">← All Apps</a>
-                <div class="logo">
-                    <img src="walk-icon.png" alt="Go for a Walk" class="logo-icon">
-                    <span class="logo-text">Go for a Walk</span>
-                </div>
-            </div>
-            <div class="sibling-dropdown">
-                <button class="sibling-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                    <span class="sibling-dropdown-label">Also by us</span>
-                    <span class="sibling-dropdown-title">Our Apps ▾</span>
-                </button>
-                <div class="sibling-dropdown-menu" role="menu">
-                    <a href="random-run.html" class="sibling-dropdown-item" role="menuitem">
-                        <img src="app-icon.png" alt="Random Run">
-                        <div class="sibling-dropdown-item-text">
-                            <span class="sibling-dropdown-item-name">Random Run</span>
-                            <span class="sibling-dropdown-item-desc">Random running routes, anywhere</span>
-                        </div>
-                    </a>
-                    <a href="bikeright.html" class="sibling-dropdown-item" role="menuitem">
-                        <img src="bikeright-icon.png" alt="BikeRight">
-                        <div class="sibling-dropdown-item-text">
-                            <span class="sibling-dropdown-item-name">BikeRight</span>
-                            <span class="sibling-dropdown-item-desc">Safe bike loops for your city</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">Walk somewhere</span>
-                <span class="title-line title-accent">new today.</span>
-            </h1>
-            <p class="hero-description">
-                Fresh walking routes from your front door—through parts of your neighborhood you haven't seen yet. Customize every walk with parks, coffee stops, and more.
-            </p>
-            <span class="coming-soon-label">Coming soon to the App Store</span>
-            <a href="mailto:playintraffic.ca@gmail.com?subject=Notify%20me%20%E2%80%94%20Go%20for%20a%20Walk" class="notify-btn" data-umami-event="notify-click-walk">
-                <svg class="mail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                    <path d="M22 4L12 13 2 4"/>
-                </svg>
-                <span>Get notified when it launches</span>
-            </a>
-        </div>
-        
-        <div class="scroll-hint" aria-hidden="true">
-            <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-            </svg>
-        </div>
-        
-        <div class="hero-visual">
-            <div class="route-animation">
-                <svg viewBox="0 0 400 300" class="route-svg">
-                    <defs>
-                        <linearGradient id="walkRouteGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#6B9080"/>
-                            <stop offset="40%" style="stop-color:#C4836A"/>
-                            <stop offset="70%" style="stop-color:#D4A574"/>
-                            <stop offset="100%" style="stop-color:#6B9080"/>
-                        </linearGradient>
-                    </defs>
-                    <path class="walk-loop-path route-path" d="M70,210 Q100,160 140,170 Q180,180 200,140 Q220,100 270,110 Q320,120 340,90 Q350,130 330,170 Q310,210 260,220 Q200,230 150,215 Z" fill="none" stroke="url(#walkRouteGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle class="walker-dot runner-dot" cx="70" cy="210" r="8" fill="#6B9080"/>
-                    <circle class="start-marker" cx="70" cy="210" r="12" fill="none" stroke="#2D4A3E" stroke-width="2"/>
-                </svg>
-            </div>
-        </div>
-    </header>
+<body class="page--walk">
 
-    <section class="how-it-works">
-        <div class="section-header">
-            <span class="section-tag">Dead simple</span>
-            <h2>How it works</h2>
-        </div>
-        
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h3>Set your distance or time</h3>
-                    <p>Want to walk 3 kilometers? Only have 45 minutes? Choose distance or duration—whatever fits your day.</p>
-                </div>
+    <!-- ── Nav ───────────────────────────────────────── -->
+    <nav class="site-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">← Play in Traffic</a>
+            <div class="nav-brand">
+                <img src="walk-icon.png" alt="Go for a Walk">
+                <span>Go for a Walk</span>
             </div>
-            
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h3>Customize your walk</h3>
-                    <p>Parks, coffee stops, dog parks, landmarks, playgrounds—tap what you want to discover along the way. Prefer flat or hilly? You choose.</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h3>Pick a route and go</h3>
-                    <p>Choose from three unique loop routes, each heading a different direction. Follow voice-guided directions so your phone can stay in your pocket.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="duration-note">
-            <div class="note-icon">🚶</div>
-            <p><strong>Personalized to your pace.</strong> Connect Apple Health and we'll use your actual walking speed to estimate how long each route will take—so "45 minutes" means 45 minutes for you.</p>
-        </div>
-    </section>
-
-    <section class="how-it-works" style="padding-top: 0;">
-        <div class="section-header">
-            <span class="section-tag">Explore freely</span>
-            <h2>Your walks, your business.</h2>
-        </div>
-        
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">🔒</div>
-                <div class="step-content">
-                    <h3>No account required</h3>
-                    <p>Open the app and go. No sign-up, no login, no profile. Go for a Walk works the moment you tap it.</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">🚫</div>
-                <div class="step-content">
-                    <h3>Zero tracking, zero ads</h3>
-                    <p>No analytics SDKs, no behavioral tracking, no advertising frameworks. What you do with the app is your business.</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">📱</div>
-                <div class="step-content">
-                    <h3>Everything stays on your device</h3>
-                    <p>Your saved walks, preferences, and history are stored locally on your phone. We don't have servers, and we don't want your data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="screenshots">
-        <div class="screenshots-header">
-            <span class="section-tag">See it in action</span>
-            <h2 class="section-header" style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--wk-forest); margin-top: 0.35rem;">The whole walk, start to finish.</h2>
-        </div>
-        <div class="screenshots-track-wrap">
-            <div class="screenshots-scroll">
-            <div class="screenshots-inner">
-
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/go-for-a-walk/01_Home.png" alt="Go for a Walk home screen with distance picker and customize chips" loading="lazy">
+            <button class="nav-apps-toggle" aria-expanded="false" aria-haspopup="true">Our Apps ▾</button>
+            <div class="nav-dropdown" role="menu">
+                <a href="random-run.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="app-icon.png" alt="Random Run">
+                    <div>
+                        <span class="nav-dropdown-item-name">Random Run</span>
+                        <span class="nav-dropdown-item-desc">Random running routes, anywhere</span>
                     </div>
+                </a>
+                <a href="bikeright.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="bikeright-icon.png" alt="BikeRight">
+                    <div>
+                        <span class="nav-dropdown-item-name">BikeRight</span>
+                        <span class="nav-dropdown-item-desc">Safe bike loops for your city</span>
+                    </div>
+                </a>
+            </div>
+            <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-panel" role="dialog" aria-label="Navigation">
+        <a href="index.html">← Play in Traffic</a>
+        <a href="random-run.html"><img src="app-icon.png" alt="">Random Run</a>
+        <a href="bikeright.html"><img src="bikeright-icon.png" alt="">BikeRight</a>
+    </div>
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Walk somewhere<br>new today.</h1>
+                <p class="product-hero-desc">Fresh walking routes from your front door — through parts of your neighborhood you haven't seen yet. Customize every walk with parks, coffee stops, and more.</p>
+                <span class="coming-soon-badge">Coming soon to the App Store</span>
+                <br>
+                <a href="mailto:playintraffic.ca@gmail.com?subject=Notify%20me%20%E2%80%94%20Go%20for%20a%20Walk" class="btn-notify">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                    <span>Get notified when it launches</span>
+                </a>
+            </div>
+            <div class="product-hero-screenshot reveal">
+                <img src="screenshots/go-for-a-walk/01_Home.png" alt="Go for a Walk home screen with customization chips" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">Dead simple</span>
+                <h2>How it works</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Set your distance or time</h3>
+                        <p>Want to walk 3 kilometers? Only have 45 minutes? Choose distance or duration — whatever fits your day.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Customize your walk</h3>
+                        <p>Parks, coffee stops, dog parks, landmarks, playgrounds — tap what you want to discover along the way. Prefer flat or hilly? You choose.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Pick a route and go</h3>
+                        <p>Choose from three unique loop routes, each heading a different direction. Follow voice-guided directions so your phone can stay in your pocket.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout-box reveal">
+                <span style="font-size: 1.5rem;">🚶</span>
+                <p><strong>Personalized to your pace.</strong> Connect Apple Health and we'll use your actual walking speed to estimate how long each route will take — so "45 minutes" means 45 minutes for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Screenshots ───────────────────────────────── -->
+    <section class="screenshots">
+        <div class="container">
+            <div class="screenshots-header reveal">
+                <span class="label">See it in action</span>
+                <h2>The whole walk, start to finish.</h2>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/go-for-a-walk/01_Home.png" alt="Go for a Walk home screen with distance picker and customize chips" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Your walk, your way</div>
-                        <div class="screenshot-caption-sub">Set your distance. Pick parks, coffee, landmarks—whatever you're in the mood for.</div>
+                        <p class="screenshot-caption-desc">Set your distance. Pick parks, coffee, landmarks — whatever you're in the mood for.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/go-for-a-walk/02_Route_Selection.png" alt="Go for a Walk route selection with three colored routes on a map" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/go-for-a-walk/02_Route_Selection.png" alt="Go for a Walk route selection with three colored routes on a map" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Three routes, three directions</div>
-                        <div class="screenshot-caption-sub">Each route explores a different part of your area. Pick the one that catches your eye.</div>
+                        <p class="screenshot-caption-desc">Each route explores a different part of your area. Pick the one that catches your eye.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/go-for-a-walk/03_Navigation.png" alt="Go for a Walk turn-by-turn voice navigation" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/go-for-a-walk/03_Navigation.png" alt="Go for a Walk turn-by-turn voice navigation" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Voice-guided. Hands-free.</div>
-                        <div class="screenshot-caption-sub">Turn-by-turn directions so you can look up, not down. Automatic rerouting if you wander off.</div>
+                        <p class="screenshot-caption-desc">Turn-by-turn directions so you can look up, not down. Automatic rerouting if you wander off.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/go-for-a-walk/04_Walk_Results.png" alt="Go for a Walk results screen with distance, time, and pace" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/go-for-a-walk/04_Walk_Results.png" alt="Go for a Walk results screen with distance, time, and pace" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Every walk counts.</div>
-                        <div class="screenshot-caption-sub">Distance, time, pace—everything saved. See your weekly stats build up over time.</div>
+                        <p class="screenshot-caption-desc">Distance, time, pace — everything saved. See your weekly stats build up over time.</p>
                     </div>
                 </div>
-
-            </div>
             </div>
         </div>
     </section>
 
-    <section class="specs">
-        <div class="specs-content">
-            <h2>Technical details</h2>
-            <div class="spec-grid">
-                <div class="spec-item">
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <h2 style="margin-bottom: 32px;">Your walks, your business.</h2>
+                <div class="privacy-points">
+                    <div class="privacy-point">
+                        <div class="privacy-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <div>
+                            <h3>No account required</h3>
+                            <p>Open the app and go. No sign-up, no login, no profile. Go for a Walk works the moment you tap it.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="privacy-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                        </div>
+                        <div>
+                            <h3>Zero tracking, zero ads</h3>
+                            <p>No analytics SDKs, no behavioral tracking, no advertising frameworks. What you do with the app is your business.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="privacy-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div>
+                            <h3>Everything stays on your device</h3>
+                            <p>Your saved walks, preferences, and history are stored locally on your phone. We don't have servers, and we don't want your data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
                     <span class="spec-label">Platform</span>
                     <span class="spec-value">iOS 17.0+</span>
                 </div>
-                <div class="spec-item">
+                <div>
                     <span class="spec-label">Price</span>
                     <span class="spec-value">Free</span>
                 </div>
-                <div class="spec-item">
+                <div>
                     <span class="spec-label">GPX Export</span>
                     <span class="spec-value">Strava, Garmin & more</span>
                 </div>
-            </div>
-            
-            <div class="android-note">
-                <p>🤖 <strong>Android walker who wants fresh routes?</strong> iOS only for now—but your voice matters. Let us know you're out there.</p>
-                <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Go%20for%20a%20Walk" class="android-link" data-umami-event="android-interest-walk">Tell us you want Android →</a>
+                <div>
+                    <span class="spec-label">Customization</span>
+                    <span class="spec-value">Parks, coffee, landmarks, terrain</span>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ── FAQ ───────────────────────────────────────── -->
     <section class="faq-section">
-        <div class="section-header">
-            <span class="section-tag">Common questions</span>
-            <h2>FAQ</h2>
-        </div>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary class="faq-question">Is Go for a Walk free?</summary>
-                <div class="faq-answer"><p>Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is included from the start.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">When does Go for a Walk launch?</summary>
-                <div class="faq-answer"><p>Go for a Walk is coming soon to the App Store. <a href="mailto:playintraffic.ca@gmail.com?subject=Notify%20me%20%E2%80%94%20Go%20for%20a%20Walk">Email us</a> to get notified the moment it's available.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Does Go for a Walk track my location or collect data?</summary>
-                <div class="faq-answer"><p>No. Your walk history, preferences, and route data stay on your device. We don't have servers, we don't run analytics, and we don't collect any personal information.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Can I customize my walking routes?</summary>
-                <div class="faq-answer"><p>Yes. You can add parks, coffee stops, dog parks, landmarks, and playgrounds to your route. You can also choose between flat or hilly terrain, and set your preferred distance or duration.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Is there an Android version?</summary>
-                <div class="faq-answer"><p>Not yet — Go for a Walk is iOS only for now. If you'd like to see an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Go%20for%20a%20Walk">let us know</a>. Your voice matters.</p></div>
-            </details>
+        <div class="container">
+            <div class="faq-section-header reveal">
+                <span class="label">Common questions</span>
+                <h2>FAQ</h2>
+            </div>
+            <div class="reveal">
+                <details class="faq-item">
+                    <summary class="faq-question">Is Go for a Walk free?</summary>
+                    <div class="faq-answer"><p>Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is included from the start.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">When does Go for a Walk launch?</summary>
+                    <div class="faq-answer"><p>Go for a Walk is coming soon to the App Store. <a href="mailto:playintraffic.ca@gmail.com?subject=Notify%20me%20%E2%80%94%20Go%20for%20a%20Walk">Email us</a> to get notified the moment it's available.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Does Go for a Walk track my location or collect data?</summary>
+                    <div class="faq-answer"><p>No. Your walk history, preferences, and route data stay on your device. We don't have servers, we don't run analytics, and we don't collect any personal information.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Can I customize my walking routes?</summary>
+                    <div class="faq-answer"><p>Yes. You can add parks, coffee stops, dog parks, landmarks, and playgrounds to your route. You can also choose between flat or hilly terrain, and set your preferred distance or duration.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Is there an Android version?</summary>
+                    <div class="faq-answer"><p>Not yet — Go for a Walk is iOS only for now. If you'd like to see an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Go%20for%20a%20Walk">let us know</a>. Your voice matters.</p></div>
+                </details>
+            </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="cta-content">
+    <!-- ── Philosophy ────────────────────────────────── -->
+    <div class="product-philosophy">
+        <div class="container">
+            <p>No accounts · No tracking · No ads · Ever</p>
+        </div>
+    </div>
+
+    <!-- ── Final CTA ─────────────────────────────────── -->
+    <section class="final-cta">
+        <div class="container">
+            <img src="walk-icon.png" alt="Go for a Walk" class="final-cta-icon">
             <h2>Your next walk<br>starts here.</h2>
-            <p class="pre-cta-reassurance">Your walk, your way — no account, no tracking, just new streets from your front door.</p>
-            <a href="mailto:playintraffic.ca@gmail.com?subject=Notify%20me%20%E2%80%94%20Go%20for%20a%20Walk" class="notify-btn notify-btn-large" data-umami-event="notify-click-walk-bottom">
-                <svg class="mail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                    <path d="M22 4L12 13 2 4"/>
-                </svg>
+            <p>Your walk, your way — no account, no tracking, just new streets from your front door.</p>
+            <a href="mailto:playintraffic.ca@gmail.com?subject=Notify%20me%20%E2%80%94%20Go%20for%20a%20Walk" class="btn-notify">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
                 <span>Get notified when it launches</span>
             </a>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="walk-icon.png" alt="Go for a Walk" class="logo-icon" style="width:28px;height:28px;border-radius:6px;">
-                <span>Go for a Walk</span>
-            </div>
+    <!-- ── Footer ────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">Go for a Walk</div>
             <div class="footer-links">
                 <a href="go-for-a-walk-privacy.html">Privacy Policy</a>
                 <a href="random-run.html">Random Run</a>
@@ -376,94 +347,12 @@
                 <a href="about.html">About</a>
                 <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
             </div>
-            <div class="footer-copy">
-                <p>© 2026 Go for a Walk. Built for the everyday explorer.</p>
-            </div>
+            <div class="footer-copy">© 2026 Go for a Walk. Built for the everyday explorer.</div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const routePath = document.querySelector('.route-path');
-            const walkerDot = document.querySelector('.walker-dot');
-            
-            if (routePath && walkerDot) {
-                const pathLength = routePath.getTotalLength();
-                
-                routePath.style.strokeDasharray = pathLength;
-                routePath.style.strokeDashoffset = pathLength;
-                
-                setTimeout(() => {
-                    routePath.style.transition = 'stroke-dashoffset 2.5s ease-out';
-                    routePath.style.strokeDashoffset = '0';
-                    
-                    let progress = 0;
-                    const animateWalker = () => {
-                        if (progress <= 1) {
-                            const point = routePath.getPointAtLength(progress * pathLength);
-                            walkerDot.setAttribute('cx', point.x);
-                            walkerDot.setAttribute('cy', point.y);
-                            progress += 0.003;
-                            requestAnimationFrame(animateWalker);
-                        }
-                    };
-                    animateWalker();
-                }, 500);
-            }
-            
-            const steps = document.querySelectorAll('.step');
-            steps.forEach((step, index) => {
-                step.style.animationDelay = `${0.8 + index * 0.15}s`;
-            });
-            
-            const scrollHint = document.querySelector('.scroll-hint');
-            const howItWorks = document.querySelector('.how-it-works');
-            
-            function checkScrollHint() {
-                if (!scrollHint || !howItWorks) return;
-                const rect = howItWorks.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    scrollHint.classList.add('hidden');
-                } else {
-                    scrollHint.classList.remove('hidden');
-                }
-            }
-            
-            checkScrollHint();
-            window.addEventListener('scroll', checkScrollHint);
-            window.addEventListener('resize', checkScrollHint);
-
-            const dropdown = document.querySelector('.sibling-dropdown');
-            const toggle = document.querySelector('.sibling-dropdown-toggle');
-            if (dropdown && toggle) {
-                toggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const open = dropdown.classList.toggle('open');
-                    toggle.setAttribute('aria-expanded', open);
-                });
-                document.addEventListener('click', () => {
-                    dropdown.classList.remove('open');
-                    toggle.setAttribute('aria-expanded', 'false');
-                });
-            }
-
-            const appName = 'go-for-a-walk';
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.tagName === 'HEADER'
-                            ? 'hero'
-                            : entry.target.className.split(' ')[0];
-                        if (typeof umami !== 'undefined') {
-                            umami.track(`section-view-${id}`, { app: appName });
-                        }
-                        sectionObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-            document.querySelectorAll('header.hero, section.how-it-works, section.screenshots, section.specs, section.cta')
-                .forEach((el) => sectionObserver.observe(el));
-        });
-    </script>
+    <script src="js/route-animation.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 </body>
 </html>

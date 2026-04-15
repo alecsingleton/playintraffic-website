@@ -1,0 +1,54 @@
+:root {
+  /* Canvas */
+  --asphalt: #1a1a1a;
+  --asphalt-warm: #2d2820;
+  --surface: #242424;
+  --warm-white: #f5f0e8;
+  --warm-white-muted: rgba(245, 240, 232, 0.7);
+  --warm-white-subtle: rgba(245, 240, 232, 0.4);
+
+  /* Signal colors */
+  --signal-red: #E8593C;
+  --signal-green: #2DB87A;
+  --signal-amber: #F2A623;
+
+  /* Signal muted */
+  --signal-red-glow: rgba(232, 89, 60, 0.15);
+  --signal-green-glow: rgba(45, 184, 122, 0.15);
+  --signal-amber-glow: rgba(242, 166, 35, 0.15);
+
+  /* Warm accent */
+  --warm-accent: #C4A67A;
+  --warm-accent-hover: #D4B68A;
+
+  /* Utility */
+  --text-primary: var(--warm-white);
+  --text-secondary: var(--warm-white-muted);
+  --text-tertiary: var(--warm-white-subtle);
+  --border: rgba(245, 240, 232, 0.1);
+  --border-hover: rgba(245, 240, 232, 0.2);
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Layout */
+  --max-width: 1200px;
+  --section-pad-y: clamp(80px, 10vw, 120px);
+  --content-pad-x: 24px;
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-btn: 8px;
+}
+
+.daylight {
+  --asphalt: #f5f0e8;
+  --surface: #ede6d8;
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(26, 26, 26, 0.7);
+  --text-tertiary: rgba(26, 26, 26, 0.4);
+  --border: rgba(26, 26, 26, 0.1);
+  --border-hover: rgba(26, 26, 26, 0.2);
+}

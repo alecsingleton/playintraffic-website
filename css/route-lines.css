@@ -1,0 +1,117 @@
+/* ── Route Line Base ────────────────────────────────── */
+
+.route-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.route-line--run { stroke: var(--signal-red); }
+.route-line--ride { stroke: var(--signal-green); }
+.route-line--walk { stroke: var(--signal-amber); }
+
+/* ── Drawing Animation ─────────────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-line[data-animate] {
+    stroke-dasharray: var(--line-length);
+    stroke-dashoffset: var(--line-length);
+    animation: draw-route 2s ease-out forwards;
+  }
+
+  .route-line[data-animate][data-delay="1"] {
+    animation-delay: 0.4s;
+  }
+
+  .route-line[data-animate][data-delay="2"] {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes draw-route {
+    to { stroke-dashoffset: 0; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-line[data-animate] {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── Hero Route Lines ──────────────────────────────── */
+
+.hero-routes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-routes svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Convergence Dot ───────────────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+  .convergence-dot {
+    animation: pulse-dot 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 0.6; r: 4; }
+    50% { opacity: 1; r: 7; }
+  }
+}
+
+/* ── Section Connector Lines ───────────────────────── */
+
+.section-connector {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* ── How-It-Works Route Line ───────────────────────── */
+
+.steps-route-line {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+}
+
+.steps-route-line svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Card Hover Route Line ─────────────────────────── */
+
+.app-card .card-route-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.app-card:hover .card-route-line {
+  opacity: 1;
+}
+
+@media (max-width: 639px) {
+  .steps-route-line {
+    left: 18px;
+  }
+
+  .hero-routes svg .route-line {
+    stroke-width: 2;
+  }
+}

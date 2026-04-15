@@ -18,135 +18,133 @@
     <meta name="twitter:image" content="https://playintraffic.ca/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=DM+Sans:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
     <link rel="apple-touch-icon" sizes="180x180" href="app-icon.png">
     <link rel="icon" type="image/png" href="app-icon.png">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="70251b7d-b076-42d7-82d0-01856cd589fa"></script>
 </head>
-<body class="privacy-page">
-    <header class="privacy-header">
-        <nav>
-            <a href="random-run.html" class="logo">
-                <img src="app-icon.png" alt="Random Run" class="logo-icon">
-                <span class="logo-text">Random Run</span>
-            </a>
-            <a href="mailto:playintraffic.ca@gmail.com" class="nav-link">Contact</a>
-        </nav>
-    </header>
-
-    <main class="privacy-content">
-        <div class="privacy-hero">
-            <span class="section-tag">Legal</span>
-            <h1>Privacy Policy</h1>
-            <p class="effective-date">Effective Date: January 1, 2026</p>
-        </div>
-
-        <article class="policy-body">
-            <section class="policy-section">
-                <h2>The Short Version</h2>
-                <div class="highlight-box">
-                    <p><strong>We don't collect your data. Period.</strong></p>
-                    <p>Random Run is designed with privacy at its core. Your location, routes, and running data stay on your device and are never transmitted to our servers.</p>
-                </div>
-            </section>
-
-            <section class="policy-section">
-                <h2>Information We Do Not Collect</h2>
-                <p>Random Run does not collect, store, or transmit any of the following:</p>
-                <ul>
-                    <li>Your location or GPS coordinates</li>
-                    <li>Routes you generate or run</li>
-                    <li>Personal information (name, email, phone number)</li>
-                    <li>Device identifiers or tracking data</li>
-                    <li>Usage analytics or behavioral data</li>
-                    <li>Health or fitness information</li>
-                </ul>
-            </section>
-
-            <section class="policy-section">
-                <h2>How the App Works</h2>
-                <p>Random Run generates running routes entirely on your device. When you use the app:</p>
-                <ul>
-                    <li>Your device's GPS determines your current location locally</li>
-                    <li>Route calculations happen on your device</li>
-                    <li>Map data is fetched from standard mapping services (Apple Maps/Google Maps) which have their own privacy policies</li>
-                    <li>No data about your location or routes is ever sent to Random Run servers</li>
-                </ul>
-            </section>
-
-            <section class="policy-section">
-                <h2>Third-Party Services</h2>
-                <p>Random Run uses mapping services to display routes. These services (Apple Maps, Google Maps) operate under their own privacy policies:</p>
-                <ul>
-                    <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
-                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-                </ul>
-                <p>We do not share any of your data with these services beyond the standard map tile requests required to display your route.</p>
-            </section>
-
-            <section class="policy-section">
-                <h2>Data Storage</h2>
-                <p>Any preferences or saved routes you create are stored locally on your device using iOS's built-in storage mechanisms. This data:</p>
-                <ul>
-                    <li>Never leaves your device</li>
-                    <li>Is protected by your device's security features</li>
-                    <li>Is deleted when you uninstall the app</li>
-                    <li>Can be cleared at any time within the app</li>
-                </ul>
-            </section>
-
-            <section class="policy-section">
-                <h2>HealthKit Integration</h2>
-                <p>If you choose to connect Random Run with Apple HealthKit to use your running pace:</p>
-                <ul>
-                    <li>This connection is entirely optional</li>
-                    <li>Data is read locally and never transmitted</li>
-                    <li>We only access the specific data types you approve</li>
-                    <li>You can revoke access at any time in iOS Settings</li>
-                </ul>
-            </section>
-
-            <section class="policy-section">
-                <h2>Children's Privacy</h2>
-                <p>Random Run does not collect personal information from anyone, including children under 13. Since we collect no data, there is no risk of collecting data from minors.</p>
-            </section>
-
-            <section class="policy-section">
-                <h2>Changes to This Policy</h2>
-                <p>If we ever change this privacy policy, we will:</p>
-                <ul>
-                    <li>Update the "Effective Date" at the top of this page</li>
-                    <li>Notify users within the app of any material changes</li>
-                    <li>Never start collecting data without explicit user consent</li>
-                </ul>
-            </section>
-
-            <section class="policy-section">
-                <h2>Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy or Random Run's privacy practices, please contact us:</p>
-                <p class="contact-email">
-                    <a href="mailto:playintraffic.ca@gmail.com">playintraffic.ca@gmail.com</a>
-                </p>
-            </section>
-        </article>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="app-icon.png" alt="Random Run" class="logo-icon">
+<body class="page--run">
+    <nav class="simple-nav">
+        <div class="container">
+            <a href="random-run.html" class="nav-back">← Random Run</a>
+            <div class="simple-nav-brand">
+                <img src="app-icon.png" alt="Random Run">
                 <span>Random Run</span>
             </div>
+            <a href="mailto:playintraffic.ca@gmail.com" class="simple-nav-contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-hero">
+                <span class="label">Legal</span>
+                <h1>Privacy Policy</h1>
+                <p class="effective-date">Effective Date: January 1, 2026</p>
+            </div>
+
+            <article class="policy-body">
+                <section class="policy-section">
+                    <h2>The Short Version</h2>
+                    <div class="highlight-box">
+                        <p><strong>We don't collect your data. Period.</strong></p>
+                        <p>Random Run is designed with privacy at its core. Your location, routes, and running data stay on your device and are never transmitted to our servers.</p>
+                    </div>
+                </section>
+
+                <section class="policy-section">
+                    <h2>Information We Do Not Collect</h2>
+                    <p>Random Run does not collect, store, or transmit any of the following:</p>
+                    <ul>
+                        <li>Your location or GPS coordinates</li>
+                        <li>Routes you generate or run</li>
+                        <li>Personal information (name, email, phone number)</li>
+                        <li>Device identifiers or tracking data</li>
+                        <li>Usage analytics or behavioral data</li>
+                        <li>Health or fitness information</li>
+                    </ul>
+                </section>
+
+                <section class="policy-section">
+                    <h2>How the App Works</h2>
+                    <p>Random Run generates running routes entirely on your device. When you use the app:</p>
+                    <ul>
+                        <li>Your device's GPS determines your current location locally</li>
+                        <li>Route calculations happen on your device</li>
+                        <li>Map data is fetched from standard mapping services (Apple Maps/Google Maps) which have their own privacy policies</li>
+                        <li>No data about your location or routes is ever sent to Random Run servers</li>
+                    </ul>
+                </section>
+
+                <section class="policy-section">
+                    <h2>Third-Party Services</h2>
+                    <p>Random Run uses mapping services to display routes. These services (Apple Maps, Google Maps) operate under their own privacy policies:</p>
+                    <ul>
+                        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+                        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                    </ul>
+                    <p>We do not share any of your data with these services beyond the standard map tile requests required to display your route.</p>
+                </section>
+
+                <section class="policy-section">
+                    <h2>Data Storage</h2>
+                    <p>Any preferences or saved routes you create are stored locally on your device using iOS's built-in storage mechanisms. This data:</p>
+                    <ul>
+                        <li>Never leaves your device</li>
+                        <li>Is protected by your device's security features</li>
+                        <li>Is deleted when you uninstall the app</li>
+                        <li>Can be cleared at any time within the app</li>
+                    </ul>
+                </section>
+
+                <section class="policy-section">
+                    <h2>HealthKit Integration</h2>
+                    <p>If you choose to connect Random Run with Apple HealthKit to use your running pace:</p>
+                    <ul>
+                        <li>This connection is entirely optional</li>
+                        <li>Data is read locally and never transmitted</li>
+                        <li>We only access the specific data types you approve</li>
+                        <li>You can revoke access at any time in iOS Settings</li>
+                    </ul>
+                </section>
+
+                <section class="policy-section">
+                    <h2>Children's Privacy</h2>
+                    <p>Random Run does not collect personal information from anyone, including children under 13. Since we collect no data, there is no risk of collecting data from minors.</p>
+                </section>
+
+                <section class="policy-section">
+                    <h2>Changes to This Policy</h2>
+                    <p>If we ever change this privacy policy, we will:</p>
+                    <ul>
+                        <li>Update the "Effective Date" at the top of this page</li>
+                        <li>Notify users within the app of any material changes</li>
+                        <li>Never start collecting data without explicit user consent</li>
+                    </ul>
+                </section>
+
+                <section class="policy-section">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy or Random Run's privacy practices, please contact us:</p>
+                    <p class="contact-email"><a href="mailto:playintraffic.ca@gmail.com">playintraffic.ca@gmail.com</a></p>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">Random Run</div>
             <div class="footer-links">
                 <a href="random-run.html">Random Run</a>
                 <a href="bikeright.html">BikeRight</a>
                 <a href="go-for-a-walk.html">Go for a Walk</a>
                 <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
             </div>
-            <div class="footer-copy">
-                <p>© 2026 Random Run. Made for runners who crave variety.</p>
-            </div>
+            <div class="footer-copy">© 2026 Random Run. Made for runners who crave variety.</div>
         </div>
     </footer>
 </body>

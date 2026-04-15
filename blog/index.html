@@ -13,16 +13,18 @@
     <meta property="og:url" content="https://playintraffic.ca/blog/">
     <meta property="og:image" content="https://playintraffic.ca/app-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog – Play in Traffic | Updates for Random Run, BikeRight & Go for a Walk">
-    <meta name="twitter:description" content="The latest updates, release notes, and feature announcements for Random Run, BikeRight, and Go for a Walk — free iOS apps by Play in Traffic.">
+    <meta name="twitter:title" content="Blog – Play in Traffic">
+    <meta name="twitter:description" content="The latest updates, release notes, and feature announcements for Random Run, BikeRight, and Go for a Walk.">
     <meta name="twitter:image" content="https://playintraffic.ca/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=DM+Sans:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../app-icon.png">
     <link rel="icon" type="image/png" href="../app-icon.png">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="70251b7d-b076-42d7-82d0-01856cd589fa"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -34,10 +36,7 @@
             "@type": "Organization",
             "name": "Play in Traffic",
             "url": "https://playintraffic.ca",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://playintraffic.ca/app-icon.png"
-            }
+            "logo": { "@type": "ImageObject", "url": "https://playintraffic.ca/app-icon.png" }
         }
     }
     </script>
@@ -52,93 +51,82 @@
     }
     </script>
 </head>
-<body class="blog-index-page">
-    <header class="blog-index-header">
-        <nav>
-            <div class="nav-left">
-                <a href="../index.html" class="back-link">← All Apps</a>
-            </div>
-        </nav>
-    </header>
-
-    <main class="blog-index-content">
-        <div class="blog-index-hero">
-            <span class="section-tag">What's new</span>
-            <h1>Blog</h1>
-            <p class="blog-index-subtitle">Feature updates and release notes for Random Run, BikeRight, and Go for a Walk.</p>
+<body>
+    <nav class="simple-nav">
+        <div class="container">
+            <a href="../index.html" class="nav-back">← Play in Traffic</a>
         </div>
+    </nav>
 
-        <div class="blog-index-posts">
+    <main class="page-content">
+        <div class="container">
+            <div class="page-hero">
+                <span class="label">What's new</span>
+                <h1>Blog</h1>
+                <p class="subtitle">Feature updates and release notes for Random Run, BikeRight, and Go for a Walk.</p>
+            </div>
 
-            <a href="random-run/a-fresh-look.html" class="blog-card">
-                <div class="blog-card-meta">
-                    <span class="blog-card-app blog-card-app--run">Random Run</span>
-                    <span class="blog-card-date">April 9, 2026</span>
-                </div>
-                <div class="blog-card-title">A Fresh Look for Random Run</div>
-                <div class="blog-card-excerpt">Clean Sprint is here — bright surfaces, coral accents, and a design built around getting you out the door faster.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
+            <div class="blog-index-posts">
+                <a href="random-run/a-fresh-look.html" class="blog-index-card blog-index-card--run">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">Random Run</span>
+                        <span class="blog-index-date">April 9, 2026</span>
+                    </div>
+                    <div class="blog-index-title">A Fresh Look for Random Run</div>
+                    <p class="blog-index-excerpt">Clean Sprint is here — bright surfaces, coral accents, and a design built around getting you out the door faster.</p>
+                </a>
 
-            <a href="bikeright/destinations-and-apple-watch.html" class="blog-card">
-                <div class="blog-card-meta">
-                    <span class="blog-card-app blog-card-app--bike">BikeRight</span>
-                    <span class="blog-card-date">April 9, 2026</span>
-                </div>
-                <div class="blog-card-title">Destinations & Apple Watch — Safe Rides Just Got More Flexible</div>
-                <div class="blog-card-excerpt">One-way trips to any destination, scored by safety. Plus a standalone Apple Watch app with haptic turn-by-turn navigation.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
+                <a href="bikeright/destinations-and-apple-watch.html" class="blog-index-card blog-index-card--ride">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">BikeRight</span>
+                        <span class="blog-index-date">April 9, 2026</span>
+                    </div>
+                    <div class="blog-index-title">Destinations & Apple Watch — Safe Rides Just Got More Flexible</div>
+                    <p class="blog-index-excerpt">One-way trips to any destination, scored by safety. Plus a standalone Apple Watch app with haptic turn-by-turn navigation.</p>
+                </a>
 
-            <a href="bikeright/a-blog-and-a-few-fixes.html" class="blog-card">
-                <div class="blog-card-meta">
-                    <span class="blog-card-app blog-card-app--bike">BikeRight</span>
-                    <span class="blog-card-date">March 28, 2026</span>
-                </div>
-                <div class="blog-card-title">A New Blog and a Few Fixes</div>
-                <div class="blog-card-excerpt">BikeRight now has a blog for updates and release notes — plus corrected App Store links and a favicon fix.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
+                <a href="bikeright/a-blog-and-a-few-fixes.html" class="blog-index-card blog-index-card--ride">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">BikeRight</span>
+                        <span class="blog-index-date">March 28, 2026</span>
+                    </div>
+                    <div class="blog-index-title">A New Blog and a Few Fixes</div>
+                    <p class="blog-index-excerpt">BikeRight now has a blog for updates and release notes — plus corrected App Store links and a favicon fix.</p>
+                </a>
 
-            <a href="random-run/apple-watch.html" class="blog-card">
-                <div class="blog-card-meta">
-                    <span class="blog-card-app blog-card-app--run">Random Run</span>
-                    <span class="blog-card-date">March 25, 2026</span>
-                </div>
-                <div class="blog-card-title">Random Run Now Works on Apple Watch</div>
-                <div class="blog-card-excerpt">Generate routes, get turn-by-turn directions, and track your run — all from your wrist. No phone required.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
+                <a href="random-run/apple-watch.html" class="blog-index-card blog-index-card--run">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">Random Run</span>
+                        <span class="blog-index-date">March 25, 2026</span>
+                    </div>
+                    <div class="blog-index-title">Random Run Now Works on Apple Watch</div>
+                    <p class="blog-index-excerpt">Generate routes, get turn-by-turn directions, and track your run — all from your wrist. No phone required.</p>
+                </a>
 
-            <a href="random-run/live-activities-and-localization.html" class="blog-card">
-                <div class="blog-card-meta">
-                    <span class="blog-card-app blog-card-app--run">Random Run</span>
-                    <span class="blog-card-date">March 25, 2026</span>
-                </div>
-                <div class="blog-card-title">Live Activities, Dynamic Island & Now in French and German</div>
-                <div class="blog-card-excerpt">Run with your screen locked. Plus, Random Run is now fully localized in French and German.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
+                <a href="random-run/live-activities-and-localization.html" class="blog-index-card blog-index-card--run">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">Random Run</span>
+                        <span class="blog-index-date">March 25, 2026</span>
+                    </div>
+                    <div class="blog-index-title">Live Activities, Dynamic Island & Now in French and German</div>
+                    <p class="blog-index-excerpt">Run with your screen locked. Plus, Random Run is now fully localized in French and German.</p>
+                </a>
 
-            <a href="bikeright/out-of-beta-with-live-activities.html" class="blog-card">
-                <div class="blog-card-meta">
-                    <span class="blog-card-app blog-card-app--bike">BikeRight</span>
-                    <span class="blog-card-date">March 25, 2026</span>
-                </div>
-                <div class="blog-card-title">BikeRight Is Out of Beta — Plus Live Activities & Dynamic Island</div>
-                <div class="blog-card-excerpt">Beta testing is done. BikeRight is now available to everyone, with Live Activities and Dynamic Island support.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
-
+                <a href="bikeright/out-of-beta-with-live-activities.html" class="blog-index-card blog-index-card--ride">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">BikeRight</span>
+                        <span class="blog-index-date">March 25, 2026</span>
+                    </div>
+                    <div class="blog-index-title">BikeRight Is Out of Beta — Plus Live Activities & Dynamic Island</div>
+                    <p class="blog-index-excerpt">Beta testing is done. BikeRight is now available to everyone, with Live Activities and Dynamic Island support.</p>
+                </a>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="../app-icon.png" alt="Play in Traffic" class="logo-icon" style="width:28px;height:28px;border-radius:6px;">
-                <span>Play in Traffic</span>
-            </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">Play in Traffic</div>
             <div class="footer-links">
                 <a href="../random-run.html">Random Run</a>
                 <a href="../bikeright.html">BikeRight</a>
@@ -146,9 +134,7 @@
                 <a href="../about.html">About</a>
                 <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
             </div>
-            <div class="footer-copy">
-                <p>© 2026 Play in Traffic</p>
-            </div>
+            <div class="footer-copy">© 2026 Play in Traffic</div>
         </div>
     </footer>
 </body>

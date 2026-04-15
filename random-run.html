@@ -14,15 +14,18 @@
     <meta property="og:image" content="https://playintraffic.ca/app-icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Random Run – Free Running Route Generator App for iOS & Apple Watch">
-    <meta name="twitter:description" content="Generate random running routes wherever you are. Set your distance or time, get three unique loop routes, and run with turn-by-turn navigation. Free for iOS and Apple Watch.">
+    <meta name="twitter:description" content="Generate random running routes wherever you are. Free for iOS and Apple Watch.">
     <meta name="twitter:image" content="https://playintraffic.ca/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=DM+Sans:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/route-lines.css">
+    <link rel="stylesheet" href="css/product-page.css">
     <link rel="apple-touch-icon" sizes="180x180" href="app-icon.png">
     <link rel="icon" type="image/png" href="app-icon.png">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="70251b7d-b076-42d7-82d0-01856cd589fa"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -30,19 +33,11 @@
         "name": "Random Run",
         "operatingSystem": "iOS 17.6+",
         "applicationCategory": "HealthApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "description": "Generate random running routes wherever you are. Set your distance or time, get three unique loop routes, and run with turn-by-turn navigation. Free for iOS and Apple Watch.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Generate random running routes wherever you are. Set your distance or time, get three unique loop routes, and run with turn-by-turn navigation.",
         "url": "https://playintraffic.ca/random-run.html",
         "downloadUrl": "https://apps.apple.com/app/random-run/id6755962631",
-        "author": {
-            "@type": "Organization",
-            "name": "Play in Traffic",
-            "url": "https://playintraffic.ca"
-        }
+        "author": { "@type": "Organization", "name": "Play in Traffic", "url": "https://playintraffic.ca" }
     }
     </script>
     <script type="application/ld+json">
@@ -53,325 +48,328 @@
             {
                 "@type": "Question",
                 "name": "Is Random Run free?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is available from day one."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is available from day one." }
             },
             {
                 "@type": "Question",
                 "name": "Does Random Run work on Apple Watch?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. Random Run runs natively on Apple Watch as a standalone app. You can generate routes, get turn-by-turn directions, and track your run entirely from your wrist — no phone needed."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Random Run runs natively on Apple Watch as a standalone app. You can generate routes, get turn-by-turn directions, and track your run entirely from your wrist — no phone needed." }
             },
             {
                 "@type": "Question",
                 "name": "Does Random Run track my location or collect my data?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind." }
             },
             {
                 "@type": "Question",
                 "name": "Is there an Android version?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Not yet — Random Run is iOS only for now. If you'd like to see an Android version, let us know at playintraffic.ca@gmail.com. It helps us prioritize."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Not yet — Random Run is iOS only for now. If you'd like to see an Android version, let us know at playintraffic.ca@gmail.com." }
             },
             {
                 "@type": "Question",
                 "name": "How does the route generation work?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Tell Random Run how far or how long you want to run. It generates three unique loop routes starting and ending at your current location. If you connect Apple Health, routes are personalized to your running pace."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Tell Random Run how far or how long you want to run. It generates three unique loop routes starting and ending at your current location. If you connect Apple Health, routes are personalized to your running pace." }
             }
         ]
     }
     </script>
 </head>
-<body>
-    <header class="hero">
-        <nav>
-            <div class="nav-left">
-                <a href="index.html" class="back-link">← All Apps</a>
-                <div class="logo">
-                    <img src="app-icon.png" alt="Random Run" class="logo-icon">
-                    <span class="logo-text">Random Run</span>
-                </div>
-            </div>
-            <div class="sibling-dropdown">
-                <button class="sibling-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                    <span class="sibling-dropdown-label">Also by us</span>
-                    <span class="sibling-dropdown-title">Our Apps ▾</span>
-                </button>
-                <div class="sibling-dropdown-menu" role="menu">
-                    <a href="bikeright.html" class="sibling-dropdown-item" role="menuitem">
-                        <img src="bikeright-icon.png" alt="BikeRight">
-                        <div class="sibling-dropdown-item-text">
-                            <span class="sibling-dropdown-item-name">BikeRight</span>
-                            <span class="sibling-dropdown-item-desc">Safe bike loops for your city</span>
-                        </div>
-                    </a>
-                    <a href="go-for-a-walk.html" class="sibling-dropdown-item" role="menuitem">
-                        <img src="walk-icon.png" alt="Go for a Walk">
-                        <div class="sibling-dropdown-item-text">
-                            <span class="sibling-dropdown-item-name">Go for a Walk</span>
-                            <span class="sibling-dropdown-item-desc">Explore new walks near you</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">Run somewhere</span>
-                <span class="title-line title-accent">new today.</span>
-            </h1>
-            <p class="hero-description">
-                Generate random running routes wherever you are, based on how far or for how long you want to run.
-            </p>
-            <a href="https://apps.apple.com/app/random-run/id6755962631" class="download-btn" target="_blank" rel="noopener" data-umami-event="download-click-random-run">
-                <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
-                <span>Download on the App Store</span>
-            </a>
-        </div>
-        
-        <div class="scroll-hint" aria-hidden="true">
-            <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-            </svg>
-        </div>
-        
-        <div class="hero-visual">
-            <div class="route-animation">
-                <svg viewBox="0 0 400 300" class="route-svg">
-                    <defs>
-                        <linearGradient id="routeGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#448AFF"/>
-                            <stop offset="50%" style="stop-color:#00E676"/>
-                            <stop offset="100%" style="stop-color:#FFAB00"/>
-                        </linearGradient>
-                    </defs>
-                    <path class="route-path" d="M50,250 Q100,200 150,220 T250,180 T300,120 T350,150" fill="none" stroke="url(#routeGradient)" stroke-width="4" stroke-linecap="round"/>
-                    <circle class="runner-dot" cx="50" cy="250" r="8" fill="#00E676"/>
-                    <circle class="start-marker" cx="50" cy="250" r="12" fill="none" stroke="#00E676" stroke-width="2"/>
-                    <circle class="end-marker" cx="350" cy="150" r="6" fill="#FFAB00"/>
-                </svg>
-            </div>
-        </div>
-    </header>
+<body class="page--run">
 
-    <section class="how-it-works">
-        <div class="section-header">
-            <span class="section-tag">Dead simple</span>
-            <h2>How it works</h2>
+    <!-- ── Nav ───────────────────────────────────────── -->
+    <nav class="site-nav">
+        <div class="container">
+            <a href="index.html" class="nav-back">← Play in Traffic</a>
+            <div class="nav-brand">
+                <img src="app-icon.png" alt="Random Run">
+                <span>Random Run</span>
+            </div>
+            <button class="nav-apps-toggle" aria-expanded="false" aria-haspopup="true">Our Apps ▾</button>
+            <div class="nav-dropdown" role="menu">
+                <a href="bikeright.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="bikeright-icon.png" alt="BikeRight">
+                    <div>
+                        <span class="nav-dropdown-item-name">BikeRight</span>
+                        <span class="nav-dropdown-item-desc">Safe bike loops for your city</span>
+                    </div>
+                </a>
+                <a href="go-for-a-walk.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="walk-icon.png" alt="Go for a Walk">
+                    <div>
+                        <span class="nav-dropdown-item-name">Go for a Walk</span>
+                        <span class="nav-dropdown-item-desc">Explore new walks near you</span>
+                    </div>
+                </a>
+            </div>
+            <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h3>Pick your goal</h3>
-                    <p>Want to run 5 kilometers? Only have 30 minutes? Choose distance or duration—whatever fits your day.</p>
-                </div>
+    </nav>
+    <div class="mobile-panel" role="dialog" aria-label="Navigation">
+        <a href="index.html">← Play in Traffic</a>
+        <a href="bikeright.html"><img src="bikeright-icon.png" alt="">BikeRight</a>
+        <a href="go-for-a-walk.html"><img src="walk-icon.png" alt="">Go for a Walk</a>
+    </div>
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Run somewhere<br>new today.</h1>
+                <p class="product-hero-desc">Generate random running routes wherever you are, based on how far or for how long you want to run.</p>
+                <a href="https://apps.apple.com/app/random-run/id6755962631" class="btn-appstore" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    <span>Download on the App Store</span>
+                </a>
             </div>
-            
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h3>One tap, three routes</h3>
-                    <p>One tap. That's it. We'll create three unique loop routes starting and ending right where you are.</p>
-                </div>
+            <div class="product-hero-screenshot reveal">
+                <img src="screenshots/random-run/02_Route_Preview.png" alt="Random Run three-route preview screen" loading="eager">
             </div>
-            
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h3>Start running</h3>
-                    <p>Pick one and go. Follow the route on your screen with turn-by-turn navigation. Discover streets you've never seen. Find your new fave.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="duration-note">
-            <div class="note-icon">⏱</div>
-            <p><strong>Pressed for time?</strong> Say yes to connecting HealthKit and we'll calculate a route that's personalized for how fast you run.</p>
         </div>
     </section>
 
-    <section class="screenshots">
-        <div class="screenshots-header">
-            <span class="section-tag">See it in action</span>
-            <h2 class="section-header" style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--color-gray-900); margin-top: 0.35rem;">The whole run, start to finish.</h2>
-        </div>
-        <div class="screenshots-track-wrap">
-            <div class="screenshots-scroll">
-            <div class="screenshots-inner">
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">Dead simple</span>
+                <h2>How it works</h2>
+            </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/random-run/01_Distance_Picker.png" alt="Random Run distance picker screen" loading="lazy">
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
                     </div>
+                    <div class="step-body">
+                        <h3>Pick your goal</h3>
+                        <p>Want to run 5 kilometers? Only have 30 minutes? Choose distance or duration — whatever fits your day.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>One tap, three routes</h3>
+                        <p>One tap. That's it. We'll create three unique loop routes starting and ending right where you are.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Start running</h3>
+                        <p>Pick one and go. Follow the route on your screen with turn-by-turn navigation. Discover streets you've never seen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout-box reveal">
+                <span style="font-size: 1.5rem;">⏱</span>
+                <p><strong>Pressed for time?</strong> Say yes to connecting HealthKit and we'll calculate a route that's personalized for how fast you run.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Screenshots ───────────────────────────────── -->
+    <section class="screenshots">
+        <div class="container">
+            <div class="screenshots-header reveal">
+                <span class="label">See it in action</span>
+                <h2>The whole run, start to finish.</h2>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/random-run/01_Distance_Picker.png" alt="Random Run distance picker screen" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Set your goal</div>
-                        <div class="screenshot-caption-sub">5 km, 30 minutes—whatever fits your day. Distance or duration, your call.</div>
+                        <p class="screenshot-caption-desc">5 km, 30 minutes — whatever fits your day. Distance or duration, your call.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/random-run/02_Route_Preview.png" alt="Random Run route preview map" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/random-run/02_Route_Preview.png" alt="Random Run route preview map" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Three routes, instantly</div>
-                        <div class="screenshot-caption-sub">Pick the one that catches your eye—or hit "3 more" and keep exploring.</div>
+                        <p class="screenshot-caption-desc">Pick the one that catches your eye — or hit "3 more" and keep exploring.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/random-run/03_Turn_By_Turn.png" alt="Random Run turn-by-turn navigation" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/random-run/03_Turn_By_Turn.png" alt="Random Run turn-by-turn navigation" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Never get lost</div>
-                        <div class="screenshot-caption-sub">Turn-by-turn directions as you run. Eyes up, feet moving.</div>
+                        <p class="screenshot-caption-desc">Turn-by-turn directions as you run. Eyes up, feet moving.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/random-run/04_Run_Summary.png" alt="Random Run summary screen" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/random-run/04_Run_Summary.png" alt="Random Run summary screen" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Run complete.</div>
-                        <div class="screenshot-caption-sub">Time, distance, pace—everything you want to see right after you finish.</div>
+                        <p class="screenshot-caption-desc">Time, distance, pace — everything you want to see right after you finish.</p>
                     </div>
                 </div>
 
-                <div class="screenshot-item">
-                    <div class="screenshot-img-wrap">
-                        <img src="screenshots/random-run/05_Live_Activity.png" alt="Random Run Live Activity on lock screen" loading="lazy">
-                    </div>
+                <div class="screenshot-card reveal">
+                    <img src="screenshots/random-run/05_Live_Activity.png" alt="Random Run Live Activity on lock screen" loading="lazy">
                     <div class="screenshot-caption">
                         <div class="screenshot-caption-title">Live Activity & Dynamic Island</div>
-                        <div class="screenshot-caption-sub">Track your run from the lock screen or Dynamic Island. Eyes on the road.</div>
+                        <p class="screenshot-caption-desc">Track your run from the lock screen or Dynamic Island. Eyes on the road.</p>
                     </div>
                 </div>
-
-            </div>
             </div>
         </div>
     </section>
 
-    <section class="specs">
-        <div class="specs-content">
-            <h2>Technical details</h2>
-            <div class="spec-grid">
-                <div class="spec-item">
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <h2 style="margin-bottom: 32px;">Your run stays yours.</h2>
+                <div class="privacy-points">
+                    <div class="privacy-point">
+                        <div class="privacy-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <div>
+                            <h3>No account required</h3>
+                            <p>Open the app and go. No sign-up, no login, no profile.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="privacy-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h3>Location never leaves your phone</h3>
+                            <p>Route generation happens entirely on-device. Your GPS coordinates are never sent anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="privacy-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                        </div>
+                        <div>
+                            <h3>Zero tracking, zero ads</h3>
+                            <p>No analytics, no behavioral data, no advertising. What you do with the app is your business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
                     <span class="spec-label">Platform</span>
                     <span class="spec-value">iOS 17.6+</span>
                 </div>
-                <div class="spec-item">
+                <div>
                     <span class="spec-label">Price</span>
                     <span class="spec-value">Free</span>
                 </div>
-                <div class="spec-item">
+                <div>
                     <span class="spec-label">Apple Watch</span>
-                    <span class="spec-value">Yes! No phone needed.</span>
+                    <span class="spec-value">Yes — no phone needed.</span>
                 </div>
             </div>
-            
-            <div class="android-note">
-                <p>🤖 <strong>Android user who's run out of ideas for amazing runs?</strong> We hear you. iOS only for now, but let us know you're out there—it helps us prioritize.</p>
-                <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Random%20Run" class="android-link" data-umami-event="android-interest-random-run">Tell us you want Android →</a>
+        </div>
+    </section>
+
+    <!-- ── What's New ────────────────────────────────── -->
+    <section class="whats-new">
+        <div class="container">
+            <div class="whats-new-header reveal">
+                <span class="label">Latest news</span>
+                <h2>What's new</h2>
+            </div>
+            <div class="blog-cards-grid">
+                <a href="blog/random-run/a-fresh-look.html" class="blog-card reveal">
+                    <div class="blog-card-date">April 9, 2026</div>
+                    <div class="blog-card-title">A Fresh Look for Random Run</div>
+                    <p class="blog-card-excerpt">Clean Sprint is here — bright surfaces, coral accents, and a design built around getting you out the door faster.</p>
+                </a>
+                <a href="blog/random-run/apple-watch.html" class="blog-card reveal">
+                    <div class="blog-card-date">March 25, 2026</div>
+                    <div class="blog-card-title">Random Run Now Works on Apple Watch</div>
+                    <p class="blog-card-excerpt">Generate routes, get turn-by-turn directions, and track your run — all from your wrist. No phone required.</p>
+                </a>
+                <a href="blog/random-run/live-activities-and-localization.html" class="blog-card reveal">
+                    <div class="blog-card-date">March 25, 2026</div>
+                    <div class="blog-card-title">Live Activities, Dynamic Island & Now in French and German</div>
+                    <p class="blog-card-excerpt">Run with your screen locked. Plus, Random Run is now fully localized in French and German.</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="blog-section">
-        <div class="section-header">
-            <span class="section-tag">Latest news</span>
-            <h2>What's new</h2>
-        </div>
-
-        <div class="blog-cards">
-            <a href="blog/random-run/a-fresh-look.html" class="blog-card">
-                <div class="blog-card-date">April 9, 2026</div>
-                <div class="blog-card-title">A Fresh Look for Random Run</div>
-                <div class="blog-card-excerpt">Clean Sprint is here — bright surfaces, coral accents, and a design built around getting you out the door faster.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
-            <a href="blog/random-run/apple-watch.html" class="blog-card">
-                <div class="blog-card-date">March 25, 2026</div>
-                <div class="blog-card-title">Random Run Now Works on Apple Watch</div>
-                <div class="blog-card-excerpt">Generate routes, get turn-by-turn directions, and track your run — all from your wrist. No phone required.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
-            <a href="blog/random-run/live-activities-and-localization.html" class="blog-card">
-                <div class="blog-card-date">March 25, 2026</div>
-                <div class="blog-card-title">Live Activities, Dynamic Island & Now in French and German</div>
-                <div class="blog-card-excerpt">Run with your screen locked. Plus, Random Run is now fully localized in French and German.</div>
-                <span class="blog-card-read-more">Read more →</span>
-            </a>
-        </div>
-    </section>
-
+    <!-- ── FAQ ───────────────────────────────────────── -->
     <section class="faq-section">
-        <div class="section-header">
-            <span class="section-tag">Common questions</span>
-            <h2>FAQ</h2>
-        </div>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary class="faq-question">Is Random Run free?</summary>
-                <div class="faq-answer"><p>Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is available from day one.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Does Random Run work on Apple Watch?</summary>
-                <div class="faq-answer"><p>Yes. Random Run runs natively on Apple Watch as a standalone app. You can generate routes, get turn-by-turn directions, and track your run entirely from your wrist — no phone needed.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Does Random Run track my location or collect my data?</summary>
-                <div class="faq-answer"><p>No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Is there an Android version?</summary>
-                <div class="faq-answer"><p>Not yet — Random Run is iOS only for now. If you'd like to see an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Random%20Run">let us know</a>. It helps us prioritize.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">How does the route generation work?</summary>
-                <div class="faq-answer"><p>Tell Random Run how far or how long you want to run. It generates three unique loop routes starting and ending at your current location. If you connect Apple Health, routes are personalized to your running pace.</p></div>
-            </details>
+        <div class="container">
+            <div class="faq-section-header reveal">
+                <span class="label">Common questions</span>
+                <h2>FAQ</h2>
+            </div>
+            <div class="reveal">
+                <details class="faq-item">
+                    <summary class="faq-question">Is Random Run free?</summary>
+                    <div class="faq-answer"><p>Yes — completely free. No subscriptions, no in-app purchases, no ads. Every feature is available from day one.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Does Random Run work on Apple Watch?</summary>
+                    <div class="faq-answer"><p>Yes. Random Run runs natively on Apple Watch as a standalone app. You can generate routes, get turn-by-turn directions, and track your run entirely from your wrist — no phone needed.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Does Random Run track my location or collect my data?</summary>
+                    <div class="faq-answer"><p>No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Is there an Android version?</summary>
+                    <div class="faq-answer"><p>Not yet — Random Run is iOS only for now. If you'd like to see an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Random%20Run">let us know</a>. It helps us prioritize.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">How does the route generation work?</summary>
+                    <div class="faq-answer"><p>Tell Random Run how far or how long you want to run. It generates three unique loop routes starting and ending at your current location. If you connect Apple Health, routes are personalized to your running pace.</p></div>
+                </details>
+            </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="cta-content">
+    <!-- ── Philosophy ────────────────────────────────── -->
+    <div class="product-philosophy">
+        <div class="container">
+            <p>No accounts · No tracking · No ads · Ever</p>
+        </div>
+    </div>
+
+    <!-- ── Final CTA ─────────────────────────────────── -->
+    <section class="final-cta">
+        <div class="container">
+            <img src="app-icon.png" alt="Random Run" class="final-cta-icon">
             <h2>Your next run<br>starts here.</h2>
-            <p class="pre-cta-reassurance">No account, no login — tap once and run.</p>
-            <a href="https://apps.apple.com/app/random-run/id6755962631" class="download-btn download-btn-large" target="_blank" rel="noopener" data-umami-event="download-click-random-run">
-                <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
+            <p>No account, no login — tap once and run.</p>
+            <a href="https://apps.apple.com/app/random-run/id6755962631" class="btn-appstore" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 <span>Download Free on App Store</span>
             </a>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="app-icon.png" alt="Random Run" class="logo-icon">
-                <span>Random Run</span>
-            </div>
+    <!-- ── Footer ────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">Random Run</div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="blog/">Blog</a>
@@ -380,94 +378,12 @@
                 <a href="about.html">About</a>
                 <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
             </div>
-            <div class="footer-copy">
-                <p>© 2026 Random Run. Made for runners who crave variety.</p>
-            </div>
+            <div class="footer-copy">© 2026 Random Run. Made for runners who crave variety.</div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const routePath = document.querySelector('.route-path');
-            const runnerDot = document.querySelector('.runner-dot');
-            
-            if (routePath && runnerDot) {
-                const pathLength = routePath.getTotalLength();
-                
-                routePath.style.strokeDasharray = pathLength;
-                routePath.style.strokeDashoffset = pathLength;
-                
-                setTimeout(() => {
-                    routePath.style.transition = 'stroke-dashoffset 2s ease-out';
-                    routePath.style.strokeDashoffset = '0';
-                    
-                    let progress = 0;
-                    const animateRunner = () => {
-                        if (progress <= 1) {
-                            const point = routePath.getPointAtLength(progress * pathLength);
-                            runnerDot.setAttribute('cx', point.x);
-                            runnerDot.setAttribute('cy', point.y);
-                            progress += 0.005;
-                            requestAnimationFrame(animateRunner);
-                        }
-                    };
-                    animateRunner();
-                }, 500);
-            }
-            
-            const steps = document.querySelectorAll('.step');
-            steps.forEach((step, index) => {
-                step.style.animationDelay = `${0.8 + index * 0.15}s`;
-            });
-            
-            const scrollHint = document.querySelector('.scroll-hint');
-            const howItWorks = document.querySelector('.how-it-works');
-            
-            function checkScrollHint() {
-                if (!scrollHint || !howItWorks) return;
-                const rect = howItWorks.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    scrollHint.classList.add('hidden');
-                } else {
-                    scrollHint.classList.remove('hidden');
-                }
-            }
-            
-            checkScrollHint();
-            window.addEventListener('scroll', checkScrollHint);
-            window.addEventListener('resize', checkScrollHint);
-
-            const dropdown = document.querySelector('.sibling-dropdown');
-            const toggle = document.querySelector('.sibling-dropdown-toggle');
-            if (dropdown && toggle) {
-                toggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const open = dropdown.classList.toggle('open');
-                    toggle.setAttribute('aria-expanded', open);
-                });
-                document.addEventListener('click', () => {
-                    dropdown.classList.remove('open');
-                    toggle.setAttribute('aria-expanded', 'false');
-                });
-            }
-
-            const appName = 'random-run';
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.tagName === 'HEADER'
-                            ? 'hero'
-                            : entry.target.className.split(' ')[0];
-                        if (typeof umami !== 'undefined') {
-                            umami.track(`section-view-${id}`, { app: appName });
-                        }
-                        sectionObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-            document.querySelectorAll('header.hero, section.how-it-works, section.screenshots, section.specs, section.blog-section, section.cta')
-                .forEach((el) => sectionObserver.observe(el));
-        });
-    </script>
+    <script src="js/route-animation.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 </body>
 </html>
