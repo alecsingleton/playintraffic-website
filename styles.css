@@ -2151,6 +2151,134 @@ footer {
 }
 
 /* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+
+.faq-section {
+    padding: var(--space-2xl) var(--space-lg);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.faq-list {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.faq-item {
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+    border-color: transparent;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::after {
+    content: "+";
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-gray-400);
+    flex-shrink: 0;
+    margin-left: var(--space-md);
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-question::after {
+    content: "−";
+}
+
+.faq-question:hover {
+    background: var(--color-gray-50);
+}
+
+.faq-answer {
+    padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.faq-answer p {
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.faq-answer a {
+    color: #059652;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.bikeright-theme .faq-item {
+    border-color: var(--br-border);
+}
+
+.bikeright-theme .faq-item[open] {
+    border-color: transparent;
+    box-shadow: 0 4px 20px rgba(27, 37, 54, 0.06);
+}
+
+.bikeright-theme .faq-question {
+    color: var(--br-navy);
+}
+
+.bikeright-theme .faq-question:hover {
+    background: var(--br-blush);
+}
+
+.bikeright-theme .faq-answer p {
+    color: var(--br-text-secondary);
+}
+
+.bikeright-theme .faq-answer a {
+    color: var(--br-rose);
+}
+
+.walk-theme .faq-item {
+    border-color: var(--wk-border);
+}
+
+.walk-theme .faq-item[open] {
+    border-color: transparent;
+    box-shadow: 0 4px 20px rgba(45, 74, 62, 0.06);
+}
+
+.walk-theme .faq-question {
+    color: var(--wk-forest);
+}
+
+.walk-theme .faq-question:hover {
+    background: var(--wk-blush);
+}
+
+.walk-theme .faq-answer p {
+    color: var(--wk-text-secondary);
+}
+
+.walk-theme .faq-answer a {
+    color: var(--wk-sage);
+}
+
+/* ==========================================================================
    Blog Section (on app landing pages)
    ========================================================================== */
 
@@ -2269,6 +2397,81 @@ footer {
 
 .bikeright-theme .blog-post-body a {
     color: var(--br-rose);
+}
+
+/* ==========================================================================
+   Blog Index Page
+   ========================================================================== */
+
+.blog-index-page {
+    background: var(--color-white);
+}
+
+.blog-index-header {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.blog-index-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.blog-index-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.blog-index-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-gray-900);
+    margin-top: var(--space-sm);
+}
+
+.blog-index-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-gray-600);
+    margin-top: var(--space-sm);
+    max-width: 520px;
+}
+
+.blog-index-posts {
+    display: grid;
+    gap: var(--space-md);
+    padding-bottom: var(--space-2xl);
+}
+
+.blog-card-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.blog-card-app {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.blog-card-app--run {
+    background: rgba(0, 230, 118, 0.1);
+    color: #059652;
+}
+
+.blog-card-app--bike {
+    background: rgba(212, 98, 122, 0.1);
+    color: #B84D65;
+}
+
+.blog-card-app--walk {
+    background: rgba(107, 144, 128, 0.1);
+    color: #4A7A68;
 }
 
 /* ==========================================================================
