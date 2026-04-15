@@ -1144,6 +1144,8 @@ footer {
     overflow: hidden;
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     animation: fadeInUp 0.7s ease-out backwards;
+    height: 100%;
+    cursor: default;
 }
 
 .hub-app-card:nth-child(2) {
@@ -1155,20 +1157,19 @@ footer {
 }
 
 .hub-app-card:hover {
-    transform: translateY(-6px);
-    border-color: transparent;
+    border-color: var(--color-gray-200);
 }
 
 .hub-app-card--run:hover {
-    box-shadow: 0 24px 70px rgba(0, 230, 118, 0.15);
+    box-shadow: none;
 }
 
 .hub-app-card--bike:hover {
-    box-shadow: 0 24px 70px rgba(52, 184, 122, 0.12);
+    box-shadow: none;
 }
 
 .hub-app-card--walk:hover {
-    box-shadow: 0 24px 70px rgba(107, 144, 128, 0.15);
+    box-shadow: none;
 }
 
 /* Coloured top accent bar */
@@ -1254,12 +1255,8 @@ footer {
 .hub-app-visual {
     padding: 0 var(--space-lg);
     opacity: 0.65;
-    transition: opacity 0.3s ease;
 }
 
-.hub-app-card:hover .hub-app-visual {
-    opacity: 1;
-}
 
 .hub-visual-svg {
     width: 100%;
@@ -1267,12 +1264,67 @@ footer {
     display: block;
 }
 
-/* Card footer */
+/* Card footer — anchored to bottom */
 .hub-app-card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-md) var(--space-xl) var(--space-xl);
+    padding: var(--space-md) var(--space-xl) 0;
+    margin-top: auto;
+}
+
+.hub-app-card-footer--center {
+    justify-content: center;
+}
+
+
+/* App Store download button inside card */
+.hub-app-card-download {
+    padding: var(--space-sm) var(--space-xl) var(--space-xl);
+}
+
+.hub-card-download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: var(--color-surface);
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(18, 18, 18, 0.12);
+    text-decoration: none;
+}
+
+.hub-card-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(18, 18, 18, 0.2);
+}
+
+.hub-card-download-btn .apple-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.hub-app-cta--block {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-gray-400);
+    text-decoration: none;
+    text-align: center;
+    padding: 0.7rem 0;
+    transition: color 0.2s ease;
+}
+
+.hub-app-cta--block:hover {
+    color: #4A7A68;
 }
 
 .hub-app-pill {
@@ -1305,17 +1357,19 @@ footer {
     font-weight: 600;
     color: var(--color-gray-400);
     transition: color 0.2s ease;
+    text-decoration: none;
 }
 
-.hub-app-card--run:hover .hub-app-cta {
+.hub-app-cta:hover,
+.hub-app-card--run .hub-app-cta:hover {
     color: #059652;
 }
 
-.hub-app-card--bike:hover .hub-app-cta {
+.hub-app-card--bike .hub-app-cta:hover {
     color: #2A9D6A;
 }
 
-.hub-app-card--walk:hover .hub-app-cta {
+.hub-app-card--walk .hub-app-cta:hover {
     color: #4A7A68;
 }
 
@@ -2287,6 +2341,168 @@ footer {
 
 
 .blog-post-body a:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* ==========================================================================
+   Notify / Coming Soon Button (Go for a Walk pre-launch)
+   ========================================================================== */
+
+.coming-soon-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--wk-text-secondary, var(--color-gray-400));
+    margin-bottom: var(--space-sm);
+}
+
+.notify-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: 0.875rem 1.75rem;
+    background: var(--wk-forest, var(--color-surface));
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(45, 74, 62, 0.2);
+}
+
+.notify-btn:hover {
+    transform: translateY(-2px);
+    background: #3A5C4E;
+    box-shadow: 0 8px 30px rgba(45, 74, 62, 0.3);
+}
+
+.notify-btn .mail-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.notify-btn-large {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Homepage "Coming soon" Badge
+   ========================================================================== */
+
+.hub-coming-soon {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    background: rgba(107, 144, 128, 0.12);
+    color: #4A7A68;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   Homepage Privacy Line (below app cards)
+   ========================================================================== */
+
+.hub-privacy-line {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg) var(--space-2xl);
+    text-align: center;
+}
+
+.hub-privacy-line p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-gray-400);
+    letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   Pre-CTA Reassurance Line (product pages)
+   ========================================================================== */
+
+.pre-cta-reassurance {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-gray-600);
+    max-width: 480px;
+    margin: 0 auto var(--space-md);
+    line-height: 1.5;
+}
+
+.bikeright-theme .pre-cta-reassurance {
+    color: var(--br-text-secondary);
+}
+
+.walk-theme .pre-cta-reassurance {
+    color: var(--wk-text-secondary);
+}
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+.about-page {
+    background: var(--color-white);
+}
+
+.about-header {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.about-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.about-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.about-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-gray-900);
+}
+
+.about-body {
+    padding-bottom: var(--space-2xl);
+}
+
+.about-section {
+    margin-bottom: var(--space-xl);
+}
+
+.about-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    color: var(--color-gray-900);
+}
+
+.about-section p {
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.about-section a {
+    color: #059652;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.about-section a:hover {
     text-decoration-thickness: 2px;
 }
 
