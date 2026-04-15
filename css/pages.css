@@ -6,7 +6,7 @@
 
 .page-hero {
   padding: var(--section-pad-y) 0 48px;
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -27,24 +27,32 @@
 /* ── About Page ────────────────────────────────────── */
 
 .about-body {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
   padding-bottom: var(--section-pad-y);
 }
 
 .about-body section {
-  margin-bottom: 48px;
+  margin-bottom: 80px;
+}
+
+.about-body section:last-child {
+  margin-bottom: 0;
 }
 
 .about-body h2 {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .about-body p {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-secondary);
+}
+
+.about-body p + p {
+  margin-top: 16px;
 }
 
 .about-body a {
@@ -54,6 +62,33 @@
 }
 
 .about-body a:hover {
+  color: var(--warm-accent-hover);
+}
+
+.about-body .app-link--run { color: var(--signal-red); }
+.about-body .app-link--ride { color: var(--signal-green); }
+.about-body .app-link--walk { color: var(--signal-amber); }
+
+.about-body .app-link--run:hover { color: var(--signal-red); opacity: 0.8; }
+.about-body .app-link--ride:hover { color: var(--signal-green); opacity: 0.8; }
+.about-body .app-link--walk:hover { color: var(--signal-amber); opacity: 0.8; }
+
+.about-contact {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 0 var(--section-pad-y);
+}
+
+.about-contact a {
+  color: var(--warm-accent);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.about-contact a:hover {
   color: var(--warm-accent-hover);
 }
 

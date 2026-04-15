@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About – Play in Traffic</title>
-    <meta name="description" content="Play in Traffic builds apps for runners, cyclists, and walkers. No accounts, no tracking, no ads — just tools to help you get outside.">
+    <meta name="description" content="Play in Traffic builds free iOS apps for runners, cyclists, and walkers. No accounts, no tracking, no ads — just tools to help you get outside.">
     <link rel="canonical" href="https://playintraffic.ca/about.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Play in Traffic">
     <meta property="og:title" content="About – Play in Traffic">
-    <meta property="og:description" content="Play in Traffic builds apps for runners, cyclists, and walkers. No accounts, no tracking, no ads — just tools to help you get outside.">
+    <meta property="og:description" content="Play in Traffic builds free iOS apps for runners, cyclists, and walkers. No accounts, no tracking, no ads.">
     <meta property="og:url" content="https://playintraffic.ca/about.html">
     <meta property="og:image" content="https://playintraffic.ca/app-icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About – Play in Traffic">
-    <meta name="twitter:description" content="Play in Traffic builds apps for runners, cyclists, and walkers. No accounts, no tracking, no ads.">
+    <meta name="twitter:description" content="Play in Traffic builds free iOS apps for runners, cyclists, and walkers. No accounts, no tracking, no ads.">
     <meta name="twitter:image" content="https://playintraffic.ca/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,11 +27,48 @@
     <link rel="icon" type="image/png" href="app-icon.png">
 </head>
 <body>
-    <nav class="simple-nav">
+    <nav class="site-nav">
         <div class="container">
             <a href="index.html" class="nav-back">← Play in Traffic</a>
+            <div class="nav-brand">
+                <img src="app-icon.png" alt="Play in Traffic">
+                <span>About</span>
+            </div>
+            <button class="nav-apps-toggle" aria-expanded="false" aria-haspopup="true">Our Apps ▾</button>
+            <div class="nav-dropdown" role="menu">
+                <a href="random-run.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="app-icon.png" alt="Random Run">
+                    <div>
+                        <span class="nav-dropdown-item-name">Random Run</span>
+                        <span class="nav-dropdown-item-desc">New route, every time</span>
+                    </div>
+                </a>
+                <a href="bikeright.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="bikeright-icon.png" alt="BikeRight">
+                    <div>
+                        <span class="nav-dropdown-item-name">BikeRight</span>
+                        <span class="nav-dropdown-item-desc">Safer routes, scored and explained</span>
+                    </div>
+                </a>
+                <a href="go-for-a-walk.html" class="nav-dropdown-item" role="menuitem">
+                    <img src="walk-icon.png" alt="Go for a Walk">
+                    <div>
+                        <span class="nav-dropdown-item-name">Go for a Walk</span>
+                        <span class="nav-dropdown-item-desc">Same block, new streets</span>
+                    </div>
+                </a>
+            </div>
+            <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
+    <div class="mobile-panel" role="dialog" aria-label="Navigation">
+        <a href="index.html">← Play in Traffic</a>
+        <a href="random-run.html"><img src="app-icon.png" alt="">Random Run</a>
+        <a href="bikeright.html"><img src="bikeright-icon.png" alt="">BikeRight</a>
+        <a href="go-for-a-walk.html"><img src="walk-icon.png" alt="">Go for a Walk</a>
+    </div>
 
     <main class="page-content">
         <div class="container">
@@ -42,18 +79,25 @@
             <div class="about-body">
                 <section>
                     <h2>The name</h2>
-                    <p>We named the company Play in Traffic because that's literally what our apps help you do — run, ride, and walk through your city, safely. It started as a joke that stuck, and honestly it describes the mission better than anything polished would.</p>
+                    <p>Play in Traffic is what these apps help you do — run, ride, and walk through your city. The name stuck because it says what the apps are for better than anything polished would.</p>
                 </section>
 
                 <section>
                     <h2>Who's building this</h2>
-                    <p>Play in Traffic is a one-person project. The person behind it has spent years working in health tech and wearable products — building things that help people move more and stress less. This is the same idea, just without a boardroom.</p>
+                    <p>Play in Traffic is built by Alec Singleton, a product and engineering leader based in Toronto. Background in health tech and wearables — sensor hardware, health algorithms, consumer products.</p>
+                    <p>These apps started as a way to solve his own problems: wanting a new running route without planning one, wanting to know which streets are actually safe to bike, wanting a better walk without opening Google Maps. They turned out to be useful for other people too.</p>
                 </section>
 
                 <section>
                     <h2>Where we are</h2>
-                    <p>Three apps, all iOS, all free. <a href="random-run.html">Random Run</a> for runners, <a href="bikeright.html">BikeRight</a> for cyclists, and <a href="go-for-a-walk.html">Go for a Walk</a> for everyone. Each one is built around the same convictions: no accounts, no tracking, no ads. Your location stays on your phone. That's not a feature — it's just how things should work.</p>
+                    <p>Three apps, all iOS, all free.</p>
+                    <p><a href="random-run.html" class="app-link--run">Random Run</a> generates running routes — pick a distance, get three options, go. <a href="bikeright.html" class="app-link--ride">BikeRight</a> finds the safest cycling route to your destination, scored by real infrastructure. <a href="go-for-a-walk.html" class="app-link--walk">Go for a Walk</a> builds walking routes through your neighborhood with the stops you actually want to pass — parks, coffee, landmarks.</p>
+                    <p>No accounts, no tracking, no ads. Your location stays on your phone.</p>
                 </section>
+            </div>
+
+            <div class="about-contact">
+                <a href="mailto:playintraffic.ca@gmail.com">playintraffic.ca@gmail.com</a>
             </div>
         </div>
     </main>
@@ -61,14 +105,27 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-brand">Play in Traffic</div>
-            <div class="footer-links">
-                <a href="random-run.html">Random Run</a>
-                <a href="bikeright.html">BikeRight</a>
-                <a href="go-for-a-walk.html">Go for a Walk</a>
-                <a href="mailto:playintraffic.ca@gmail.com">Contact</a>
+            <div class="footer-icons">
+                <a href="random-run.html" aria-label="Random Run">
+                    <img src="app-icon.png" alt="Random Run">
+                </a>
+                <a href="bikeright.html" aria-label="BikeRight">
+                    <img src="bikeright-icon.png" alt="BikeRight">
+                </a>
+                <a href="go-for-a-walk.html" aria-label="Go for a Walk">
+                    <img src="walk-icon.png" alt="Go for a Walk">
+                </a>
             </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="blog/">Blog</a>
+            </div>
+            <div class="footer-email"><a href="mailto:playintraffic.ca@gmail.com">playintraffic.ca@gmail.com</a></div>
             <div class="footer-copy">© 2026 Play in Traffic</div>
         </div>
     </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 </body>
 </html>
