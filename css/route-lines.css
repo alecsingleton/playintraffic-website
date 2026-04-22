@@ -53,6 +53,25 @@
   height: 100%;
 }
 
+/* ── Full-page Walk Route ──────────────────────────── */
+
+.page-walk-route {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.page-walk-route svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 /* ── Convergence Dot ───────────────────────────────── */
 
 @media (prefers-reduced-motion: no-preference) {

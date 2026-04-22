@@ -40,24 +40,29 @@
 </head>
 <body>
 
+    <!-- ── Full-page Walk Route (path built in JS to match body dimensions) ── -->
+    <div class="page-walk-route" aria-hidden="true">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="route-line route-line--walk"
+                  d="M0,0"
+                  stroke-width="3" vector-effect="non-scaling-stroke"/>
+        </svg>
+    </div>
+
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="home-hero">
         <div class="hero-routes" aria-hidden="true">
             <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                 <!-- Random Run route — city-block geometry from top-left -->
                 <path class="route-line route-line--run" data-animate
-                      d="M-20,200 L120,200 L120,340 L280,340 L280,260 L420,260 L420,380 L560,380 L560,400"
+                      d="M-20,120 L120,120 L120,200 L260,200 L260,160 L400,160 L400,240 L540,240 L540,280 L600,280"
                       stroke-width="3"/>
                 <!-- BikeRight route — city-block geometry from top-right -->
                 <path class="route-line route-line--ride" data-animate data-delay="1"
-                      d="M1220,180 L1060,180 L1060,300 L900,300 L900,220 L760,220 L760,360 L640,360 L640,400"
-                      stroke-width="3"/>
-                <!-- Go for a Walk route — city-block geometry from bottom -->
-                <path class="route-line route-line--walk" data-animate data-delay="2"
-                      d="M600,820 L600,680 L520,680 L520,560 L600,560 L600,480 L600,400"
+                      d="M1220,120 L1060,120 L1060,200 L920,200 L920,160 L780,160 L780,240 L660,240 L660,280 L600,280"
                       stroke-width="3"/>
                 <!-- Convergence dot -->
-                <circle class="convergence-dot" cx="600" cy="400" r="5" fill="var(--warm-white)" opacity="0.7"/>
+                <circle class="convergence-dot" cx="600" cy="280" r="5" fill="var(--warm-white)" opacity="0.7"/>
             </svg>
         </div>
 
