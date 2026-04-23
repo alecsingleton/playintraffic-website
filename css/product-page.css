@@ -516,6 +516,186 @@
   color: var(--text-primary);
 }
 
+/* ── Feature Beat (big narrative sections) ─────────── */
+
+.feature-beat {
+  padding: var(--section-pad-y) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-beat + .feature-beat {
+  padding-top: 0;
+}
+
+.feature-beat-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.feature-beat--reverse .feature-beat-inner {
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature-beat--reverse .feature-beat-media {
+  order: 2;
+}
+
+.feature-beat-text .label {
+  margin-bottom: 16px;
+  display: block;
+}
+
+.feature-beat-text h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.feature-beat-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.feature-beat-text p:last-child {
+  margin-bottom: 0;
+}
+
+.feature-beat-text strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.feature-beat-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-beat-media img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radius-card);
+  border: 2px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.feature-beat-media::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 10%;
+  right: 10%;
+  height: 80px;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.page--run .feature-beat-media img { border-color: rgba(232, 89, 60, 0.4); }
+.page--ride .feature-beat-media img { border-color: rgba(45, 184, 122, 0.4); }
+
+.page--run .feature-beat-media::after { background: var(--signal-red-glow); }
+.page--ride .feature-beat-media::after { background: var(--signal-green-glow); }
+
+.feature-beat-footnote {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-top: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 1023px) {
+  .feature-beat-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .feature-beat--reverse .feature-beat-media {
+    order: 0;
+  }
+
+  .feature-beat-media img {
+    max-width: 360px;
+  }
+}
+
+/* ── Feature Beat: Lockup variant (no screenshot) ─── */
+
+.feature-beat-media--lockup::after {
+  display: none;
+}
+
+.strava-lockup {
+  width: 100%;
+  max-width: 420px;
+  padding: 56px 32px;
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.strava-lockup-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.strava-lockup-mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #FC4C02;
+}
+
+.strava-lockup-sublabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ── Ride Safe Intro (BikeRight Act 2 lead-in) ────── */
+
+.ride-safe-intro {
+  padding: var(--section-pad-y) 0 calc(var(--section-pad-y) / 2);
+  border-top: 1px solid var(--border);
+}
+
+.ride-safe-intro-inner {
+  max-width: 720px;
+}
+
+.ride-safe-intro h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.ride-safe-intro p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
 /* ── Safety Score Visual (BikeRight) ──────────────── */
 
 .safety-score-section {

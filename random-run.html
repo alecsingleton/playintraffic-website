@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Run – Free Running Route Generator App for iOS & Apple Watch</title>
-    <meta name="description" content="Pick a distance or a time. Get three routes you've never run. Every one starts and ends where you're standing. Free for iOS and Apple Watch.">
+    <title>Random Run – Free Running Route Generator for iPhone, Apple Watch & Strava</title>
+    <meta name="description" content="One tap to find a new route. One tap to run it on your wrist. Zero taps to log it to Strava. Free for iPhone and Apple Watch, privacy-first by default.">
     <link rel="canonical" href="https://playintraffic.ca/random-run.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Play in Traffic">
-    <meta property="og:title" content="Random Run – Free Running Route Generator App for iOS & Apple Watch">
-    <meta property="og:description" content="Pick a distance or a time. Get three routes you've never run. Every one starts and ends where you're standing. Free for iOS and Apple Watch.">
+    <meta property="og:title" content="Random Run – Free Running Route Generator for iPhone, Apple Watch & Strava">
+    <meta property="og:description" content="One tap to find a new route. One tap to run it on your wrist. Zero taps to log it to Strava. Free for iPhone and Apple Watch.">
     <meta property="og:url" content="https://playintraffic.ca/random-run.html">
     <meta property="og:image" content="https://playintraffic.ca/app-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Random Run – Free Running Route Generator App for iOS & Apple Watch">
-    <meta name="twitter:description" content="Pick a distance or a time. Get three routes you've never run. Free for iOS and Apple Watch.">
+    <meta name="twitter:title" content="Random Run – Free Running Route Generator for iPhone, Apple Watch & Strava">
+    <meta name="twitter:description" content="One tap to find a new route. One tap to run it on your wrist. Zero taps to log it to Strava. Free for iPhone and Apple Watch.">
     <meta name="twitter:image" content="https://playintraffic.ca/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
         "operatingSystem": "iOS 17.6+",
         "applicationCategory": "HealthApplication",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "description": "Pick a distance or a time. Get three routes you've never run. Every one starts and ends where you're standing.",
+        "description": "One tap to find a new route. One tap to run it on your wrist. Zero taps to log it to Strava. Free for iPhone and Apple Watch, privacy-first by default.",
         "url": "https://playintraffic.ca/random-run.html",
         "downloadUrl": "https://apps.apple.com/app/random-run/id6755962631",
         "author": { "@type": "Organization", "name": "Play in Traffic", "url": "https://playintraffic.ca" }
@@ -53,12 +53,17 @@
             {
                 "@type": "Question",
                 "name": "Does Random Run work on Apple Watch?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Random Run runs natively on Apple Watch as a standalone app. You can generate routes, get turn-by-turn directions, and track your run entirely from your wrist — no phone needed." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Random Run is a real standalone Apple Watch app — not a companion that mirrors the phone. You can generate routes, follow turn-by-turn directions, and track the whole run from your wrist. Leave the phone at home." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Random Run upload runs to Strava?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Random Run has optional Strava integration on both iPhone and Apple Watch. It is off by default. Turn it on once and every future run uploads automatically when you finish. One tap to turn it off again any time." }
             },
             {
                 "@type": "Question",
                 "name": "Does Random Run track my location or collect my data?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind." }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind. Strava integration is fully optional and off by default." }
             },
             {
                 "@type": "Question",
@@ -150,7 +155,7 @@
         <div class="container">
             <div class="how-section-header reveal">
                 <span class="label">How it works</span>
-                <h2>One screen. One tap. Three options. Pick one and go.</h2>
+                <h2>One tap to find it. One tap to run it. Zero taps to log it.</h2>
             </div>
 
             <div class="steps-container">
@@ -159,8 +164,8 @@
                         <span class="step-number">01</span>
                     </div>
                     <div class="step-body">
-                        <h3>Pick your goal</h3>
-                        <p>5 kilometers? 30 minutes? Whatever fits your day.</p>
+                        <h3>Find</h3>
+                        <p>Pick a distance. Or a time. Three routes you've never run appear right where you're standing. Tap one. Go.</p>
                     </div>
                 </div>
 
@@ -169,8 +174,8 @@
                         <span class="step-number">02</span>
                     </div>
                     <div class="step-body">
-                        <h3>Three routes, instantly</h3>
-                        <p>Three unique loops, all starting from where you are. Pick the one that looks interesting — or hit "3 more."</p>
+                        <h3>Run</h3>
+                        <p>Turn-by-turn directions on your phone — or on your wrist, with no phone needed at all.</p>
                     </div>
                 </div>
 
@@ -179,8 +184,8 @@
                         <span class="step-number">03</span>
                     </div>
                     <div class="step-body">
-                        <h3>Run</h3>
-                        <p>Turn-by-turn directions as you go. Eyes up, feet moving.</p>
+                        <h3>Share</h3>
+                        <p>Finish the run. It's already on Strava. Off by default — one tap to turn it off again.</p>
                     </div>
                 </div>
             </div>
@@ -252,11 +257,42 @@
         </div>
     </section>
 
-    <!-- ── Apple Watch ───────────────────────────────── -->
-    <section class="feature-callout reveal">
+    <!-- ── Feature Beat: Apple Watch ─────────────────── -->
+    <section class="feature-beat reveal">
         <div class="container">
-            <div class="feature-callout-inner">
-                <p><strong>Works standalone on Apple Watch.</strong> Leave the phone at home.</p>
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    <img src="screenshots/random-run/watch_route_preview.png" alt="Random Run standalone app on Apple Watch showing a generated running route" loading="lazy">
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Act 02 — Run</span>
+                    <h2>Run it from your wrist.</h2>
+                    <p>Random Run is a real Apple Watch app — not a mirror of your phone. Generate a route, follow it turn by turn, and track the whole run from 40mm of glass.</p>
+                    <p><strong>The phone can stay at home.</strong> Most of the time, it does.</p>
+                    <p class="feature-beat-footnote">Works standalone on Apple Watch Series 6 and later. Falls back to your phone whenever you want it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Strava ──────────────────────── -->
+    <section class="feature-beat feature-beat--reverse reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media feature-beat-media--lockup">
+                    <div class="strava-lockup" aria-label="Works with Strava — iPhone and Apple Watch">
+                        <span class="strava-lockup-label">Works with</span>
+                        <span class="strava-lockup-mark">STRAVA</span>
+                        <span class="strava-lockup-sublabel">iPhone + Apple Watch</span>
+                    </div>
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Act 03 — Share</span>
+                    <h2>Finish. It's already on Strava.</h2>
+                    <p>Turn on Strava once. Every run after that is there before you catch your breath — from your wrist or from your phone, either way.</p>
+                    <p><strong>Off by default. One tap to turn off again.</strong> Nothing leaves your phone unless you say so.</p>
+                    <p class="feature-beat-footnote">Your runs, your call. Strava integration is fully optional and disabled on first launch.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -297,8 +333,16 @@
                     <span class="spec-value">Standalone — no phone needed</span>
                 </div>
                 <div>
+                    <span class="spec-label">Strava</span>
+                    <span class="spec-value">Auto-upload, off by default</span>
+                </div>
+                <div>
                     <span class="spec-label">HealthKit</span>
                     <span class="spec-value">Pace-personalized routes</span>
+                </div>
+                <div>
+                    <span class="spec-label">Privacy</span>
+                    <span class="spec-value">No account, no tracking</span>
                 </div>
             </div>
         </div>
@@ -345,11 +389,15 @@
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">Does Random Run work on Apple Watch?</summary>
-                    <div class="faq-answer"><p>Yes. Random Run runs natively on Apple Watch as a standalone app. You can generate routes, get turn-by-turn directions, and track your run entirely from your wrist — no phone needed.</p></div>
+                    <div class="faq-answer"><p>Yes. Random Run is a real standalone Apple Watch app — not a companion that mirrors the phone. You can generate routes, follow turn-by-turn directions, and track the whole run from your wrist. Leave the phone at home.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Does Random Run upload runs to Strava?</summary>
+                    <div class="faq-answer"><p>Yes. Random Run has optional Strava integration on both iPhone and Apple Watch. It's off by default — turn it on once and every future run uploads automatically when you finish. One tap to turn it off again, any time.</p></div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">Does Random Run track my location or collect my data?</summary>
-                    <div class="faq-answer"><p>No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind.</p></div>
+                    <div class="faq-answer"><p>No. Your location stays on your device and is never sent to our servers. Route generation happens locally. There are no analytics SDKs, no accounts, and no tracking of any kind. Strava integration is fully optional and off by default.</p></div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">Is there an Android version?</summary>
