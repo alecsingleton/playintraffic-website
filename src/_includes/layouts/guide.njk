@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+styles: ["pages"]
+ogType: article
+---
+{%- from "macros.njk" import appstoreBtn -%}
+{%- set appData = apps | appByKey(app) -%}
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": {{ title | dump | safe }},
+        "datePublished": "{{ page.date | isoDate }}",
+        "dateModified": "{{ (lastmod or page.date) | isoDate }}",
+        "description": {{ description | dump | safe }},
+        "url": {{ page.url | absUrl(site.url) | dump | safe }},
+        "image": {{ (ogImage or appData.shareCard or site.ogImage) | absUrl(site.url) | dump | safe }},
+        "author": { "@type": "Organization", "name": {{ site.name | dump | safe }}, "url": {{ site.url | dump | safe }} },
+        "publisher": {
+            "@type": "Organization",
+            "name": {{ site.name | dump | safe }},
+            "url": {{ site.url | dump | safe }},
+            "logo": { "@type": "ImageObject", "url": {{ "/img/favicon-512.png" | absUrl(site.url) | dump | safe }} }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": {{ site.name | dump | safe }}, "item": "{{ site.url }}/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": {{ "/guides/" | absUrl(site.url) | dump | safe }} },
+            { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }} }
+        ]
+    }
+    </script>
+
+    <nav class="simple-nav"><div class="container"><a href="/guides/" class="nav-back">← {{ str.guides }}</a><div class="simple-nav-brand"><img src="/img/play-in-traffic-icon-128.webp" alt="" width="24" height="24"><span>{{ site.name }}</span></div></div></nav>
+
+    <main class="page-content"><div class="container"><div class="post-hero"><span class="post-date">{{ page.date | readableDate }}</span><h1>{{ heading or title }}</h1></div><div class="post-body">
+{{ content | safe }}
+    </div></div></main>
+
+{%- if appData %}
+    <section class="post-cta"><div class="container"><h2>{{ appData.ctaHeading }}</h2>{{ appstoreBtn(appData.appStoreUrl, str.downloadFree, appData.key) }}</div></section>
+{%- endif %}
+
+{% include "partials/footer.njk" %}

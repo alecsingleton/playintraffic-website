@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+styles: ["pages"]
+ogType: article
+---
+{%- from "macros.njk" import appstoreBtn -%}
+{%- set appData = apps | appByKey(app) -%}
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+{%- set footerAppData = appData -%}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ title | dump | safe }},
+        "datePublished": "{{ page.date | isoDate }}",
+        "dateModified": "{{ (lastmod or page.date) | isoDate }}",
+        "description": {{ description | dump | safe }},
+        "url": {{ page.url | absUrl(site.url) | dump | safe }},
+        "image": {{ (ogImage or appData.shareCard) | absUrl(site.url) | dump | safe }},
+        "author": { "@type": "Organization", "name": {{ site.name | dump | safe }}, "url": {{ site.url | dump | safe }} },
+        "publisher": {
+            "@type": "Organization",
+            "name": {{ site.name | dump | safe }},
+            "url": {{ site.url | dump | safe }},
+            "logo": { "@type": "ImageObject", "url": {{ "/img/favicon-512.png" | absUrl(site.url) | dump | safe }} }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": {{ site.name | dump | safe }}, "item": "{{ site.url }}/" },
+            { "@type": "ListItem", "position": 2, "name": {{ appData.name | dump | safe }}, "item": {{ appData.page | absUrl(site.url) | dump | safe }} },
+            { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }} }
+        ]
+    }
+    </script>
+
+    <nav class="simple-nav"><div class="container"><a href="{{ appData.page }}" class="nav-back">← {{ appData.name }}</a><div class="simple-nav-brand"><img src="{{ appData.icon128 }}" alt="" width="24" height="24"><span>{{ appData.name }}</span></div></div></nav>
+
+    <main class="page-content"><div class="container"><div class="post-hero"><span class="post-date">{{ page.date | readableDate }}</span><h1>{{ heading or title }}</h1></div><div class="post-body">
+{{ content | safe }}
+    </div></div></main>
+
+    <section class="post-cta"><div class="container"><h2>{{ appData.ctaHeading }}</h2>{{ appstoreBtn(appData.appStoreUrl, str.downloadFree, appData.key) }}</div></section>
+
+{% include "partials/footer.njk" %}

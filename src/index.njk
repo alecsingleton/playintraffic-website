@@ -1,0 +1,133 @@
+---
+layout: layouts/base.njk
+permalink: index.html
+title: Play in Traffic – Free Running, Cycling & Walking Route Apps for iOS
+description: "Three free iOS apps for runners, cyclists, and walkers who want to explore somewhere new. Find new routes with Random Run, BikeRight, and Go for a Walk."
+styles: ["route-lines", "homepage"]
+scripts: ["route-animation", "nav", "scroll-reveal"]
+showFooterIcons: true
+showFooterEmail: true
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/" }
+  - { lang: fr, href: "/fr/" }
+  - { lang: de, href: "/de/" }
+  - { lang: x-default, href: "/" }
+---
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "logo": "{{ '/img/favicon-512.png' | absUrl(site.url) }}",
+        "email": "{{ site.email }}",
+        "description": "Apps for runners, cyclists, and walkers who want to explore somewhere new."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Play in Traffic apps",
+        "itemListElement": [
+            {%- for a in apps %}
+            {
+                "@type": "ListItem",
+                "position": {{ loop.index }},
+                "item": {
+                    "@type": "SoftwareApplication",
+                    "name": {{ a.name | dump | safe }},
+                    "operatingSystem": {{ a.os | dump | safe }},
+                    "applicationCategory": "HealthApplication",
+                    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                    "url": {{ a.page | absUrl(site.url) | dump | safe }},
+                    "downloadUrl": {{ a.appStoreUrl | dump | safe }}
+                }
+            }{{ "," if not loop.last }}
+            {%- endfor %}
+        ]
+    }
+    </script>
+
+    <!-- ── Full-page Walk Route (path built in JS to match body dimensions) ── -->
+    <div class="page-walk-route" aria-hidden="true">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="route-line route-line--walk"
+                  d="M0,0"
+                  stroke-width="3" vector-effect="non-scaling-stroke"/>
+        </svg>
+    </div>
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="home-hero">
+        <div class="hero-routes" aria-hidden="true">
+            <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <!-- Random Run route — city-block geometry from top-left -->
+                <path class="route-line route-line--run" data-animate
+                      d="M-20,120 L120,120 L120,200 L260,200 L260,160 L400,160 L400,240 L540,240 L540,280 L600,280"
+                      stroke-width="3"/>
+                <!-- BikeRight route — city-block geometry from top-right -->
+                <path class="route-line route-line--ride" data-animate data-delay="1"
+                      d="M1220,120 L1060,120 L1060,200 L920,200 L920,160 L780,160 L780,240 L660,240 L660,280 L600,280"
+                      stroke-width="3"/>
+                <!-- Convergence dot -->
+                <circle class="convergence-dot" cx="600" cy="280" r="5" fill="var(--warm-white)" opacity="0.7"/>
+            </svg>
+        </div>
+
+        <div class="home-hero-text">
+            <h1>Play in Traffic</h1>
+            <p class="home-hero-sub">You pick the distance. We pick the streets. Free route apps for running, cycling, and walking on iPhone and Apple Watch.</p>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Explore</span>
+            <div class="scroll-indicator-line"></div>
+        </div>
+    </section>
+
+    <!-- ── App Showcase ──────────────────────────────── -->
+    <section class="app-showcase">
+        <div class="container">
+{%- for a in apps %}
+            <div class="app-card app-card--{{ a.color }} reveal">
+                <div class="app-card-header">
+                    <img src="{{ a.icon128 }}" alt="{{ a.name }} app icon" class="app-card-icon" width="48" height="48">
+                    <div>
+                        <div class="app-card-name">{{ a.name }}</div>
+                        <p class="app-card-diff">{{ a.tagline }}</p>
+                    </div>
+                </div>
+                <span class="app-card-tag">Free · iOS</span>
+                <div class="app-card-cta-row">
+                    <a href="{{ a.page }}" class="app-card-link" data-umami-event="hub-card" data-umami-event-app="{{ a.key }}">Learn more →</a>
+                    <a href="{{ a.appStoreUrl }}" class="app-card-store" target="_blank" rel="noopener" data-umami-event="download-click" data-umami-event-app="{{ a.key }}" aria-label="Download {{ a.name }} on the App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <span>App Store</span>
+                    </a>
+                </div>
+            </div>
+{%- endfor %}
+        </div>
+    </section>
+
+    <!-- ── What We Make ──────────────────────────────── -->
+    <section class="home-intro reveal">
+        <div class="container">
+            <h2>Free route apps for exploring on foot and on wheels</h2>
+            <p><a href="/random-run.html">Random Run</a> is a running route generator for iPhone and Apple Watch. Pick a distance or a time and get three loop routes you've never run, starting and ending right where you stand — with turn-by-turn voice guidance and automatic Strava upload when you finish.</p>
+            <p><a href="/bikeright.html">BikeRight</a> finds the safest bike route to wherever you're going. Every route is scored against your city's real cycling infrastructure — protected lanes, multi-use paths, quiet streets — and Apple Watch taps out every turn so your eyes stay on the road.</p>
+            <p><a href="/go-for-a-walk.html">Go for a Walk</a> builds walking routes through your own neighborhood with the stops you actually want: parks, coffee, landmarks, playgrounds. Three loops from your front door, each heading somewhere new.</p>
+            <p>All three apps are completely free, with no accounts, no ads, and no tracking. New here? Start with our <a href="/guides/">guides to finding better routes</a>.</p>
+        </div>
+    </section>
+
+    <!-- ── Philosophy Strip ──────────────────────────── -->
+    <section class="philosophy reveal">
+        <div class="container">
+            <p>Free. Private. No account required.</p>
+        </div>
+    </section>
+
+{% include "partials/footer.njk" %}

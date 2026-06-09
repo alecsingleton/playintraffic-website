@@ -1,0 +1,33 @@
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+{%- set langPrefix = ("/" + pageLang) if pageLang != "en" else "" -%}
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">{{ footerAppData.footerBrand if footerAppData else site.name }}</div>
+{%- if showFooterIcons %}
+            <div class="footer-icons">
+                {%- for a in apps %}
+                <a href="{{ langPrefix }}{{ a.page }}" aria-label="{{ a.name }}">
+                    <img src="{{ a.icon128 }}" alt="{{ a.name }}" width="36" height="36">
+                </a>
+                {%- endfor %}
+            </div>
+{%- endif %}
+            <div class="footer-links">
+{%- if footerAppData %}
+                <a href="{{ footerAppData.privacy }}">{{ str.privacyPolicy }}</a>
+{%- endif %}
+                <a href="/blog/">{{ str.blog }}</a>
+                <a href="/guides/">{{ str.guides }}</a>
+{%- for a in apps %}{% if not footerAppData or a.key != footerAppData.key %}
+                <a href="{{ langPrefix }}{{ a.page }}">{{ a.name }}</a>
+{%- endif %}{% endfor %}
+                <a href="/about.html">{{ str.about }}</a>
+                <a href="mailto:{{ site.email }}">{{ str.contact }}</a>
+            </div>
+{%- if showFooterEmail %}
+            <div class="footer-email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+{%- endif %}
+            <div class="footer-copy">© {{ site.copyrightYear }} {{ site.name }}.{% if footerAppData %} {{ footerAppData.footerCopy }}{% endif %}</div>
+        </div>
+    </footer>

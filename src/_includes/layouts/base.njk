@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{%- set appData = apps | appByKey(app) -%}
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+<html lang="{{ pageLang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ page.url | absUrl(site.url) }}">
+{%- if alternates %}
+{%- for alt in alternates %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.href | absUrl(site.url) }}">
+{%- endfor %}
+{%- endif %}
+    <meta property="og:type" content="{{ ogType or "website" }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ ogTitle or title }}">
+    <meta property="og:description" content="{{ ogDescription or description }}">
+    <meta property="og:url" content="{{ page.url | absUrl(site.url) }}">
+    <meta property="og:image" content="{{ (ogImage or (appData.shareCard if appData) or site.ogImage) | absUrl(site.url) }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ ogTitle or title }}">
+    <meta name="twitter:description" content="{{ ogDescription or description }}">
+    <meta name="twitter:image" content="{{ (ogImage or (appData.shareCard if appData) or site.ogImage) | absUrl(site.url) }}">
+    <meta name="theme-color" content="{{ site.themeColor }}">
+{%- if appData %}
+    <meta name="apple-itunes-app" content="app-id={{ appData.appStoreId }}">
+{%- endif %}
+    <link rel="preload" href="/fonts/sora-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/dm-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+{%- for sheet in styles %}
+    <link rel="stylesheet" href="/css/{{ sheet }}.css">
+{%- endfor %}
+{%- if appData %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ appData.icon180 }}">
+    <link rel="icon" type="image/png" href="{{ appData.icon180 }}">
+{%- else %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/favicon-512.png">
+{%- endif %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} Blog" href="{{ '/feed.xml' | absUrl(site.url) }}">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiId }}"></script>
+</head>
+<body{% if bodyClass or appData %} class="{{ bodyClass or appData.bodyClass }}"{% endif %}>
+{{ content | safe }}
+{%- for script in scripts %}
+    <script src="/js/{{ script }}.js"></script>
+{%- endfor %}
+</body>
+</html>

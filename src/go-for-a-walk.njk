@@ -1,0 +1,185 @@
+---
+layout: layouts/product.njk
+permalink: go-for-a-walk.html
+app: go-for-a-walk
+title: Go for a Walk – Discover Walking Routes Near You (Free iOS App)
+description: "Set your distance. Pick what you want along the way — parks, coffee, landmarks, playgrounds. Get three routes through parts of your own area you've never seen. Free for iOS."
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/go-for-a-walk.html" }
+  - { lang: fr, href: "/fr/go-for-a-walk.html" }
+  - { lang: de, href: "/de/go-for-a-walk.html" }
+  - { lang: x-default, href: "/go-for-a-walk.html" }
+---
+{%- from "macros.njk" import appstoreBtn, screenshot -%}
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>A better walk through the neighborhood you think you know.</h1>
+                <p class="product-hero-desc">Set your distance. Pick what you want along the way — parks, coffee, landmarks, playgrounds. Get three routes through parts of your own area you've never seen.</p>
+                {{ appstoreBtn("https://apps.apple.com/app/go-for-a-walk/id6761119312", "Download on the App Store", "go-for-a-walk") }}
+            </div>
+            <div class="product-hero-screenshot reveal">
+                {{ screenshot("/screenshots/go-for-a-walk/01_home", "Go for a Walk home screen with customization chips", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Customization Callout ─────────────────────── -->
+    <section class="differentiator reveal">
+        <div class="container">
+            <div class="differentiator-inner">
+                <blockquote>Feeling like green space? Tap parks. Need a destination? Tap coffee. Just want to wander? Set a distance and go.</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">How it works</span>
+                <h2>Set a distance. Pick what sounds good. Walk.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Set your distance or time</h3>
+                        <p>3 kilometers? 45 minutes? Whatever fits your day.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Customize your walk</h3>
+                        <p>Parks, coffee stops, dog parks, landmarks, playgrounds — tap what you want to discover along the way.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Pick a route and go</h3>
+                        <p>Three routes, each heading in a different direction. Voice-guided so your phone stays in your pocket.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Voice Nav Callout ─────────────────────────── -->
+    <section class="feature-callout reveal">
+        <div class="container">
+            <div class="feature-callout-inner">
+                <p><strong>Voice-guided directions</strong> so your phone stays in your pocket.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Section Connector ─────────────────────────── -->
+    <div class="section-route-connector" aria-hidden="true">
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+            <path class="route-line route-line--walk" d="M0,20 L40,20 L40,50 L80,50 L80,30 L130,30 L130,60 L170,60 L200,60" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <!-- ── Screenshots ───────────────────────────────── -->
+    <section class="screenshots">
+        <div class="container">
+            <div class="screenshots-header reveal">
+                <span class="label">See it in action</span>
+                <h2>The whole walk, start to finish.</h2>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/go-for-a-walk/01_home", "Go for a Walk home screen with distance picker and customization chips", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Your walk, your way</div>
+                        <p class="screenshot-caption-desc">Set your distance. Pick parks, coffee, landmarks — whatever you're in the mood for.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/go-for-a-walk/02_route_selection", "Go for a Walk route selection with three colored routes on a map", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Three routes, three directions</div>
+                        <p class="screenshot-caption-desc">Each route explores a different part of your area.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/go-for-a-walk/03_navigation", "Go for a Walk voice-guided navigation", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Voice-guided. Hands-free.</div>
+                        <p class="screenshot-caption-desc">Turn-by-turn directions so you can look up, not down.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/go-for-a-walk/04_walk_results", "Go for a Walk results screen", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Walk complete</div>
+                        <p class="screenshot-caption-desc">Distance, time, pace — all tracked.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HealthKit Callout ─────────────────────────── -->
+    <section class="feature-callout reveal">
+        <div class="container">
+            <div class="callout-box">
+                <div>
+                    <p><strong>Connect Apple Health</strong> and route times are based on how fast you actually walk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <p>No account. No tracking. No ads.</p>
+                <p>Your location never leaves your phone. Open the app and go.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
+                    <span class="spec-label">Platform</span>
+                    <span class="spec-value">iOS 26.1+</span>
+                </div>
+                <div>
+                    <span class="spec-label">Price</span>
+                    <span class="spec-value">Free</span>
+                </div>
+                <div>
+                    <span class="spec-label">Voice navigation</span>
+                    <span class="spec-value">Hands-free directions</span>
+                </div>
+                <div>
+                    <span class="spec-label">Customization</span>
+                    <span class="spec-value">Parks, coffee, landmarks, playgrounds</span>
+                </div>
+            </div>
+        </div>
+    </section>

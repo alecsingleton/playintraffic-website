@@ -1,0 +1,236 @@
+---
+layout: layouts/product.njk
+permalink: random-run.html
+app: random-run
+title: Random Run – Free Running Route Generator for iPhone, Apple Watch & Strava
+description: "One tap to find a new route. One tap to run it on your wrist. Zero taps to log it to Strava. Free for iPhone and Apple Watch, privacy-first by default."
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/random-run.html" }
+  - { lang: fr, href: "/fr/random-run.html" }
+  - { lang: de, href: "/de/random-run.html" }
+  - { lang: x-default, href: "/random-run.html" }
+---
+{%- from "macros.njk" import appstoreBtn, screenshot -%}
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Lace up. We'll figure out where.</h1>
+                <p class="product-hero-desc">Pick a distance or a time. Get three routes you've never run. Every one starts and ends where you're standing.</p>
+                {{ appstoreBtn("https://apps.apple.com/app/random-run/id6755962631", "Download on the App Store", "random-run") }}
+            </div>
+            <div class="product-hero-screenshot reveal">
+                {{ screenshot("/screenshots/random-run/02_route_preview", "Random Run three-route preview screen", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Differentiator ────────────────────────────── -->
+    <section class="differentiator reveal">
+        <div class="container">
+            <div class="differentiator-inner">
+                <blockquote>Every run is a new route. No repeats, no history, no algorithm deciding what you "usually" do.</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">How it works</span>
+                <h2>One tap to find it. One tap to run it. Zero taps to log it.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Find</h3>
+                        <p>Pick a distance. Or a time. Three routes you've never run, each starting where you stand. Tap one. Go.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Run</h3>
+                        <p>Turn-by-turn directions on your phone — or on your wrist, with no phone needed at all.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Share</h3>
+                        <p>Finish the run. It's already on Strava. Off by default — one tap to turn it off again.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout-box reveal">
+                <div>
+                    <p><strong>Connect Apple Health and routes match your actual pace.</strong> "30 minutes" means 30 minutes for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Section Connector ─────────────────────────── -->
+    <div class="section-route-connector" aria-hidden="true">
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+            <path class="route-line route-line--run" d="M0,40 L40,40 L40,20 L80,20 L80,60 L120,60 L120,30 L160,30 L200,30" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <!-- ── Screenshots ───────────────────────────────── -->
+    <section class="screenshots">
+        <div class="container">
+            <div class="screenshots-header reveal">
+                <span class="label">See it in action</span>
+                <h2>The whole run, start to finish.</h2>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/random-run/01_distance_picker", "Random Run distance picker screen", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Set your goal</div>
+                        <p class="screenshot-caption-desc">5 km, 30 minutes — whatever fits your day.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/random-run/02_route_preview", "Random Run route preview map", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Three routes, instantly</div>
+                        <p class="screenshot-caption-desc">Pick the one that catches your eye — or hit "3 more."</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/random-run/03_turn_by_turn", "Random Run turn-by-turn navigation", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Turn-by-turn navigation</div>
+                        <p class="screenshot-caption-desc">Eyes up, feet moving.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/random-run/04_run_summary", "Random Run summary screen", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Run complete</div>
+                        <p class="screenshot-caption-desc">Time, distance, pace — everything you need.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card reveal">
+                    {{ screenshot("/screenshots/random-run/05_live_activity", "Random Run Live Activity on lock screen", 480, 1044, "202px") }}
+                    <div class="screenshot-caption">
+                        <div class="screenshot-caption-title">Live Activity & Dynamic Island</div>
+                        <p class="screenshot-caption-desc">Track your run from the Lock Screen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Apple Watch ─────────────────── -->
+    <section class="feature-beat reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    <img src="/screenshots/random-run/watch_route_preview-416.webp" alt="Random Run standalone app on Apple Watch showing a generated running route" width="416" height="496" loading="lazy">
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Run</span>
+                    <h2>Run it from your wrist.</h2>
+                    <p>Random Run is a standalone Apple Watch app — not a mirror of your phone. Generate a route, follow it turn by turn, and track the whole run from 40mm of glass.</p>
+                    <p><strong>The phone can stay at home.</strong> Most of the time, it does.</p>
+                    <p class="feature-beat-footnote">Works standalone on Apple Watch Series 6 and later. Falls back to your phone whenever you'd rather.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Strava ──────────────────────── -->
+    <section class="feature-beat feature-beat--reverse reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media feature-beat-media--lockup">
+                    <div class="strava-lockup" aria-label="Works with Strava — iPhone and Apple Watch">
+                        <span class="strava-lockup-label">Works with</span>
+                        <span class="strava-lockup-mark">STRAVA</span>
+                        <span class="strava-lockup-sublabel">iPhone + Apple Watch</span>
+                    </div>
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Share</span>
+                    <h2>Finish. It's already on Strava.</h2>
+                    <p>Turn on Strava once. Every run after that is there before you catch your breath — from your wrist or from your phone.</p>
+                    <p><strong>Off by default. One tap to turn off again.</strong> Nothing leaves your phone unless you say so.</p>
+                    <p class="feature-beat-footnote">Your runs, your call. Strava integration is fully optional and disabled on first launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Strava ────────────────────────────────────── -->
+    <section class="feature-callout reveal">
+        <div class="container">
+            <div class="feature-callout-inner">
+                <p><strong>Connect Strava once. Every run uploads automatically.</strong> Finish the run, skip the sharing dance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <p>No account. No tracking. No ads.</p>
+                <p>Your location never leaves your phone. Open the app and go.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
+                    <span class="spec-label">Platform</span>
+                    <span class="spec-value">iOS 17.6+</span>
+                </div>
+                <div>
+                    <span class="spec-label">Price</span>
+                    <span class="spec-value">Free</span>
+                </div>
+                <div>
+                    <span class="spec-label">Apple Watch</span>
+                    <span class="spec-value">Standalone — no phone needed</span>
+                </div>
+                <div>
+                    <span class="spec-label">Strava</span>
+                    <span class="spec-value">Auto-upload, off by default</span>
+                </div>
+                <div>
+                    <span class="spec-label">HealthKit</span>
+                    <span class="spec-value">Pace-personalized routes</span>
+                </div>
+                <div>
+                    <span class="spec-label">Privacy</span>
+                    <span class="spec-value">No account, no tracking</span>
+                </div>
+            </div>
+        </div>
+    </section>

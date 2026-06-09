@@ -1,0 +1,202 @@
+/* ── Homepage Hero ──────────────────────────────────── */
+
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 var(--content-pad-x);
+  overflow: hidden;
+}
+
+.home-hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 16px;
+}
+
+.home-hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.scroll-indicator.hidden {
+  opacity: 0;
+}
+
+.scroll-indicator span {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 32px;
+  background: var(--text-tertiary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-indicator-line {
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+}
+
+@media (max-width: 639px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* ── App Showcase ──────────────────────────────────── */
+
+.app-showcase {
+  padding: var(--section-pad-y) 0;
+}
+
+.app-showcase .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1023px) {
+  .app-showcase .container {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+}
+
+/* ── App Card CTAs ─────────────────────────────────── */
+
+/* Cards are <div>s; the Learn-more link stretches over the card so the
+   whole surface stays clickable, while the store button sits above it. */
+.app-card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.app-card-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.app-card-cta-row .app-card-link {
+  margin-top: 0;
+}
+
+.app-card-store {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: var(--text-primary);
+  color: var(--asphalt);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-btn);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-card-store:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(245, 240, 232, 0.15);
+}
+
+.app-card-store svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Home Intro (crawlable copy) ───────────────────── */
+
+.home-intro {
+  padding-bottom: var(--section-pad-y);
+}
+
+.home-intro .container {
+  max-width: 720px;
+}
+
+.home-intro h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 24px;
+}
+
+.home-intro p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.home-intro a {
+  color: var(--warm-accent);
+  transition: color 0.2s;
+}
+
+.home-intro a:hover {
+  color: var(--warm-accent-hover);
+}
+
+/* ── Philosophy Strip ──────────────────────────────── */
+
+.philosophy {
+  background: var(--asphalt-warm);
+  padding: 64px 0;
+}
+
+.philosophy .container {
+  text-align: center;
+}
+
+.philosophy p {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--warm-white);
+  letter-spacing: 0.01em;
+}
+
+/* ── Home Footer ───────────────────────────────────── */
+
+.home-footer {
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+}

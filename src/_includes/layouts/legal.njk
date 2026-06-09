@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+styles: ["pages"]
+---
+{%- set appData = apps | appByKey(app) -%}
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+{%- set footerAppData = appData -%}
+    <nav class="simple-nav">
+        <div class="container">
+            <a href="{{ appData.page }}" class="nav-back">← {{ appData.name }}</a>
+            <div class="simple-nav-brand">
+                <img src="{{ appData.icon128 }}" alt="" width="24" height="24">
+                <span>{{ appData.name }}</span>
+            </div>
+            <a href="mailto:{{ site.email }}" class="simple-nav-contact">{{ str.contact }}</a>
+        </div>
+    </nav>
+
+{{ content | safe }}
+
+{% include "partials/footer.njk" %}

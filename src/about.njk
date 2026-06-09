@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+permalink: about.html
+title: About – Play in Traffic
+description: "Play in Traffic builds free iOS apps for runners, cyclists, and walkers. No accounts, no tracking, no ads — just tools to help you get outside."
+styles: ["pages"]
+scripts: ["nav", "scroll-reveal"]
+navTitle: About
+showFooterIcons: true
+showFooterEmail: true
+lastmod: 2026-06-09
+---
+{% include "partials/site-nav.njk" %}
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-hero">
+                <h1>About Play in Traffic</h1>
+            </div>
+
+            <div class="about-body">
+                <section>
+                    <h2>The name</h2>
+                    <p>Play in Traffic is what these apps help you do: run, ride, and walk through your city. We tried more polished names. None of them were as honest, and none would make your mom smirk when she thought you weren't looking.</p>
+                </section>
+
+                <section>
+                    <h2>Who's building this</h2>
+                    <p>Play in Traffic is built by Alec Singleton, a product and engineering leader in Toronto with a background in health tech, wearable hardware, and connected systems.</p>
+                    <p>These apps started as solutions to his own problems: wanting a new running route without planning one, wanting to bike somewhere without gambling on infrastructure, and wanting a better walk than the same three blocks on autopilot. Other people had the same problems, so here we are.</p>
+                </section>
+
+                <section>
+                    <h2>What we make</h2>
+                    <p>Three apps. All iOS. All free.</p>
+                    <p><a href="/random-run.html" class="app-link--run">Random Run</a> generates running routes — pick a distance, get three options, go. <a href="/bikeright.html" class="app-link--ride">BikeRight</a> finds the safest cycling route to your destination, scored by real infrastructure. <a href="/go-for-a-walk.html" class="app-link--walk">Go for a Walk</a> builds walking loops through your neighborhood with the stops you actually want — parks, coffee, landmarks you've walked past a hundred times without noticing.</p>
+                    <p>No accounts. No tracking. No ads. Your location stays on your phone. We don't want your data.</p>
+                </section>
+            </div>
+
+            <div class="about-contact">
+                <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </div>
+        </div>
+    </main>
+
+{% include "partials/footer.njk" %}

@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+styles: ["route-lines", "product-page"]
+scripts: ["route-animation", "nav", "scroll-reveal"]
+---
+{%- from "macros.njk" import appstoreBtn, blogCard -%}
+{%- set appData = apps | appByKey(app) -%}
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+{%- set faqList = faqs or appData.faqs -%}
+{%- set footerAppData = appData -%}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": {{ appData.name | dump | safe }},
+        "operatingSystem": {{ appData.os | dump | safe }},
+        "applicationCategory": "HealthApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": {{ appData.schemaDescription | dump | safe }},
+        "url": {{ page.url | absUrl(site.url) | dump | safe }},
+        "downloadUrl": {{ appData.appStoreUrl | dump | safe }},
+        {%- if appData.rating.count >= appData.rating.min %}
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": {{ appData.rating.value }}, "ratingCount": {{ appData.rating.count }} },
+        {%- endif %}
+        "author": { "@type": "Organization", "name": {{ site.name | dump | safe }}, "url": {{ site.url | dump | safe }} }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {%- for faq in faqList %}
+            {
+                "@type": "Question",
+                "name": {{ faq.q | dump | safe }},
+                "acceptedAnswer": { "@type": "Answer", "text": {{ faq.a | striptags | dump | safe }} }
+            }{{ "," if not loop.last }}
+            {%- endfor %}
+        ]
+    }
+    </script>
+
+{% include "partials/site-nav.njk" %}
+
+{{ content | safe }}
+
+{%- set appPosts = collections.posts | byApp(appData.key) | limit(3) %}
+{%- if appPosts.length and pageLang == "en" %}
+    <!-- ── What's New ────────────────────────────────── -->
+    <section class="whats-new">
+        <div class="container">
+            <div class="whats-new-header reveal">
+                <span class="label">{{ str.whatsNewLabel }}</span>
+                <h2>{{ str.whatsNew }}</h2>
+            </div>
+            <div class="blog-cards-grid">
+                {%- for post in appPosts %}
+                {{ blogCard(post) }}
+                {%- endfor %}
+            </div>
+        </div>
+    </section>
+{%- endif %}
+
+    <!-- ── FAQ ───────────────────────────────────────── -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-section-header reveal">
+                <span class="label">{{ str.faqLabel }}</span>
+                <h2>{{ str.faq }}</h2>
+            </div>
+            <div class="reveal">
+                {%- for faq in faqList %}
+                <details class="faq-item">
+                    <summary class="faq-question">{{ faq.q }}</summary>
+                    <div class="faq-answer">{{ faq.a | safe }}</div>
+                </details>
+                {%- endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Android CTA ──────────────────────────────── -->
+    <section class="android-cta reveal">
+        <div class="container">
+            <div class="android-cta-inner">
+                <p>{{ str.androidCta | safe }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Final CTA ─────────────────────────────────── -->
+    <section class="final-cta">
+        <div class="container">
+            <img src="{{ appData.icon180 }}" alt="{{ appData.name }}" class="final-cta-icon" width="80" height="80" loading="lazy">
+            <h2>{{ ctaHeading or appData.ctaHeading }}</h2>
+            {{ appstoreBtn(appData.appStoreUrl, str.downloadFree, appData.key) }}
+        </div>
+    </section>
+
+{% include "partials/footer.njk" %}

@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Blog – Play in Traffic | Updates for Random Run, BikeRight & Go for a Walk
+description: "The latest updates, release notes, and feature announcements for Random Run, BikeRight, and Go for a Walk — free iOS apps by Play in Traffic."
+ogTitle: Blog – Play in Traffic
+styles: ["pages"]
+---
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Play in Traffic Blog",
+        "description": "Updates, release notes, and feature announcements for Random Run, BikeRight, and Go for a Walk.",
+        "url": "{{ '/blog/' | absUrl(site.url) }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site.name }}",
+            "url": "{{ site.url }}",
+            "logo": { "@type": "ImageObject", "url": "{{ '/img/favicon-512.png' | absUrl(site.url) }}" }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "{{ site.name }}", "item": "{{ site.url }}/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog" }
+        ]
+    }
+    </script>
+    <nav class="simple-nav">
+        <div class="container">
+            <a href="/" class="nav-back">← Play in Traffic</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-hero">
+                <span class="label">What's new</span>
+                <h1>Blog</h1>
+                <p class="subtitle">Feature updates and release notes for Random Run, BikeRight, and Go for a Walk.</p>
+            </div>
+
+            <div class="blog-index-posts">
+{%- for post in collections.posts %}
+{%- set postApp = apps | appByKey(post.data.app) %}
+                <a href="{{ post.url }}" class="blog-index-card blog-index-card--{{ postApp.color }}">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">{{ postApp.name }}</span>
+                        <span class="blog-index-date">{{ post.date | readableDate }}</span>
+                    </div>
+                    <div class="blog-index-title">{{ post.data.heading or post.data.title }}</div>
+                    <p class="blog-index-excerpt">{{ post.data.excerpt }}</p>
+                </a>
+{%- endfor %}
+            </div>
+        </div>
+    </main>
+
+{% include "partials/footer.njk" %}

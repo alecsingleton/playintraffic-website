@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+permalink: 404.html
+title: Page Not Found – Play in Traffic
+description: "That route doesn't exist. Head back to Play in Traffic and find a new one."
+styles: ["pages"]
+sitemap: false
+eleventyExcludeFromCollections: true
+---
+    <nav class="simple-nav">
+        <div class="container">
+            <a href="/" class="nav-back">← Play in Traffic</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-hero">
+                <span class="label">404</span>
+                <h1>Wrong turn.</h1>
+                <p class="subtitle">This page doesn't exist — but a new route is one tap away.</p>
+            </div>
+
+            <div class="blog-index-posts">
+{%- for a in apps %}
+                <a href="{{ a.page }}" class="blog-index-card blog-index-card--{{ a.color }}">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">{{ a.name }}</span>
+                    </div>
+                    <div class="blog-index-title">{{ a.tagline }}</div>
+                    <p class="blog-index-excerpt">Free on iOS · {{ a.os }}</p>
+                </a>
+{%- endfor %}
+            </div>
+        </div>
+    </main>
+
+{% include "partials/footer.njk" %}

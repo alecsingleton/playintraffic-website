@@ -1,0 +1,36 @@
+{%- set appData = apps | appByKey(app) -%}
+{%- set pageLang = lang or "en" -%}
+{%- set str = strings[pageLang] -%}
+{%- set navBrandIcon = appData.icon128 if appData else "/img/play-in-traffic-icon-128.webp" -%}
+{%- set navBrandName = appData.name if appData else navTitle -%}
+{%- set langPrefix = ("/" + pageLang) if pageLang != "en" else "" -%}
+    <nav class="site-nav">
+        <div class="container">
+            <a href="{{ langPrefix or '/' }}" class="nav-back">{{ str.backHome }}</a>
+            <div class="nav-brand">
+                <img src="{{ navBrandIcon }}" alt="" width="24" height="24">
+                <span>{{ navBrandName }}</span>
+            </div>
+            <button class="nav-apps-toggle" aria-expanded="false" aria-haspopup="true">{{ str.ourApps }} ▾</button>
+            <div class="nav-dropdown">
+                {%- for a in apps %}{% if not appData or a.key != appData.key %}
+                <a href="{{ langPrefix }}{{ a.page }}" class="nav-dropdown-item">
+                    <img src="{{ a.icon128 }}" alt="" width="36" height="36">
+                    <div>
+                        <span class="nav-dropdown-item-name">{{ a.name }}</span>
+                        <span class="nav-dropdown-item-desc">{{ a.navDesc }}</span>
+                    </div>
+                </a>
+                {%- endif %}{% endfor %}
+            </div>
+            <button class="nav-hamburger" aria-label="{{ str.menu }}" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-panel" role="dialog" aria-label="Navigation">
+        <a href="{{ langPrefix or '/' }}">{{ str.backHome }}</a>
+        {%- for a in apps %}{% if not appData or a.key != appData.key %}
+        <a href="{{ langPrefix }}{{ a.page }}"><img src="{{ a.icon128 }}" alt="" width="36" height="36">{{ a.name }}</a>
+        {%- endif %}{% endfor %}
+    </div>
