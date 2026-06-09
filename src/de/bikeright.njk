@@ -1,0 +1,173 @@
+---
+layout: layouts/product.njk
+permalink: de/bikeright.html
+app: bikeright
+lang: de
+title: BikeRight – Sicherere Radrouten mit haptischer Navigation am Handgelenk (kostenlose iOS-App)
+description: "Finde die sicherste Radroute über die echte Radinfrastruktur deiner Stadt — jede Route mit Sicherheitsbewertung, plus haptische Navigation auf der Apple Watch. Kostenlos für iOS."
+ctaHeading: "Deine sicherste Fahrt beginnt hier."
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/bikeright.html" }
+  - { lang: fr, href: "/fr/bikeright.html" }
+  - { lang: de, href: "/de/bikeright.html" }
+  - { lang: x-default, href: "/bikeright.html" }
+faqs:
+  - q: "Ist BikeRight kostenlos?"
+    a: "<p>Ja — komplett kostenlos. Keine Abos, keine In-App-Käufe, keine Werbung. Alle Funktionen, einschließlich Apple Watch und Zielmodus, sind enthalten.</p>"
+  - q: "Wie bewertet BikeRight die Sicherheit einer Route?"
+    a: "<p>BikeRight analysiert jeden Streckenabschnitt anhand der OpenStreetMap-Daten zur Radinfrastruktur — geschützte Radwege, Mehrzweckwege, geteilte Straßen und Straßen ohne Radinfrastruktur. Jede Route erhält eine Gesamtbewertung, sodass die sicherste Option immer oben steht.</p>"
+  - q: "Trackt BikeRight meinen Standort oder sammelt es Daten?"
+    a: "<p>Nein. Routenberechnung und Sicherheitsbewertung passieren vollständig auf deinem Gerät. Deine GPS-Koordinaten werden nie an unsere Server gesendet — wir haben keine. Keine Analytik, keine Konten, kein Tracking.</p>"
+  - q: "Funktioniert BikeRight auf der Apple Watch?"
+    a: "<p>Ja. Die eigenständige Apple-Watch-App liefert zwei Arten von Information per haptischem Tippen: Navigation (eindeutige Muster für links und rechts) und die Sicherheit des nächsten Abschnitts — einmal Tippen für einen geschützten Radweg, zweimal für geteilte Straßen, dreimal für ungeschützte. Kein Display, kein Blick nach unten.</p>"
+  - q: "Kann ich mit BikeRight zu einem bestimmten Ziel navigieren?"
+    a: "<p>Ja. Tippe auf „Ziel hinzufügen“, gib eine Adresse ein und BikeRight findet mehrere Routen — jede bewertet und nach Sicherheit sortiert.</p>"
+  - q: "Gibt es eine Android-Version?"
+    a: "<p>Noch nicht — BikeRight gibt es vorerst nur für iOS. Wenn du dir eine Android-Version wünschst, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">schreib uns</a>. Das hilft uns bei der Priorisierung.</p>"
+---
+{%- from "macros.njk" import appstoreBtn, screenshot -%}
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Fahr auf den Straßen, die wirklich für Räder gebaut sind.</h1>
+                <p class="product-hero-desc">Gib dein Ziel ein. BikeRight baut die Route um geschützte Radwege, ruhige Straßen und die Radinfrastruktur, die deine Stadt tatsächlich hat — und hält deine Augen auf der Straße, während du fährst.</p>
+                {{ appstoreBtn("https://apps.apple.com/app/bikeright-safer-bike-routes/id6759763484", "Im App Store laden", "bikeright") }}
+            </div>
+            <div class="product-hero-screenshot reveal">
+                {{ screenshot("/screenshots/bikeright/02_route_selection", "BikeRight Routenauswahl mit Sicherheitsbewertungen", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Why Not Google ────────────────────────────── -->
+    <section class="differentiator reveal">
+        <div class="container">
+            <div class="differentiator-inner">
+                <blockquote>Google Maps findet die schnellste Route. BikeRight findet die, auf der du dir die Spur nicht mit Lieferwagen teilst.</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">So funktioniert's</span>
+                <h2>Plane die sicherste Route. Fahr sie, ohne hinzusehen.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Wähle dein Ziel</h3>
+                        <p>Arbeit, Freunde, das andere Ende der Stadt — gib ein, wohin du willst, und BikeRight erledigt den Rest.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Sieh dir die Sicherheitsbilanz an</h3>
+                        <p>Jede Route kommt mit einer Sicherheitsbewertung: wie viel geschützter Radweg, wie viel geteilte Straße, und wo die Lücken sind.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Fahr, ohne hinzusehen</h3>
+                        <p>Jede Abbiegung kommt über dein Handgelenk. Die Sicherheit jedes Abschnitts auch. Augen auf der Straße, Hände am Lenker.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Apple Watch ─────────────────── -->
+    <section class="feature-beat reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    <img src="/screenshots/bikeright/watch_haptic_nav-416.webp" alt="BikeRight Apple-Watch-App mit haptischer Abbiegenavigation" width="416" height="496" loading="lazy">
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Apple Watch</span>
+                    <h2>Du liest die Sicherheitsbewertung nicht. Du fühlst sie.</h2>
+                    <p>BikeRight tippt dir am Handgelenk, wenn ein neuer Abschnitt beginnt — einmal für einen geschützten Radweg, zweimal für geteilte Straßen, dreimal für ungeschützte. Die Sicherheitsbilanz von der Karte, geliefert ans Handgelenk, während du fährst.</p>
+                    <p>Dasselbe Handgelenk meldet jede Abbiegung. Ein Muster für links, eins für rechts — du lernst den Rhythmus in einer einzigen Fahrt.</p>
+                    <p><strong>Kein Display. Kein Blick nach unten.</strong></p>
+                    <p class="feature-beat-footnote">Eigenständige App. Funktioniert ohne Telefon. Apple Watch Series 6 und neuer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Live Activity ───────────────── -->
+    <section class="feature-beat feature-beat--reverse reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    {{ screenshot("/screenshots/bikeright/live_activity", "BikeRight Live-Aktivität auf dem iPhone-Sperrbildschirm", 480, 1044, "(min-width: 1024px) 480px, 360px") }}
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Sperrbildschirm &amp; Dynamic Island</span>
+                    <h2>Telefon in der Halterung? Lass es da.</h2>
+                    <p>Deine nächste Abbiegung, die Distanz dorthin und die Sicherheit des aktuellen Abschnitts bleiben als Live-Aktivität auf dem Sperrbildschirm sichtbar. Dynamic Island hält die Abbiegung im Blick, selbst während eines Anrufs.</p>
+                    <p><strong>Ein Grund weniger, eine Hand vom Lenker zu nehmen.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <p>Kein Konto. Kein Tracking. Keine Werbung.</p>
+                <p>Dein Standort verlässt nie dein Telefon. App öffnen und los.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
+                    <span class="spec-label">Plattform</span>
+                    <span class="spec-value">iOS 17.6+</span>
+                </div>
+                <div>
+                    <span class="spec-label">Preis</span>
+                    <span class="spec-value">Kostenlos</span>
+                </div>
+                <div>
+                    <span class="spec-label">Apple Watch</span>
+                    <span class="spec-value">Eigenständig — haptische Abbiegungen + Abschnittssicherheit</span>
+                </div>
+                <div>
+                    <span class="spec-label">Live-Aktivitäten</span>
+                    <span class="spec-value">Sperrbildschirm + Dynamic Island</span>
+                </div>
+                <div>
+                    <span class="spec-label">Sicherheitsbewertung</span>
+                    <span class="spec-value">OpenStreetMap-Infrastrukturdaten</span>
+                </div>
+                <div>
+                    <span class="spec-label">Datenschutz</span>
+                    <span class="spec-value">Kein Konto, kein Tracking</span>
+                </div>
+            </div>
+        </div>
+    </section>

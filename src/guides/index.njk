@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+title: Guides – Better Routes for Running, Cycling & Walking | Play in Traffic
+description: "Practical guides to finding better routes: running route generation, bike route safety, and turning neighbourhood walks into small explorations."
+ogTitle: Guides – Play in Traffic
+styles: ["pages"]
+lastmod: 2026-06-09
+---
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "{{ site.name }}", "item": "{{ site.url }}/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides" }
+        ]
+    }
+    </script>
+    <nav class="simple-nav">
+        <div class="container">
+            <a href="/" class="nav-back">← Play in Traffic</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-hero">
+                <span class="label">Guides</span>
+                <h1>Better routes, on purpose.</h1>
+                <p class="subtitle">Practical guides to exploring your city on foot and on wheels.</p>
+            </div>
+
+            <div class="blog-index-posts">
+{%- for guide in collections.guides %}
+{%- set guideApp = apps | appByKey(guide.data.app) %}
+                <a href="{{ guide.url }}" class="blog-index-card blog-index-card--{{ guideApp.color }}">
+                    <div class="blog-index-meta">
+                        <span class="blog-index-app">{{ guideApp.name }}</span>
+                        <span class="blog-index-date">{{ guide.date | readableDate }}</span>
+                    </div>
+                    <div class="blog-index-title">{{ guide.data.heading or guide.data.title }}</div>
+                    <p class="blog-index-excerpt">{{ guide.data.excerpt }}</p>
+                </a>
+{%- endfor %}
+            </div>
+        </div>
+    </main>
+
+{% include "partials/footer.njk" %}

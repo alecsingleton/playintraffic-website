@@ -1,0 +1,173 @@
+---
+layout: layouts/product.njk
+permalink: fr/bikeright.html
+app: bikeright
+lang: fr
+title: BikeRight – Itinéraires vélo plus sûrs, navigation haptique au poignet (app iOS gratuite)
+description: "Trouvez l'itinéraire vélo le plus sûr grâce aux vraies infrastructures cyclables de votre ville — chaque trajet noté pour sa sécurité, avec navigation haptique sur Apple Watch. Gratuit sur iOS."
+ctaHeading: "Votre trajet le plus sûr commence ici."
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/bikeright.html" }
+  - { lang: fr, href: "/fr/bikeright.html" }
+  - { lang: de, href: "/de/bikeright.html" }
+  - { lang: x-default, href: "/bikeright.html" }
+faqs:
+  - q: "BikeRight est-il gratuit ?"
+    a: "<p>Oui — entièrement gratuit. Pas d'abonnement, pas d'achats intégrés, pas de publicité. Toutes les fonctionnalités, y compris l'Apple Watch et le mode destination, sont incluses.</p>"
+  - q: "Comment BikeRight évalue-t-il la sécurité d'un itinéraire ?"
+    a: "<p>BikeRight analyse chaque segment de l'itinéraire à partir des données d'infrastructure cyclable d'OpenStreetMap — pistes protégées, sentiers polyvalents, rues partagées et rues sans aménagement. Chaque itinéraire reçoit une note de sécurité globale : l'option la plus sûre est toujours en tête.</p>"
+  - q: "BikeRight suit-il ma position ou collecte-t-il des données ?"
+    a: "<p>Non. La génération d'itinéraires et l'évaluation de sécurité se font entièrement sur votre appareil. Vos coordonnées GPS ne sont jamais envoyées à nos serveurs — nous n'en avons pas. Pas d'analytique, pas de compte, pas de pistage.</p>"
+  - q: "BikeRight fonctionne-t-il sur Apple Watch ?"
+    a: "<p>Oui. L'app Apple Watch autonome de BikeRight transmet deux types d'information par tapotements haptiques : la navigation (un motif distinct pour gauche et droite) et la sécurité du prochain segment — un tap pour une piste protégée, deux pour une rue partagée, trois pour une rue sans aménagement. Aucun écran à consulter, aucun regard vers le bas.</p>"
+  - q: "Puis-je naviguer vers une destination précise ?"
+    a: "<p>Oui. Touchez « Ajouter une destination », entrez une adresse et BikeRight trouve plusieurs itinéraires — chacun noté et classé selon sa sécurité.</p>"
+  - q: "Existe-t-il une version Android ?"
+    a: "<p>Pas encore — BikeRight est pour l'instant disponible uniquement sur iOS. Si une version Android vous intéresse, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a>. Ça nous aide à prioriser.</p>"
+---
+{%- from "macros.njk" import appstoreBtn, screenshot -%}
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Roulez sur les rues vraiment faites pour les vélos.</h1>
+                <p class="product-hero-desc">Entrez votre destination. BikeRight construit l'itinéraire autour des pistes protégées, des rues calmes et des infrastructures cyclables que votre ville possède vraiment — puis garde vos yeux sur la route pendant que vous roulez.</p>
+                {{ appstoreBtn("https://apps.apple.com/app/bikeright-safer-bike-routes/id6759763484", "Télécharger dans l'App Store", "bikeright") }}
+            </div>
+            <div class="product-hero-screenshot reveal">
+                {{ screenshot("/screenshots/bikeright/02_route_selection", "Sélection d'itinéraires BikeRight avec notes de sécurité", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Why Not Google ────────────────────────────── -->
+    <section class="differentiator reveal">
+        <div class="container">
+            <div class="differentiator-inner">
+                <blockquote>Google Maps trouve l'itinéraire le plus rapide. BikeRight trouve celui où vous ne partagez pas votre voie avec des camions de livraison.</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">Comment ça marche</span>
+                <h2>Planifiez l'itinéraire le plus sûr. Roulez sans regarder.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Choisissez votre destination</h3>
+                        <p>Le travail, chez un ami, l'autre bout de la ville — entrez où vous allez et BikeRight s'occupe du reste.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Consultez le bilan de sécurité</h3>
+                        <p>Chaque itinéraire vient avec une note de sécurité : quelle part est en piste protégée, quelle part en rue partagée, et où sont les zones à risque.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Roulez sans regarder</h3>
+                        <p>Chaque virage annoncé à votre poignet. La sécurité de chaque segment aussi. Les yeux sur la route, les mains sur le guidon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Apple Watch ─────────────────── -->
+    <section class="feature-beat reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    <img src="/screenshots/bikeright/watch_haptic_nav-416.webp" alt="App Apple Watch BikeRight avec navigation haptique virage par virage" width="416" height="496" loading="lazy">
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Apple Watch</span>
+                    <h2>Vous ne lisez pas la note de sécurité. Vous la sentez.</h2>
+                    <p>Sur Apple Watch, BikeRight tapote votre poignet au début de chaque segment — un tap pour une piste protégée, deux pour une rue partagée, trois pour une rue sans aménagement. Le bilan de sécurité que vous avez vu sur la carte, livré à votre poignet pendant que vous roulez.</p>
+                    <p>Le même poignet annonce chaque virage. Un motif pour la gauche, un autre pour la droite — vous apprenez le rythme en un seul trajet.</p>
+                    <p><strong>Aucun écran à consulter. Aucun regard vers le bas.</strong></p>
+                    <p class="feature-beat-footnote">App autonome. Fonctionne sans votre téléphone. Apple Watch Series 6 et plus récentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Live Activity ───────────────── -->
+    <section class="feature-beat feature-beat--reverse reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    {{ screenshot("/screenshots/bikeright/live_activity", "Activité en direct BikeRight sur l'écran verrouillé de l'iPhone", 480, 1044, "(min-width: 1024px) 480px, 360px") }}
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Écran verrouillé &amp; Dynamic Island</span>
+                    <h2>Téléphone sur le support ? N'y touchez pas.</h2>
+                    <p>Votre prochain virage, la distance restante et la sécurité du segment en cours restent visibles sur l'écran verrouillé grâce aux activités en direct. Dynamic Island garde le virage en vue, même pendant un appel.</p>
+                    <p><strong>Une raison de moins de lâcher le guidon.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <p>Pas de compte. Pas de pistage. Pas de pub.</p>
+                <p>Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
+                    <span class="spec-label">Plateforme</span>
+                    <span class="spec-value">iOS 17.6+</span>
+                </div>
+                <div>
+                    <span class="spec-label">Prix</span>
+                    <span class="spec-value">Gratuit</span>
+                </div>
+                <div>
+                    <span class="spec-label">Apple Watch</span>
+                    <span class="spec-value">Autonome — virages et sécurité haptiques</span>
+                </div>
+                <div>
+                    <span class="spec-label">Activités en direct</span>
+                    <span class="spec-value">Écran verrouillé + Dynamic Island</span>
+                </div>
+                <div>
+                    <span class="spec-label">Note de sécurité</span>
+                    <span class="spec-value">Données d'infrastructure OpenStreetMap</span>
+                </div>
+                <div>
+                    <span class="spec-label">Confidentialité</span>
+                    <span class="spec-value">Sans compte, sans pistage</span>
+                </div>
+            </div>
+        </div>
+    </section>

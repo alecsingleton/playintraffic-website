@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+permalink: fr/index.html
+lang: fr
+title: Play in Traffic – Apps gratuites d'itinéraires de course, vélo et marche pour iOS
+description: "Trois apps iOS gratuites pour les coureurs, cyclistes et marcheurs qui veulent explorer. Trouvez de nouveaux itinéraires avec Random Run, BikeRight et Go for a Walk."
+styles: ["route-lines", "homepage"]
+scripts: ["route-animation", "nav", "scroll-reveal"]
+showFooterIcons: true
+showFooterEmail: true
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/" }
+  - { lang: fr, href: "/fr/" }
+  - { lang: de, href: "/de/" }
+  - { lang: x-default, href: "/" }
+---
+{%- set taglines = { "random-run": "Un nouvel itinéraire, à chaque fois.", "bikeright": "Des trajets plus sûrs, notés et expliqués.", "go-for-a-walk": "Même quartier, nouvelles rues." } %}
+    <!-- ── Full-page Walk Route ── -->
+    <div class="page-walk-route" aria-hidden="true">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="route-line route-line--walk" d="M0,0" stroke-width="3" vector-effect="non-scaling-stroke"/>
+        </svg>
+    </div>
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="home-hero">
+        <div class="hero-routes" aria-hidden="true">
+            <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <path class="route-line route-line--run" data-animate
+                      d="M-20,120 L120,120 L120,200 L260,200 L260,160 L400,160 L400,240 L540,240 L540,280 L600,280"
+                      stroke-width="3"/>
+                <path class="route-line route-line--ride" data-animate data-delay="1"
+                      d="M1220,120 L1060,120 L1060,200 L920,200 L920,160 L780,160 L780,240 L660,240 L660,280 L600,280"
+                      stroke-width="3"/>
+                <circle class="convergence-dot" cx="600" cy="280" r="5" fill="var(--warm-white)" opacity="0.7"/>
+            </svg>
+        </div>
+
+        <div class="home-hero-text">
+            <h1>Play in Traffic</h1>
+            <p class="home-hero-sub">Vous choisissez la distance. On choisit les rues. Apps gratuites d'itinéraires de course, vélo et marche pour iPhone et Apple Watch.</p>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Explorer</span>
+            <div class="scroll-indicator-line"></div>
+        </div>
+    </section>
+
+    <!-- ── App Showcase ──────────────────────────────── -->
+    <section class="app-showcase">
+        <div class="container">
+{%- for a in apps %}
+            <div class="app-card app-card--{{ a.color }} reveal">
+                <div class="app-card-header">
+                    <img src="{{ a.icon128 }}" alt="Icône de l'app {{ a.name }}" class="app-card-icon" width="48" height="48">
+                    <div>
+                        <div class="app-card-name">{{ a.name }}</div>
+                        <p class="app-card-diff">{{ taglines[a.key] }}</p>
+                    </div>
+                </div>
+                <span class="app-card-tag">Gratuit · iOS</span>
+                <div class="app-card-cta-row">
+                    <a href="/fr{{ a.page }}" class="app-card-link" data-umami-event="hub-card" data-umami-event-app="{{ a.key }}">En savoir plus →</a>
+                    <a href="{{ a.appStoreUrl }}" class="app-card-store" target="_blank" rel="noopener" data-umami-event="download-click" data-umami-event-app="{{ a.key }}" aria-label="Télécharger {{ a.name }} dans l'App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <span>App Store</span>
+                    </a>
+                </div>
+            </div>
+{%- endfor %}
+        </div>
+    </section>
+
+    <!-- ── What We Make ──────────────────────────────── -->
+    <section class="home-intro reveal">
+        <div class="container">
+            <h2>Des apps gratuites pour explorer, à pied comme à vélo</h2>
+            <p><a href="/fr/random-run.html">Random Run</a> est un générateur d'itinéraires de course pour iPhone et Apple Watch. Choisissez une distance ou une durée et recevez trois boucles que vous n'avez jamais courues, avec guidage vocal virage par virage et envoi automatique sur Strava.</p>
+            <p><a href="/fr/bikeright.html">BikeRight</a> trouve l'itinéraire vélo le plus sûr vers votre destination. Chaque trajet est noté selon les vraies infrastructures cyclables de votre ville, et l'Apple Watch annonce chaque virage par tapotements haptiques.</p>
+            <p><a href="/fr/go-for-a-walk.html">Go for a Walk</a> construit des promenades dans votre propre quartier avec les arrêts qui vous tentent : parcs, café, points d'intérêt, aires de jeux. Trois boucles depuis votre porte, chacune vers du nouveau.</p>
+            <p>Les trois apps sont entièrement gratuites, sans compte, sans publicité et sans pistage.</p>
+        </div>
+    </section>
+
+    <!-- ── Philosophy Strip ──────────────────────────── -->
+    <section class="philosophy reveal">
+        <div class="container">
+            <p>Gratuit. Privé. Aucun compte requis.</p>
+        </div>
+    </section>
+
+{% include "partials/footer.njk" %}

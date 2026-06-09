@@ -1,0 +1,182 @@
+---
+layout: layouts/product.njk
+permalink: fr/random-run.html
+app: random-run
+lang: fr
+title: Random Run – Générateur d'itinéraires de course gratuit pour iPhone et Apple Watch
+description: "Un tap pour trouver un nouvel itinéraire. Un tap pour le courir depuis votre poignet. Zéro tap pour l'envoyer sur Strava. Gratuit sur iPhone et Apple Watch."
+ctaHeading: "Votre prochaine course commence ici."
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/random-run.html" }
+  - { lang: fr, href: "/fr/random-run.html" }
+  - { lang: de, href: "/de/random-run.html" }
+  - { lang: x-default, href: "/random-run.html" }
+faqs:
+  - q: "Random Run est-il gratuit ?"
+    a: "<p>Oui — entièrement gratuit. Pas d'abonnement, pas d'achats intégrés, pas de publicité. Toutes les fonctionnalités sont disponibles dès le premier jour.</p>"
+  - q: "Random Run fonctionne-t-il sur Apple Watch ?"
+    a: "<p>Oui. Random Run est une app Apple Watch autonome — pas un simple miroir du téléphone. Générez des itinéraires, suivez les indications virage par virage et enregistrez toute votre course depuis votre poignet. Laissez le téléphone à la maison.</p>"
+  - q: "Random Run envoie-t-il mes courses sur Strava ?"
+    a: "<p>Oui. Random Run propose une intégration Strava optionnelle sur iPhone et Apple Watch. Elle est désactivée par défaut — activez-la une fois et chaque course terminée s'envoie automatiquement. Un tap pour la désactiver, à tout moment.</p>"
+  - q: "Random Run suit-il ma position ou collecte-t-il mes données ?"
+    a: "<p>Votre position et vos itinéraires ne quittent jamais votre appareil. La génération d'itinéraires se fait localement, sans compte ni pistage publicitaire. Nous recueillons des signaux d'utilisation anonymes et agrégés via TelemetryDeck — aucun identifiant, aucun GPS, aucune donnée d'itinéraire. Consultez notre <a href=\"/privacy.html\">politique de confidentialité</a> pour tous les détails.</p>"
+  - q: "Existe-t-il une version Android ?"
+    a: "<p>Pas encore — Random Run est pour l'instant disponible uniquement sur iOS. Si une version Android vous intéresse, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a>. Ça nous aide à prioriser.</p>"
+  - q: "Comment fonctionne la génération d'itinéraires ?"
+    a: "<p>Dites à Random Run quelle distance ou quelle durée vous voulez courir. L'app génère trois boucles uniques qui commencent et se terminent à votre position. Si vous connectez Apple Santé, les itinéraires s'adaptent à votre rythme de course réel.</p>"
+---
+{%- from "macros.njk" import appstoreBtn, screenshot -%}
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Lacez vos chaussures. On s'occupe du reste.</h1>
+                <p class="product-hero-desc">Choisissez une distance ou une durée. Recevez trois itinéraires que vous n'avez jamais courus. Chacun commence et se termine là où vous êtes.</p>
+                {{ appstoreBtn("https://apps.apple.com/app/random-run/id6755962631", "Télécharger dans l'App Store", "random-run") }}
+            </div>
+            <div class="product-hero-screenshot reveal">
+                {{ screenshot("/screenshots/random-run/02_route_preview", "Aperçu des trois itinéraires dans Random Run", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Differentiator ────────────────────────────── -->
+    <section class="differentiator reveal">
+        <div class="container">
+            <div class="differentiator-inner">
+                <blockquote>Chaque course est un nouvel itinéraire. Pas de répétition, pas d'historique, pas d'algorithme qui décide de vos « habitudes ».</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">Comment ça marche</span>
+                <h2>Un tap pour trouver. Un tap pour courir. Zéro tap pour partager.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Trouvez</h3>
+                        <p>Choisissez une distance. Ou une durée. Trois itinéraires jamais courus, chacun partant de là où vous êtes. Touchez-en un. Partez.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Courez</h3>
+                        <p>Indications virage par virage sur votre téléphone — ou à votre poignet, sans téléphone du tout.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Partagez</h3>
+                        <p>Terminez la course. Elle est déjà sur Strava. Désactivé par défaut — un tap pour couper.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout-box reveal">
+                <div>
+                    <p><strong>Connectez Apple Santé et les itinéraires s'adaptent à votre rythme réel.</strong> « 30 minutes » veut dire 30 minutes pour vous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Apple Watch ─────────────────── -->
+    <section class="feature-beat reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media">
+                    <img src="/screenshots/random-run/watch_route_preview-416.webp" alt="Random Run sur Apple Watch avec un itinéraire de course généré" width="416" height="496" loading="lazy">
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Courez</span>
+                    <h2>Courez depuis votre poignet.</h2>
+                    <p>Random Run est une app Apple Watch autonome — pas un miroir de votre téléphone. Générez un itinéraire, suivez-le virage par virage et enregistrez toute la course depuis 40 mm de verre.</p>
+                    <p><strong>Le téléphone peut rester à la maison.</strong> La plupart du temps, c'est le cas.</p>
+                    <p class="feature-beat-footnote">Fonctionne en autonomie sur Apple Watch Series 6 et plus récentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Feature Beat: Strava ──────────────────────── -->
+    <section class="feature-beat feature-beat--reverse reveal">
+        <div class="container">
+            <div class="feature-beat-inner">
+                <div class="feature-beat-media feature-beat-media--lockup">
+                    <div class="strava-lockup" aria-label="Compatible avec Strava — iPhone et Apple Watch">
+                        <span class="strava-lockup-label">Compatible avec</span>
+                        <span class="strava-lockup-mark">STRAVA</span>
+                        <span class="strava-lockup-sublabel">iPhone + Apple Watch</span>
+                    </div>
+                </div>
+                <div class="feature-beat-text">
+                    <span class="label">Partagez</span>
+                    <h2>Terminez. C'est déjà sur Strava.</h2>
+                    <p>Activez Strava une fois. Chaque course suivante y est avant même que vous repreniez votre souffle — depuis votre poignet ou votre téléphone.</p>
+                    <p><strong>Désactivé par défaut. Un tap pour couper.</strong> Rien ne quitte votre téléphone sans votre accord.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <p>Pas de compte. Pas de pistage. Pas de pub.</p>
+                <p>Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
+                    <span class="spec-label">Plateforme</span>
+                    <span class="spec-value">iOS 17.6+</span>
+                </div>
+                <div>
+                    <span class="spec-label">Prix</span>
+                    <span class="spec-value">Gratuit</span>
+                </div>
+                <div>
+                    <span class="spec-label">Apple Watch</span>
+                    <span class="spec-value">Autonome — sans téléphone</span>
+                </div>
+                <div>
+                    <span class="spec-label">Strava</span>
+                    <span class="spec-value">Envoi auto, désactivé par défaut</span>
+                </div>
+                <div>
+                    <span class="spec-label">HealthKit</span>
+                    <span class="spec-value">Itinéraires adaptés à votre rythme</span>
+                </div>
+                <div>
+                    <span class="spec-label">Confidentialité</span>
+                    <span class="spec-value">Sans compte, sans pistage</span>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,147 @@
+---
+layout: layouts/product.njk
+permalink: fr/go-for-a-walk.html
+app: go-for-a-walk
+lang: fr
+title: Go for a Walk – Découvrez des promenades près de chez vous (app iOS gratuite)
+description: "Choisissez votre distance. Sélectionnez ce qui vous tente en chemin — parcs, café, points d'intérêt. Recevez trois itinéraires dans des coins de votre quartier que vous n'avez jamais vus. Gratuit sur iOS."
+ctaHeading: "Votre prochaine promenade commence ici."
+lastmod: 2026-06-09
+alternates:
+  - { lang: en, href: "/go-for-a-walk.html" }
+  - { lang: fr, href: "/fr/go-for-a-walk.html" }
+  - { lang: de, href: "/de/go-for-a-walk.html" }
+  - { lang: x-default, href: "/go-for-a-walk.html" }
+faqs:
+  - q: "Go for a Walk est-il gratuit ?"
+    a: "<p>Oui — entièrement gratuit. Pas d'abonnement, pas d'achats intégrés, pas de publicité. Toutes les fonctionnalités sont incluses dès le départ.</p>"
+  - q: "Où télécharger Go for a Walk ?"
+    a: "<p>Go for a Walk est disponible gratuitement sur l'<a href=\"https://apps.apple.com/app/go-for-a-walk/id6761119312\" target=\"_blank\" rel=\"noopener\">App Store</a>.</p>"
+  - q: "Go for a Walk suit-il ma position ou collecte-t-il des données ?"
+    a: "<p>Non. Votre historique de promenades, vos préférences et vos itinéraires restent sur votre appareil. Nous n'avons pas de serveurs, pas d'analytique, et nous ne collectons aucune information personnelle.</p>"
+  - q: "Puis-je personnaliser mes itinéraires de promenade ?"
+    a: "<p>Oui. Ajoutez des parcs, des cafés, des parcs à chiens, des points d'intérêt et des aires de jeux à votre itinéraire. Réglez la distance ou la durée qui vous convient.</p>"
+  - q: "Existe-t-il une version Android ?"
+    a: "<p>Pas encore — Go for a Walk est pour l'instant disponible uniquement sur iOS. Si une version Android vous intéresse, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a>. Ça nous aide à prioriser.</p>"
+---
+{%- from "macros.njk" import appstoreBtn, screenshot -%}
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="product-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="product-hero-text">
+                <h1>Une meilleure promenade dans le quartier que vous croyez connaître.</h1>
+                <p class="product-hero-desc">Choisissez votre distance. Sélectionnez ce qui vous tente en chemin — parcs, café, points d'intérêt, aires de jeux. Recevez trois itinéraires dans des coins de votre quartier que vous n'avez jamais vus.</p>
+                {{ appstoreBtn("https://apps.apple.com/app/go-for-a-walk/id6761119312", "Télécharger dans l'App Store", "go-for-a-walk") }}
+            </div>
+            <div class="product-hero-screenshot reveal">
+                {{ screenshot("/screenshots/go-for-a-walk/01_home", "Écran d'accueil de Go for a Walk avec options de personnalisation", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Customization Callout ─────────────────────── -->
+    <section class="differentiator reveal">
+        <div class="container">
+            <div class="differentiator-inner">
+                <blockquote>Envie de verdure ? Touchez « parcs ». Besoin d'une destination ? Touchez « café ». Juste envie d'errer ? Réglez une distance et partez.</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────── -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-section-header reveal">
+                <span class="label">Comment ça marche</span>
+                <h2>Réglez une distance. Choisissez ce qui vous tente. Marchez.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">01</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Réglez votre distance ou votre durée</h3>
+                        <p>3 kilomètres ? 45 minutes ? Ce qui convient à votre journée.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">02</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Personnalisez votre promenade</h3>
+                        <p>Parcs, cafés, parcs à chiens, points d'intérêt, aires de jeux — touchez ce que vous voulez découvrir en chemin.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-marker">
+                        <span class="step-number">03</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>Choisissez un itinéraire et partez</h3>
+                        <p>Trois itinéraires, chacun dans une direction différente. Guidage vocal pour que votre téléphone reste dans votre poche.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Voice Nav Callout ─────────────────────────── -->
+    <section class="feature-callout reveal">
+        <div class="container">
+            <div class="feature-callout-inner">
+                <p><strong>Guidage vocal</strong> pour que votre téléphone reste dans votre poche.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HealthKit Callout ─────────────────────────── -->
+    <section class="feature-callout reveal">
+        <div class="container">
+            <div class="callout-box">
+                <div>
+                    <p><strong>Connectez Apple Santé</strong> et les durées s'appuient sur votre vitesse de marche réelle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Privacy ───────────────────────────────────── -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-card reveal">
+                <p>Pas de compte. Pas de pistage. Pas de pub.</p>
+                <p>Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Specs ─────────────────────────────────────── -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="spec-grid reveal">
+                <div>
+                    <span class="spec-label">Plateforme</span>
+                    <span class="spec-value">iOS 26.1+</span>
+                </div>
+                <div>
+                    <span class="spec-label">Prix</span>
+                    <span class="spec-value">Gratuit</span>
+                </div>
+                <div>
+                    <span class="spec-label">Guidage vocal</span>
+                    <span class="spec-value">Mains libres</span>
+                </div>
+                <div>
+                    <span class="spec-label">Personnalisation</span>
+                    <span class="spec-value">Parcs, café, points d'intérêt, aires de jeux</span>
+                </div>
+            </div>
+        </div>
+    </section>
