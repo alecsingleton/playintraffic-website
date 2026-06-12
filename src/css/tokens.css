@@ -1,37 +1,54 @@
 :root {
+  /* ── Trailhead palette ─────────────────────────────
+     Warm cream canvas, pine greens, sunset orange, and
+     golden yellow. Park-poster, not parking lot. */
+
   /* Canvas */
-  --asphalt: #1a1a1a;
-  --asphalt-warm: #2d2820;
-  --surface: #242424;
-  --warm-white: #f5f0e8;
-  --warm-white-muted: rgba(245, 240, 232, 0.7);
-  --warm-white-subtle: rgba(245, 240, 232, 0.4);
+  --cream: #FAF3E3;
+  --paper: #FFFBF0;
+  --ink: #2B2B25;
+  --pine: #2F5D3A;
+  --pine-deep: #234A2D;
+  --sunset: #E8703A;
+  --sunset-deep: #B95122;
+  --golden: #F2B134;
+  --sky: #A8D5E2;
 
-  /* Signal colors */
-  --signal-red: #E8593C;
-  --signal-green: #2DB87A;
-  --signal-amber: #F2A623;
+  /* Legacy slot names (kept so older styles keep working) */
+  --asphalt: var(--cream);
+  --asphalt-warm: var(--pine-deep);
+  --surface: var(--paper);
+  --warm-white: var(--paper);
+  --warm-white-muted: rgba(255, 251, 240, 0.75);
+  --warm-white-subtle: rgba(255, 251, 240, 0.45);
 
-  /* Signal muted */
-  --signal-red-glow: rgba(232, 89, 60, 0.15);
-  --signal-green-glow: rgba(45, 184, 122, 0.15);
-  --signal-amber-glow: rgba(242, 166, 35, 0.15);
+  /* Signal colors — one per app, dark enough for cream */
+  --signal-red: #D9582C;
+  --signal-green: #3E7C59;
+  --signal-amber: #C9881F;
 
-  /* Warm accent */
-  --warm-accent: #C4A67A;
-  --warm-accent-hover: #D4B68A;
+  /* Signal tints (chips, soft shadows) */
+  --signal-red-glow: rgba(217, 88, 44, 0.14);
+  --signal-green-glow: rgba(62, 124, 89, 0.14);
+  --signal-amber-glow: rgba(201, 136, 31, 0.16);
+
+  /* Warm accent (links) */
+  --warm-accent: #C2511F;
+  --warm-accent-hover: #A84318;
 
   /* Utility */
-  --text-primary: var(--warm-white);
-  --text-secondary: var(--warm-white-muted);
-  --text-tertiary: var(--warm-white-subtle);
-  --border: rgba(245, 240, 232, 0.1);
-  --border-hover: rgba(245, 240, 232, 0.2);
+  --text-primary: var(--ink);
+  --text-secondary: #5C5A4E;
+  --text-tertiary: #8A8674;
+  --heading: var(--pine-deep);
+  --border: rgba(43, 43, 37, 0.12);
+  --border-hover: rgba(43, 43, 37, 0.25);
+  --shadow-card: 0 2px 4px rgba(43, 43, 37, 0.05), 0 12px 28px rgba(43, 43, 37, 0.09);
 
   /* Typography */
-  --font-display: 'Sora', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Nunito', -apple-system, sans-serif;
+  --font-mono: 'Nunito', -apple-system, sans-serif;
 
   /* Layout */
   --max-width: 1200px;
@@ -39,16 +56,6 @@
   --content-pad-x: 24px;
 
   /* Radius */
-  --radius-card: 16px;
-  --radius-btn: 8px;
-}
-
-.daylight {
-  --asphalt: #f5f0e8;
-  --surface: #ede6d8;
-  --text-primary: #1a1a1a;
-  --text-secondary: rgba(26, 26, 26, 0.7);
-  --text-tertiary: rgba(26, 26, 26, 0.4);
-  --border: rgba(26, 26, 26, 0.1);
-  --border-hover: rgba(26, 26, 26, 0.2);
+  --radius-card: 20px;
+  --radius-btn: 999px;
 }

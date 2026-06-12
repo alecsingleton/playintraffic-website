@@ -21,6 +21,7 @@
 
 .page-hero .subtitle {
   font-size: 1rem;
+  font-weight: 600;
   color: var(--text-secondary);
 }
 
@@ -57,12 +58,13 @@
 
 .about-body a {
   color: var(--warm-accent);
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .about-body a:hover {
-  color: var(--warm-accent-hover);
+  color: var(--sunset);
 }
 
 .about-body .app-link--run { color: var(--signal-red); }
@@ -82,14 +84,14 @@
 .about-contact a {
   color: var(--warm-accent);
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1rem;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .about-contact a:hover {
-  color: var(--warm-accent-hover);
+  color: var(--sunset);
 }
 
 /* ── Privacy / Policy Pages ────────────────────────── */
@@ -131,19 +133,21 @@
 
 .policy-section a {
   color: var(--warm-accent);
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .policy-section a:hover {
-  color: var(--warm-accent-hover);
+  color: var(--sunset);
 }
 
 .highlight-box {
-  background: var(--surface);
+  background: var(--paper);
   border-radius: var(--radius-card);
   padding: 24px;
-  border-left: 3px solid var(--warm-accent);
+  border-left: 4px solid var(--golden);
+  box-shadow: var(--shadow-card);
 }
 
 .highlight-box p {
@@ -155,13 +159,14 @@
 }
 
 .highlight-box strong {
-  color: var(--text-primary);
+  color: var(--pine-deep);
 }
 
 .effective-date {
-  font-family: var(--font-mono);
+  font-weight: 800;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-tertiary);
 }
 
@@ -171,7 +176,7 @@
 
 .contact-email a {
   color: var(--warm-accent);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* ── Blog Index ────────────────────────────────────── */
@@ -182,19 +187,21 @@
   padding-bottom: var(--section-pad-y);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .blog-index-card {
   display: block;
   padding: 20px 24px;
-  border-left: 3px solid var(--border);
-  border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
-  transition: background 0.2s, border-color 0.2s;
+  background: var(--paper);
+  border-left: 4px solid var(--border);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s;
 }
 
 .blog-index-card:hover {
-  background: rgba(245, 240, 232, 0.03);
+  transform: translateY(-2px);
 }
 
 .blog-index-card--run { border-left-color: var(--signal-red); }
@@ -209,12 +216,12 @@
 }
 
 .blog-index-app {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-weight: 800;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 2px 10px;
+  border-radius: var(--radius-btn);
 }
 
 .blog-index-card--run .blog-index-app {
@@ -233,22 +240,24 @@
 }
 
 .blog-index-date {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-weight: 700;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-tertiary);
 }
 
 .blog-index-title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1rem;
+  color: var(--pine-deep);
   margin-bottom: 4px;
 }
 
 .blog-index-excerpt {
   font-size: 0.875rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
@@ -261,8 +270,8 @@
 }
 
 .post-date {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-weight: 800;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
   color: var(--text-tertiary);
   text-transform: uppercase;
@@ -299,12 +308,13 @@
 
 .post-body a {
   color: var(--warm-accent);
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .post-body a:hover {
-  color: var(--warm-accent-hover);
+  color: var(--sunset);
 }
 
 .post-body ul {
@@ -325,19 +335,24 @@
 .post-cta {
   text-align: center;
   padding: var(--section-pad-y) 0;
+  background: var(--pine-deep);
 }
 
-.page--run .post-cta { background: var(--signal-red); }
-.page--ride .post-cta { background: var(--signal-green); }
-
 .post-cta h2 {
-  color: var(--asphalt);
+  color: var(--cream);
   margin-bottom: 20px;
 }
 
 .post-cta .btn-appstore {
-  background: var(--asphalt);
-  color: var(--warm-white);
+  background: var(--sunset);
+  color: var(--paper);
+  box-shadow: 0 4px 0 var(--sunset-deep);
+}
+
+.post-cta .btn-appstore:hover {
+  background: var(--sunset);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--sunset-deep);
 }
 
 /* ── Simple Nav for Secondary Pages ────────────────── */
@@ -348,7 +363,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(250, 243, 227, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -379,27 +394,30 @@
 
 .simple-nav-brand span {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.875rem;
+  color: var(--pine-deep);
 }
 
 .simple-nav .nav-back {
   font-family: var(--font-body);
+  font-weight: 700;
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: var(--pine);
   transition: color 0.2s;
 }
 
 .simple-nav .nav-back:hover {
-  color: var(--text-primary);
+  color: var(--sunset-deep);
 }
 
 .simple-nav-contact {
+  font-weight: 700;
   font-size: 0.8125rem;
   color: var(--text-tertiary);
   transition: color 0.2s;
 }
 
 .simple-nav-contact:hover {
-  color: var(--text-primary);
+  color: var(--pine-deep);
 }

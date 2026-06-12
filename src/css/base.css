@@ -11,11 +11,11 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-primary);
-  background-color: var(--asphalt);
+  background-color: var(--cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -48,27 +48,27 @@ button {
 
 h1 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 900;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--heading);
 }
 
 h2 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   line-height: 1.15;
-  color: var(--text-primary);
+  color: var(--heading);
 }
 
 h3 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   line-height: 1.25;
-  color: var(--text-primary);
+  color: var(--heading);
 }
 
 p {
@@ -76,13 +76,17 @@ p {
 }
 
 .label {
-  font-family: var(--font-mono);
-  font-weight: 400;
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--signal-red);
 }
+
+.page--run .label { color: var(--signal-red); }
+.page--ride .label { color: var(--signal-green); }
+.page--walk .label { color: var(--signal-amber); }
 
 .container {
   max-width: var(--max-width);
@@ -91,12 +95,12 @@ p {
 }
 
 ::selection {
-  background: var(--warm-accent);
-  color: var(--asphalt);
+  background: var(--golden);
+  color: var(--ink);
 }
 
 :focus-visible {
-  outline: 2px solid var(--warm-accent);
+  outline: 2px solid var(--sunset);
   outline-offset: 2px;
 }
 

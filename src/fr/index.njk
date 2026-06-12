@@ -4,11 +4,11 @@ permalink: fr/index.html
 lang: fr
 title: Play in Traffic – Apps gratuites d'itinéraires de course, vélo et marche pour iOS
 description: "Trois apps iOS gratuites pour les coureurs, cyclistes et marcheurs qui veulent explorer. Trouvez de nouveaux itinéraires avec Random Run, BikeRight et Go for a Walk."
-styles: ["route-lines", "homepage"]
-scripts: ["route-animation", "nav", "scroll-reveal"]
+styles: ["homepage"]
+scripts: ["scroll-reveal"]
 showFooterIcons: true
 showFooterEmail: true
-lastmod: 2026-06-09
+lastmod: 2026-06-12
 alternates:
   - { lang: en, href: "/" }
   - { lang: fr, href: "/fr/" }
@@ -16,40 +16,31 @@ alternates:
   - { lang: x-default, href: "/" }
 ---
 {%- set taglines = { "random-run": "Un nouvel itinéraire, à chaque fois.", "bikeright": "Des trajets plus sûrs, notés et expliqués.", "go-for-a-walk": "Même quartier, nouvelles rues." } %}
-    <!-- ── Full-page Walk Route ── -->
-    <div class="page-walk-route" aria-hidden="true">
-        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="route-line route-line--walk" d="M0,0" stroke-width="3" vector-effect="non-scaling-stroke"/>
-        </svg>
-    </div>
-
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="home-hero">
-        <div class="hero-routes" aria-hidden="true">
-            <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <path class="route-line route-line--run" data-animate
-                      d="M-20,120 L120,120 L120,200 L260,200 L260,160 L400,160 L400,240 L540,240 L540,280 L600,280"
-                      stroke-width="3"/>
-                <path class="route-line route-line--ride" data-animate data-delay="1"
-                      d="M1220,120 L1060,120 L1060,200 L920,200 L920,160 L780,160 L780,240 L660,240 L660,280 L600,280"
-                      stroke-width="3"/>
-                <circle class="convergence-dot" cx="600" cy="280" r="5" fill="var(--warm-white)" opacity="0.7"/>
-            </svg>
-        </div>
-
         <div class="home-hero-text">
-            <h1>Play in Traffic</h1>
+            <span class="hero-badge">★ Trois apps iOS gratuites</span>
+            <h1>Sortez.<br><em>On trouve le chemin.</em></h1>
             <p class="home-hero-sub">Vous choisissez la distance. On choisit les rues. Apps gratuites d'itinéraires de course, vélo et marche pour iPhone et Apple Watch.</p>
+            <a class="hero-cta" href="#apps">Choisissez votre aventure ↓</a>
         </div>
 
-        <div class="scroll-indicator" aria-hidden="true">
-            <span>Explorer</span>
-            <div class="scroll-indicator-line"></div>
-        </div>
+        <svg class="hero-hills" viewBox="0 0 1440 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0,180 C240,100 420,210 720,150 C1020,90 1200,190 1440,130 L1440,280 L0,280 Z" fill="#A8D5E2" opacity="0.55"/>
+            <path d="M0,210 C260,140 520,240 800,180 C1080,120 1280,230 1440,180 L1440,280 L0,280 Z" fill="#3E7C59" opacity="0.85"/>
+            <path d="M0,250 C300,190 600,270 900,225 C1150,190 1320,260 1440,235 L1440,280 L0,280 Z" fill="#234A2D"/>
+            <path d="M80,235 C300,205 480,245 700,215 C920,185 1140,240 1380,210" fill="none" stroke="#FAF3E3" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+            <circle cx="80" cy="235" r="6" fill="#F2B134"/>
+            <circle cx="1380" cy="210" r="6" fill="#E8703A"/>
+        </svg>
     </section>
 
     <!-- ── App Showcase ──────────────────────────────── -->
-    <section class="app-showcase">
+    <section class="app-showcase" id="apps">
+        <div class="app-showcase-head">
+            <h2>Trois apps, une idée</h2>
+            <p>Ne prenez jamais deux fois le même itinéraire.</p>
+        </div>
         <div class="container">
 {%- for a in apps %}
             <div class="app-card app-card--{{ a.color }} reveal">
