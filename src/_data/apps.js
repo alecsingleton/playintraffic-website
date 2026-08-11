@@ -135,7 +135,7 @@ module.exports = [
     tagline: "Same block, new streets.",
     navDesc: "Same block, new streets",
     cardDesc:
-      "A walking route app that builds loops through your own neighborhood with the stops you actually want — parks, coffee, landmarks, playgrounds — so the same block always has new streets.",
+      "A walking route app that builds loops through your own neighbourhood with the stops you actually want — parks, coffee, landmarks, playgrounds — so the same block always has new streets.",
     page: "/go-for-a-walk.html",
     privacy: "/go-for-a-walk-privacy.html",
     appStoreId: "6761119312",
