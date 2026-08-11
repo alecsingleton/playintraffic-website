@@ -53,11 +53,23 @@ module.exports = [
       },
       {
         q: "How does the route generation work?",
-        a: "<p>Tell Random Run how far or how long you want to run. It generates three unique loop routes starting and ending at your current location. If you connect Apple Health, routes are personalized to your running pace.</p>",
+        a: "<p>Tell Random Run how far or how long you want to run. It generates three unique loop routes starting and ending at your current location — and since version 2.0, every route is a true loop that never retraces a street, so there are no disguised out-and-backs. If you connect Apple Health, routes are personalized to your running pace.</p>",
       },
       {
         q: "Can I auto-upload my runs to Strava?",
         a: "<p>Yes. Connect Strava once in Settings and every finished run uploads automatically — no taps required. Your phone sends runs directly to Strava; we never see them. Disconnect anytime from Settings or from Strava's own app-permissions page.</p>",
+      },
+      {
+        q: "Does Random Run support run/walk intervals?",
+        a: "<p>Yes. Random Run has built-in Galloway-style run/walk intervals. Set your run and walk durations, and the app announces every switch with a voice cue and a haptic tap — on iPhone and Apple Watch. Interval cues share audio politely with turn-by-turn voice guidance.</p>",
+      },
+      {
+        q: "Can I plan a running route somewhere other than my current location?",
+        a: "<p>Yes. Pick any starting point on the map — a hotel, an office, a trailhead — and Random Run generates loop routes from there. Perfect for planning tomorrow's run the night before, especially when travelling.</p>",
+      },
+      {
+        q: "What happens if I go off route during a run?",
+        a: "<p>Random Run automatically detects when you've drifted off course and reroutes you back to your loop, updating the map, directions, and voice guidance. If a road is closed or you want a different way home, tap the Detour button and the app builds an alternate path back to your start.</p>",
       },
     ],
   },

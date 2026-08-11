@@ -1,0 +1,34 @@
+---
+title: "Random Run 2.0: True Loop Running Routes — No More Backtracking"
+heading: "Random Run 2.0: Every Route Is a True Loop"
+description: "Random Run 2.0 generates loop running routes that never retrace a street. No out-and-backs, no doubling back — just clean loops, generated faster than ever, on iPhone and Apple Watch."
+date: 2026-08-11
+lastmod: 2026-08-11
+excerpt: "Version 2.0 guarantees loop routes that never retrace a street — no out-and-backs, no doubling back. And they generate faster than ever."
+---
+
+            <p>There's a special kind of disappointment in a "loop" route that sends you back down the street you just ran. You know the one: three kilometres of new territory, then a U-turn, then the same three kilometres in reverse. That's not a loop. That's an out-and-back wearing a costume.</p>
+
+            <p><strong>Random Run 2.0 puts an end to it.</strong> Every route the app generates is now a true loop — a route that never retraces a street you've already run. It's the biggest change to route generation since we launched, and it's live now on the App Store for iPhone and Apple Watch.</p>
+
+            <h2>What changed</h2>
+
+            <p>Under the hood, Random Run has always generated candidate routes and scored them before showing you the best three. Until now, that scoring <em>tolerated</em> a bit of doubling back — a couple hundred metres here and there was considered acceptable. Version 2.0 flips that rule: <strong>routes with retraced stretches don't make the cut, period.</strong></p>
+
+            <p>Getting there took more than tightening a threshold. The new route engine can tell the difference between genuinely running the same street twice and simply <em>crossing</em> your own path — a figure-eight through a park is a perfectly good loop, and the app now knows it. And when a promising route has one stubborn backtracked section, Random Run doesn't just throw it away: it nudges the route away from the offending street and tries again, which rescues routes in neighbourhoods that used to be tricky.</p>
+
+            <h2>From city grids to country lanes</h2>
+
+            <p>Dense downtown grids and sparse rural roads fail in opposite ways, so 2.0 handles both. In a city, where street corners get revisited from different directions all the time, the engine only counts backtracking you'd actually <em>perceive</em> — running the same block face twice — not technicalities at intersections.</p>
+
+            <p>In the countryside, the problem inverts: sometimes there's exactly one lane out of where you're standing, and a perfect loop mathematically doesn't exist. Rather than showing you an empty screen, Random Run allows the minimum backtracking the road network forces — your run out of a dead-end lane still works, and the rest of the route stays clean.</p>
+
+            <h2>Faster, too</h2>
+
+            <p>While we were rebuilding the engine, we made it quick. Route generation now runs fully in the background with candidates evaluated in parallel, so your three routes appear noticeably faster. And when you tap <em>3 more</em>, the next batch has often already been fetched before your thumb gets there.</p>
+
+            <h2>Why loops matter</h2>
+
+            <p>Random Run exists because <a href="/guides/running-route-generator.html">finding a new running route</a> shouldn't be homework. But novelty only works if the whole route is new — a route that repeats itself halfway through breaks the spell. A true loop means every kilometre of your run is a street you haven't seen yet today. That's the promise on the box, and as of 2.0 it's a guarantee, not a goal.</p>
+
+            <p>As always: no account, no subscription, no ads. Update Random Run, pick a distance, and run a loop that actually loops.</p>
