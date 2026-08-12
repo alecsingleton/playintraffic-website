@@ -28,6 +28,7 @@
 {%- if showFooterEmail %}
             <div class="footer-email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
 {%- endif %}
+            <div class="footer-made-in">{{ str.madeInCanada }} 🇨🇦</div>
             <div class="footer-copy">© {{ site.copyrightYear }} {{ site.name }}.{% if footerAppData %} {{ footerAppData.footerCopy }}{% endif %}</div>
         </div>
     </footer>

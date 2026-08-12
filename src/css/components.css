@@ -522,6 +522,12 @@ details[open] .faq-question::after {
   color: var(--golden);
 }
 
+.footer-made-in {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: rgba(250, 243, 227, 0.7);
+}
+
 .footer-copy {
   font-size: 0.75rem;
   color: rgba(250, 243, 227, 0.55);
