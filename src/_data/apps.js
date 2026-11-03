@@ -33,7 +33,7 @@ module.exports = [
     faqs: [
       {
         q: "Is Random Run free?",
-        a: "<p>Yes, completely free. There are no subscriptions, in-app purchases, or ads, and every feature is included from day one.</p>",
+        a: "<p>Yes. Random Run is free to download, with no ads and no account.</p>",
       },
       {
         q: "Does Random Run work on Apple Watch?",
@@ -41,27 +41,27 @@ module.exports = [
       },
       {
         q: "Does Random Run upload runs to Strava?",
-        a: "<p>Yes. There's an optional Strava integration on both iPhone and Apple Watch. It's off by default; once you turn it on, every finished run uploads automatically, and you can turn it back off anytime.</p>",
+        a: "<p>Yes, from iPhone and Apple Watch. It's off by default: connect Strava once in Settings and every finished run uploads on its own. Runs go straight from your phone to Strava, so we never see them, and you can disconnect anytime from Settings or from Strava's app permissions page.</p>",
       },
       {
         q: "Does Random Run track my location or collect my data?",
-        a: '<p>Your location and your routes never leave your device. Route generation happens locally, and there are no accounts or ad tracking. We do collect anonymous, aggregated usage signals (like how many people finish onboarding) through TelemetryDeck, with no identifiers, GPS, or route data attached. Strava integration is optional and off by default. Our <a href="/privacy.html">privacy policy</a> has the full details.</p>',
+        a: '<p>We never see your location or your routes, and there are no accounts or ads. To build routes, Random Run sends your starting point and a few waypoints to Google\'s routing service, with nothing that identifies you attached. Your run history stays on your device. We also collect anonymous, aggregated usage signals (like how many people finish onboarding) through TelemetryDeck, with no identifiers, GPS, or route data attached. Strava is optional and off by default. Our <a href="/privacy.html">privacy policy</a> has the full details.</p>',
       },
       {
         q: "Is there an Android version?",
-        a: '<p>Not yet. Random Run is iOS only for now, but if you\'d like an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Random%20Run">let us know</a> — knowing people want it helps us decide what to build next.</p>',
+        a: '<p>Not yet. Random Run is iOS only for now. <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20waitlist%20(Random%20Run)&body=Add%20me%20to%20the%20Android%20waitlist.">Join the Android waitlist</a> and we\'ll email you once, when it\'s ready.</p>',
       },
       {
         q: "How does the route generation work?",
-        a: "<p>You tell Random Run how far or how long you want to run, and it generates three loop routes that start and end at your current location. Since version 2.0, every route is a true loop that never retraces a street, so you won't get an out-and-back in disguise. If you connect Apple Health, route timing is based on your own running pace.</p>",
-      },
-      {
-        q: "Can I auto-upload my runs to Strava?",
-        a: "<p>Yes. Connect Strava once in Settings and every finished run uploads on its own. Your phone sends runs directly to Strava, so we never see them, and you can disconnect anytime from Settings or from Strava's app permissions page.</p>",
+        a: "<p>You tell Random Run how far or how long you want to run, and it generates three loop routes that start and end where you are, or at any point you pick on the map. Since version 2.0, every route is a true loop that never retraces a street, so you won't get an out-and-back in disguise. If you connect Apple Health, route timing is based on your own running pace.</p>",
       },
       {
         q: "Does Random Run support run/walk intervals?",
         a: "<p>Yes. There are built-in Galloway-style run/walk intervals: set your run and walk durations, and the app announces each switch with a voice cue and a haptic tap on both iPhone and Apple Watch. The interval cues are timed so they don't talk over the turn-by-turn voice guidance.</p>",
+      },
+      {
+        q: "Can I run a route again?",
+        a: "<p>Yes. Tap any run in your history to run that route again, and your favourites get a quick-start row on the home screen. A new route when you want variety, a known-good one when you don't.</p>",
       },
       {
         q: "Can I plan a running route somewhere other than my current location?",
@@ -99,15 +99,15 @@ module.exports = [
     faqs: [
       {
         q: "Is BikeRight free?",
-        a: "<p>Yes, completely free. There are no subscriptions, in-app purchases, or ads, and everything, including the Apple Watch app and destination mode, is included.</p>",
+        a: "<p>Yes. BikeRight is free to download, with no ads and no account.</p>",
       },
       {
         q: "How does BikeRight score route safety?",
-        a: "<p>Each segment of a route is checked against OpenStreetMap's cycling infrastructure data and classified as a protected bike lane, multi-use path, shared road, or unprotected street. Those segments roll up into an overall safety score for the route, so the safest option is easy to spot.</p>",
+        a: "<p>BikeRight matches every stretch of a route to OpenStreetMap and rates it with a model based on Level of Traffic Stress (LTS), the framework many cities' transportation departments use to judge how comfortable a street is to bike on. It weighs the kind of bike facility (separated path, protected lane, buffered lane, painted lane, sharrow, or nothing), the type of road, the speed limit, and the number of lanes.</p><p>Each segment lands in one of three bands, protected, shared, or unprotected, and fast arterials with no bike facility get flagged on top of that. The segments roll up into one score per route. That's why a quiet residential street can beat a painted lane on a busy road.</p>",
       },
       {
         q: "Does BikeRight track my location or collect data?",
-        a: "<p>No. Route generation and safety scoring happen entirely on your device, and your GPS coordinates are never sent to our servers (we don't have any). There are no analytics, accounts, or tracking.</p>",
+        a: '<p>We never see your location or your rides, and there are no accounts or ads. To build and score routes, BikeRight requests map data from outside services: OpenStreetMap data for the bike infrastructure around you, Google for directions, and Apple for address search. Those requests carry the coordinates they need and nothing that identifies you. Your rides and saved places stay on your device. Our <a href="/bikeright-privacy.html">privacy policy</a> has the details.</p>',
       },
       {
         q: "Does BikeRight work on Apple Watch?",
@@ -123,7 +123,7 @@ module.exports = [
       },
       {
         q: "Is there an Android version?",
-        a: '<p>Not yet. BikeRight is iOS only for now, but if you\'d like an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20BikeRight">let us know</a> — knowing people want it helps us decide what to build next.</p>',
+        a: '<p>Not yet. BikeRight is iOS only for now. <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20waitlist%20(BikeRight)&body=Add%20me%20to%20the%20Android%20waitlist.">Join the Android waitlist</a> and we\'ll email you once, when it\'s ready.</p>',
       },
     ],
   },
@@ -153,7 +153,7 @@ module.exports = [
     faqs: [
       {
         q: "Is Go for a Walk free?",
-        a: "<p>Yes, completely free. There are no subscriptions, in-app purchases, or ads, and every feature is included from the start.</p>",
+        a: "<p>Yes. Go for a Walk is free to download, with no ads and no account.</p>",
       },
       {
         q: "Where can I download Go for a Walk?",
@@ -161,7 +161,11 @@ module.exports = [
       },
       {
         q: "Does Go for a Walk track my location or collect data?",
-        a: "<p>No. Your walk history, preferences, and routes stay on your device. We don't run servers or analytics, and we don't collect any personal information.</p>",
+        a: '<p>We never see your location or your walks, and there are no accounts, ads, or analytics. To build routes, Go for a Walk sends map coordinates to Google Maps Platform for directions, elevation, and nearby places, with nothing that identifies you. Your walk history, preferences, and saved routes stay on your device. Our <a href="/go-for-a-walk-privacy.html">privacy policy</a> has the details.</p>',
+      },
+      {
+        q: "Can I export a walking route to another app?",
+        a: "<p>Yes. Export any route as a GPX file and open it in Strava, Garmin Connect, or any app that reads GPX. The file is made on your phone and goes wherever you send it from the share sheet.</p>",
       },
       {
         q: "Can I customize my walking routes?",
@@ -169,7 +173,7 @@ module.exports = [
       },
       {
         q: "Is there an Android version?",
-        a: '<p>Not yet. Go for a Walk is iOS only for now, but if you\'d like an Android version, <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20Request%20for%20Go%20for%20a%20Walk">let us know</a> — knowing people want it helps us decide what to build next.</p>',
+        a: '<p>Not yet. Go for a Walk is iOS only for now. <a href="mailto:playintraffic.ca@gmail.com?subject=Android%20waitlist%20(Go%20for%20a%20Walk)&body=Add%20me%20to%20the%20Android%20waitlist.">Join the Android waitlist</a> and we\'ll email you once, when it\'s ready.</p>',
       },
     ],
   },

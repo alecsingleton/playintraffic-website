@@ -17,7 +17,7 @@ ogType: article
         "description": {{ description | dump | safe }},
         "url": {{ page.url | absUrl(site.url) | dump | safe }},
         "image": {{ (ogImage or appData.shareCard or site.ogImage) | absUrl(site.url) | dump | safe }},
-        "author": { "@type": "Organization", "name": {{ site.name | dump | safe }}, "url": {{ site.url | dump | safe }} },
+        "author": { "@type": "Person", "name": "Alec Singleton", "url": {{ "/about.html" | absUrl(site.url) | dump | safe }}, "jobTitle": "Founder, Play in Traffic" },
         "publisher": {
             "@type": "Organization",
             "name": {{ site.name | dump | safe }},
@@ -40,7 +40,7 @@ ogType: article
 
     <nav class="simple-nav"><div class="container"><a href="/guides/" class="nav-back">← {{ str.guides }}</a><div class="simple-nav-brand"><img src="/img/play-in-traffic-icon-128.webp" alt="" width="24" height="24"><span>{{ site.name }}</span></div></div></nav>
 
-    <main class="page-content"><div class="container"><div class="post-hero"><span class="post-date">{{ page.date | readableDate }}</span><h1>{{ heading or title }}</h1></div><div class="post-body">
+    <main class="page-content"><div class="container"><div class="post-hero"><span class="post-date">{{ page.date | readableDate }} · By <a href="/about.html">Alec Singleton</a></span><h1>{{ heading or title }}</h1></div><div class="post-body">
 {{ content | safe }}
     </div></div></main>
 

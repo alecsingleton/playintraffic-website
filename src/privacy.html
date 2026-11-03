@@ -3,15 +3,15 @@ layout: layouts/legal.njk
 permalink: privacy.html
 app: random-run
 title: "Privacy Policy – Random Run"
-description: "Privacy Policy for Random Run app. We do not collect, store, or share your personal data."
-lastmod: 2026-04-22
+description: "Privacy Policy for Random Run. No account, no ads, and we never see your location or your runs. Here is exactly what the app sends, and to whom."
+lastmod: 2026-11-03
 ---
     <main class="page-content">
         <div class="container">
             <div class="page-hero">
                 <span class="label">Legal</span>
                 <h1>Privacy Policy</h1>
-                    <p class="effective-date">Effective Date: May 6, 2026</p>
+                    <p class="effective-date">Effective Date: November 3, 2026</p>
             </div>
 
             <article class="policy-body">
@@ -19,13 +19,13 @@ lastmod: 2026-04-22
                     <h2>The Short Version</h2>
                     <div class="highlight-box">
                         <p><strong>No account. No profile. No ads.</strong></p>
-                        <p>Random Run sends anonymous, aggregated usage signals — which screens you visit, which buttons you tap — so we can see what's working and what isn't. We never see your location, your routes, your runs, or anything that could identify you. Optional Apple Health and Strava integrations send data directly from your device to those services — never through us.</p>
+                        <p>We never see your location, your routes, or your runs. To build routes, Random Run sends your starting point and a few waypoints to Google's routing service, with no name, account, or identifier of ours attached. Separately, it sends anonymous, aggregated usage signals (which screens you visit, which buttons you tap) so we can see what's working. Optional Apple Health and Strava integrations go directly between your device and those services, never through us.</p>
                     </div>
                 </section>
 
                 <section class="policy-section">
                     <h2>Information We Do Not Collect</h2>
-                    <p>Random Run does not collect, store, or transmit any of the following:</p>
+                    <p>Play in Traffic does not receive or store any of the following:</p>
                     <ul>
                         <li>Your location or GPS coordinates</li>
                         <li>Routes you generate or run</li>
@@ -33,16 +33,19 @@ lastmod: 2026-04-22
                         <li>Device identifiers (IDFA, IDFV) or cross-app tracking data</li>
                         <li>Health or fitness information</li>
                     </ul>
+                    <p>We don't operate servers that receive location or route data. The services that do see coordinates (Google, and Strava if you connect it) are described below.</p>
                 </section>
 
                 <section class="policy-section">
                     <h2>How the App Works</h2>
-                    <p>Random Run generates running routes entirely on your device. When you use the app:</p>
+                    <p>Here's what happens when you use Random Run:</p>
                     <ul>
-                        <li>Your device's GPS determines your current location locally</li>
-                        <li>Route calculations happen on your device</li>
-                        <li>Map data is fetched from standard mapping services (Apple Maps/Google Maps) which have their own privacy policies</li>
-                        <li>No data about your location or routes is ever sent to Random Run servers</li>
+                        <li>Your device's GPS determines your current location on your phone or watch</li>
+                        <li>To generate routes, the app sends your starting point (where you are, or the point you pick on the map) and a small number of candidate waypoints to the Google Maps Platform routing APIs, which return paths you can run</li>
+                        <li>Those requests identify the app, not you: they carry no name, account, email, or device identifier</li>
+                        <li>Maps are displayed with the Google Maps SDK for iOS, which loads map imagery from Google</li>
+                        <li>Choosing between routes, your run history, and your favourites are handled on your device</li>
+                        <li>No data about your location or routes is ever sent to Play in Traffic</li>
                     </ul>
                 </section>
 
@@ -72,20 +75,21 @@ lastmod: 2026-04-22
 
                 <section class="policy-section">
                     <h2>Third-Party Services</h2>
-                    <p>Random Run uses mapping services to display routes. These services (Apple Maps, Google Maps) operate under their own privacy policies:</p>
+                    <p>Random Run relies on these services, each under its own privacy policy:</p>
                     <ul>
-                        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
-                        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-                        <li><a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noopener">TelemetryDeck Privacy Policy</a> (anonymous analytics, described above)</li>
+                        <li><strong>Google Maps Platform</strong> (routing and maps): receives the coordinates needed to build and display your routes. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                        <li><strong>TelemetryDeck</strong> (anonymous analytics, described above). <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noopener">TelemetryDeck Privacy Policy</a></li>
+                        <li><strong>Apple</strong> (Apple Health, if you connect it; data is read on your device). <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+                        <li><strong>Strava</strong> (only if you connect it, described below). <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">Strava Privacy Policy</a></li>
                     </ul>
-                    <p>We do not share any of your data with these services beyond the standard map tile requests required to display your route, and the anonymous signals described in the section above.</p>
+                    <p>We don't share anything else with these services, and none of them receive your name, email, or an identifier that links your activity back to you.</p>
                 </section>
 
                 <section class="policy-section">
                     <h2>Data Storage</h2>
-                    <p>Any preferences or saved routes you create are stored locally on your device using iOS's built-in storage mechanisms. This data:</p>
+                    <p>Your preferences, saved routes, favourites, and run history are stored locally on your device using iOS's built-in storage mechanisms. This data:</p>
                     <ul>
-                        <li>Never leaves your device</li>
+                        <li>Is never uploaded to Play in Traffic</li>
                         <li>Is protected by your device's security features</li>
                         <li>Is deleted when you uninstall the app</li>
                         <li>Can be cleared at any time within the app</li>
@@ -117,7 +121,7 @@ lastmod: 2026-04-22
 
                 <section class="policy-section">
                     <h2>Children's Privacy</h2>
-                    <p>Random Run does not collect personal information from anyone, including children under 13. Since we collect no data, there is no risk of collecting data from minors.</p>
+                    <p>Random Run does not collect personal information from anyone, including children under 13. The only usage data it sends is the anonymous, aggregated analytics described above.</p>
                 </section>
 
                 <section class="policy-section">

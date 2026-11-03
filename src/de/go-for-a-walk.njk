@@ -14,17 +14,19 @@ alternates:
   - { lang: x-default, href: "/go-for-a-walk.html" }
 faqs:
   - q: "Ist Go for a Walk kostenlos?"
-    a: "<p>Ja, komplett kostenlos. Es gibt keine Abos, In-App-Käufe oder Werbung, und alle Funktionen sind von Anfang an enthalten.</p>"
+    a: "<p>Ja. Go for a Walk ist kostenlos ladbar, ohne Werbung und ohne Konto.</p>"
   - q: "Wo kann ich Go for a Walk herunterladen?"
     a: "<p>Go for a Walk gibt es kostenlos im <a href=\"https://apps.apple.com/app/go-for-a-walk/id6761119312\" target=\"_blank\" rel=\"noopener\">App Store</a>.</p>"
   - q: "Trackt Go for a Walk meinen Standort oder sammelt es Daten?"
-    a: "<p>Nein. Dein Spaziergangsverlauf, deine Einstellungen und deine Routen bleiben auf deinem Gerät. Wir betreiben weder Server noch Analytik und sammeln keine persönlichen Daten.</p>"
+    a: "<p>Wir sehen nie deinen Standort oder deine Spaziergänge, und es gibt weder Konto noch Werbung noch Analytik. Um Routen zu bauen, sendet Go for a Walk Koordinaten an die Google Maps Platform für Wegführung, Höhendaten und Orte in der Nähe, ohne etwas, das dich identifiziert. Dein Verlauf, deine Einstellungen und gespeicherten Routen bleiben auf deinem Gerät. Details stehen in unserer <a href=\"/go-for-a-walk-privacy.html\">Datenschutzerklärung</a>.</p>"
   - q: "Kann ich meine Spazierrouten anpassen?"
     a: "<p>Ja. Stelle deine bevorzugte Distanz oder Dauer ein und füge dann Parks, Kaffeestopps, Hundeparks, Sehenswürdigkeiten oder Spielplätze hinzu: Deine Routen führen daran vorbei.</p>"
+  - q: "Kann ich eine Route in eine andere App exportieren?"
+    a: "<p>Ja. Exportiere jede Route als GPX-Datei und öffne sie in Strava, Garmin Connect oder jeder App, die GPX liest. Die Datei entsteht auf deinem Telefon und geht dorthin, wohin du sie über das Teilen-Menü schickst.</p>"
   - q: "Gibt es eine Android-Version?"
-    a: "<p>Noch nicht. Go for a Walk gibt es vorerst nur für iOS, aber wenn du dir eine Android-Version wünschst, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">schreib uns</a> — zu wissen, dass Leute darauf warten, hilft uns bei der Planung.</p>"
+    a: "<p>Noch nicht. Go for a Walk gibt es vorerst nur für iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android-Warteliste%20(Go%20for%20a%20Walk)\">Trag dich in die Android-Warteliste ein</a>, und wir schreiben dir einmal, sobald sie fertig ist.</p>"
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -34,6 +36,7 @@ faqs:
                 <h1>Ein besserer Spaziergang durchs Viertel, das du zu kennen glaubst.</h1>
                 <p class="product-hero-desc">Wähle eine Distanz, such dir aus, was unterwegs liegen soll — Parks, Kaffee, Sehenswürdigkeiten, Spielplätze — und erhalte drei Routen durch Ecken deiner Gegend, die du noch nie gesehen hast.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/go-for-a-walk/id6761119312", "Im App Store laden", "go-for-a-walk") }}
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/go-for-a-walk/01_home", "Go for a Walk Startbildschirm mit Anpassungsoptionen", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -117,7 +120,7 @@ faqs:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>Kein Konto. Kein Tracking. Keine Werbung.</p>
-                <p>Dein Standort verlässt nie dein Telefon. App öffnen und los.</p>
+                <p>Wir sehen nie deinen Standort oder deine Strecken. App öffnen und los.</p>
             </div>
         </div>
     </section>
@@ -132,7 +135,7 @@ faqs:
                 </div>
                 <div>
                     <span class="spec-label">Preis</span>
-                    <span class="spec-value">Kostenlos</span>
+                    <span class="spec-value">Kostenloser Download</span>
                 </div>
                 <div>
                     <span class="spec-label">Sprachführung</span>

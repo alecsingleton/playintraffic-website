@@ -4,14 +4,14 @@ permalink: random-run.html
 app: random-run
 title: Random Run – Running Route Generator for iPhone & Apple Watch
 description: "A free running route generator for iPhone and Apple Watch. Get three loop routes you've never run, follow them from your wrist, and upload to Strava automatically."
-lastmod: 2026-08-12
+lastmod: 2026-11-03
 alternates:
   - { lang: en, href: "/random-run.html" }
   - { lang: fr, href: "/fr/random-run.html" }
   - { lang: de, href: "/de/random-run.html" }
   - { lang: x-default, href: "/random-run.html" }
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -19,8 +19,10 @@ alternates:
         <div class="container">
             <div class="product-hero-text">
                 <h1>Lace up — we'll figure out where.</h1>
-                <p class="product-hero-desc">Pick a distance or a time and get three routes you've never run, each starting and ending right where you're standing.</p>
+                <p class="product-hero-desc">Pick a distance or a time and get three routes you've never run, starting right where you're standing, or anywhere you drop a pin.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/random-run/id6755962631", "Download on the App Store", "random-run") }}
+                <p class="hero-proof">Downloaded more than 1,000 times.</p>
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/random-run/02_route_preview", "Random Run three-route preview screen", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -32,7 +34,7 @@ alternates:
     <section class="differentiator reveal">
         <div class="container">
             <div class="differentiator-inner">
-                <blockquote>Every run is a new route — no repeats, no history, and no algorithm deciding what you usually do.</blockquote>
+                <blockquote>Every run can be a new route, with no algorithm deciding what you usually do. Find one you love? Run it again in one tap.</blockquote>
             </div>
         </div>
     </section>
@@ -52,7 +54,7 @@ alternates:
                     </div>
                     <div class="step-body">
                         <h3>Find</h3>
-                        <p>Pick a distance or a time and get three routes you've never run, each starting right where you stand. Tap the one you like.</p>
+                        <p>Pick a distance or a time and get three routes you've never run, starting where you stand or anywhere you drop a pin. Tap the one you like.</p>
                     </div>
                 </div>
 
@@ -177,8 +179,7 @@ alternates:
                     <span class="label">Share</span>
                     <h2>Finished runs go straight to Strava.</h2>
                     <p>Connect Strava once and every run after that uploads on its own, whether you ran with your wrist or your phone.</p>
-                    <p><strong>It's off by default and one tap to turn off again.</strong> Nothing leaves your phone unless you say so.</p>
-                    <p class="feature-beat-footnote">Strava integration is fully optional and disabled on first launch.</p>
+                    <p><strong>It's off by default and one tap to turn off again.</strong> Runs go straight from your phone to Strava, never through us.</p>
                 </div>
             </div>
         </div>
@@ -188,7 +189,7 @@ alternates:
     <section class="feature-callout reveal">
         <div class="container">
             <div class="feature-callout-inner">
-                <p><strong>Connect Strava once and every run uploads automatically.</strong> No extra steps when you finish.</p>
+                <p><strong>Plan it anywhere, run it again.</strong> Drop a pin on a hotel or a trailhead and get loops from there tonight for tomorrow's run, or tap any past run to run that route again.</p>
             </div>
         </div>
     </section>
@@ -198,7 +199,7 @@ alternates:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>No account. No tracking. No ads.</p>
-                <p>Your location never leaves your phone. Open the app and go.</p>
+                <p>We never see your location or your routes. Open the app and go.</p>
             </div>
         </div>
     </section>
@@ -213,7 +214,7 @@ alternates:
                 </div>
                 <div>
                     <span class="spec-label">Price</span>
-                    <span class="spec-value">Free</span>
+                    <span class="spec-value">Free to download</span>
                 </div>
                 <div>
                     <span class="spec-label">Apple Watch</span>

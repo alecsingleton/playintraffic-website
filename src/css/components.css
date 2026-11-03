@@ -565,3 +565,17 @@ details[open] .faq-question::after {
     transition: none;
   }
 }
+
+.footer-langs {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  font-size: 0.8125rem;
+}
+.footer-langs a {
+  color: rgba(250, 243, 227, 0.7);
+  font-weight: 700;
+}
+.footer-langs a[aria-current="page"] {
+  color: var(--golden);
+}

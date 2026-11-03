@@ -826,3 +826,35 @@
   letter-spacing: 0.04em;
   color: var(--pine-deep);
 }
+
+/* Social proof under the hero button */
+.hero-proof {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* QR code for desktop visitors (phones never see it) */
+.qr-download { display: none; }
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .qr-download {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .qr-download img {
+    width: 88px;
+    height: 88px;
+    padding: 6px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .qr-download span {
+    max-width: 15em;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+}

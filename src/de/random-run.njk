@@ -6,7 +6,7 @@ lang: de
 title: Random Run – Kostenloser Laufstrecken-Generator für iPhone und Apple Watch
 description: "Kostenloser Laufstrecken-Generator für iPhone und Apple Watch. Erhalte drei Rundstrecken, die du noch nie gelaufen bist, folge ihnen vom Handgelenk aus und lade Läufe automatisch zu Strava hoch."
 ctaHeading: "Dein nächster Lauf beginnt hier."
-lastmod: 2026-08-12
+lastmod: 2026-11-03
 alternates:
   - { lang: en, href: "/random-run.html" }
   - { lang: fr, href: "/fr/random-run.html" }
@@ -14,19 +14,21 @@ alternates:
   - { lang: x-default, href: "/random-run.html" }
 faqs:
   - q: "Ist Random Run kostenlos?"
-    a: "<p>Ja, komplett kostenlos. Es gibt keine Abos, In-App-Käufe oder Werbung, und alle Funktionen sind vom ersten Tag an enthalten.</p>"
+    a: "<p>Ja. Random Run ist kostenlos ladbar, ohne Werbung und ohne Konto.</p>"
   - q: "Funktioniert Random Run auf der Apple Watch?"
     a: "<p>Ja. Random Run läuft eigenständig auf der Apple Watch: Du kannst Strecken generieren, Abbiegehinweisen folgen und den ganzen Lauf vom Handgelenk aus aufzeichnen, ohne dein Telefon mitzunehmen.</p>"
   - q: "Lädt Random Run meine Läufe zu Strava hoch?"
     a: "<p>Ja. Es gibt eine optionale Strava-Integration auf iPhone und Apple Watch. Sie ist standardmäßig aus; einmal aktiviert, wird jeder beendete Lauf automatisch hochgeladen, und du kannst sie jederzeit wieder ausschalten.</p>"
   - q: "Trackt Random Run meinen Standort oder sammelt es meine Daten?"
-    a: "<p>Dein Standort und deine Strecken verlassen dein Gerät nie. Die Streckengenerierung passiert lokal, ohne Konten und ohne Werbe-Tracking. Wir erfassen anonyme, aggregierte Nutzungssignale über TelemetryDeck, ohne Kennungen, GPS oder Streckendaten. Alle Details stehen in unserer <a href=\"/privacy.html\">Datenschutzerklärung</a>.</p>"
+    a: "<p>Wir sehen nie deinen Standort oder deine Strecken, und es gibt weder Konto noch Werbung. Um Strecken zu bauen, sendet Random Run deinen Startpunkt und einige Wegpunkte an den Routing-Dienst von Google, ohne etwas, das dich identifiziert. Dein Laufverlauf bleibt auf deinem Gerät. Außerdem erfassen wir anonyme, aggregierte Nutzungssignale über TelemetryDeck, ohne Kennungen, GPS oder Streckendaten. Alle Details stehen in unserer <a href=\"/privacy.html\">Datenschutzerklärung</a>.</p>"
   - q: "Gibt es eine Android-Version?"
-    a: "<p>Noch nicht. Random Run gibt es vorerst nur für iOS, aber wenn du dir eine Android-Version wünschst, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">schreib uns</a> — zu wissen, dass Leute darauf warten, hilft uns bei der Planung.</p>"
+    a: "<p>Noch nicht. Random Run gibt es vorerst nur für iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android-Warteliste%20(Random%20Run)\">Trag dich in die Android-Warteliste ein</a>, und wir schreiben dir einmal, sobald sie fertig ist.</p>"
   - q: "Wie funktioniert die Streckengenerierung?"
-    a: "<p>Du sagst Random Run, wie weit oder wie lange du laufen willst, und die App generiert drei Rundstrecken, die an deinem Standort beginnen und enden. Mit Apple Health verbunden, basieren die Zeitangaben auf deinem eigenen Lauftempo.</p>"
+    a: "<p>Du sagst Random Run, wie weit oder wie lange du laufen willst, und die App generiert drei Rundstrecken, die dort beginnen und enden, wo du bist, oder an einem beliebigen Punkt auf der Karte. Seit Version 2.0 ist jede Strecke eine echte Runde, die keine Straße doppelt läuft. Mit Apple Health verbunden, basieren die Zeitangaben auf deinem eigenen Lauftempo.</p>"
+  - q: "Kann ich eine Strecke noch einmal laufen?"
+    a: "<p>Ja. Tippe auf einen Lauf in deinem Verlauf, um die Strecke noch einmal zu laufen, und deine Favoriten bekommen eine eigene Reihe auf dem Startbildschirm. Eine neue Strecke, wenn du Abwechslung willst, eine bewährte, wenn nicht.</p>"
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -36,6 +38,8 @@ faqs:
                 <h1>Schuhe an — wir kümmern uns ums Wohin.</h1>
                 <p class="product-hero-desc">Wähle eine Distanz oder eine Zeit und erhalte drei Strecken, die du noch nie gelaufen bist. Jede beginnt und endet genau dort, wo du stehst.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/random-run/id6755962631", "Im App Store laden", "random-run") }}
+                <p class="hero-proof">Über 1.000 Mal geladen.</p>
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/random-run/02_route_preview", "Random Run Vorschau mit drei Strecken", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -47,7 +51,7 @@ faqs:
     <section class="differentiator reveal">
         <div class="container">
             <div class="differentiator-inner">
-                <blockquote>Jeder Lauf ist eine neue Strecke — keine Wiederholungen, kein Verlauf und kein Algorithmus, der entscheidet, was du normalerweise machst.</blockquote>
+                <blockquote>Jeder Lauf kann eine neue Strecke sein, ohne Algorithmus, der entscheidet, was du normalerweise machst. Eine Lieblingsstrecke gefunden? Mit einem Tipp läufst du sie wieder.</blockquote>
             </div>
         </div>
     </section>
@@ -67,7 +71,7 @@ faqs:
                     </div>
                     <div class="step-body">
                         <h3>Finden</h3>
-                        <p>Wähle eine Distanz oder eine Zeit und erhalte drei Strecken, die du noch nie gelaufen bist, jede startet dort, wo du stehst. Tippe die an, die dir gefällt.</p>
+                        <p>Wähle eine Distanz oder eine Zeit und erhalte drei Strecken, die du noch nie gelaufen bist, jede startet dort, wo du stehst, oder an einem beliebigen Punkt auf der Karte. Tippe die an, die dir gefällt.</p>
                     </div>
                 </div>
 
@@ -133,7 +137,7 @@ faqs:
                     <span class="label">Teilen</span>
                     <h2>Beendete Läufe landen direkt auf Strava.</h2>
                     <p>Verbinde Strava einmal und jeder Lauf danach lädt sich von selbst hoch, egal ob du mit der Uhr oder dem Telefon gelaufen bist.</p>
-                    <p><strong>Standardmäßig aus, und ein Tipp genügt zum Ausschalten.</strong> Nichts verlässt dein Telefon ohne dein Okay.</p>
+                    <p><strong>Standardmäßig aus, und ein Tipp genügt zum Ausschalten.</strong> Läufe gehen direkt von deinem Telefon zu Strava, nie über uns.</p>
                 </div>
             </div>
         </div>
@@ -144,7 +148,7 @@ faqs:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>Kein Konto. Kein Tracking. Keine Werbung.</p>
-                <p>Dein Standort verlässt nie dein Telefon. App öffnen und los.</p>
+                <p>Wir sehen nie deinen Standort oder deine Strecken. App öffnen und los.</p>
             </div>
         </div>
     </section>
@@ -159,7 +163,7 @@ faqs:
                 </div>
                 <div>
                     <span class="spec-label">Preis</span>
-                    <span class="spec-value">Kostenlos</span>
+                    <span class="spec-value">Kostenloser Download</span>
                 </div>
                 <div>
                     <span class="spec-label">Apple Watch</span>

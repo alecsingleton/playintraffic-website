@@ -3,29 +3,29 @@ layout: layouts/legal.njk
 permalink: bikeright-privacy.html
 app: bikeright
 title: "Privacy Policy – BikeRight"
-description: "Privacy Policy for BikeRight. We do not collect, store, or share your personal data. Your rides stay on your device."
-lastmod: 2026-03-01
+description: "Privacy Policy for BikeRight. No account, no ads, no analytics, and we never see your location or your rides. Here is exactly what the app sends, and to whom."
+lastmod: 2026-11-03
 ---
     <main class="page-content">
         <div class="container">
             <div class="page-hero">
                 <span class="label">Legal</span>
                 <h1>Privacy Policy</h1>
-                <p class="effective-date">Effective Date: March 1, 2026</p>
+                <p class="effective-date">Effective Date: November 3, 2026</p>
             </div>
 
             <article class="policy-body">
                 <section class="policy-section">
                     <h2>The Short Version</h2>
                     <div class="highlight-box">
-                        <p><strong>We don't collect your data. Full stop.</strong></p>
-                        <p>BikeRight is built with privacy as a core feature, not an afterthought. Your location, your routes, and everything you do in the app stays on your device and never touches our servers.</p>
+                        <p><strong>We never see your location or your rides.</strong></p>
+                        <p>BikeRight has no account, no ads, and no analytics. To build and score routes it asks a few mapping services for data about the streets around you, and those requests include coordinates but nothing that identifies you. Your rides, saved places, and settings stay on your device. Play in Traffic doesn't run servers that receive any of it.</p>
                     </div>
                 </section>
 
                 <section class="policy-section">
                     <h2>What We Don't Collect</h2>
-                    <p>BikeRight does not collect, store, or transmit any of the following:</p>
+                    <p>Play in Traffic does not receive or store any of the following:</p>
                     <ul>
                         <li>Your location or GPS coordinates</li>
                         <li>Routes you generate or ride</li>
@@ -35,17 +35,19 @@ lastmod: 2026-03-01
                         <li>Fitness or health information</li>
                         <li>Crash reports or diagnostic logs that identify you</li>
                     </ul>
-                    <p>There are no analytics SDKs, no crash reporting tools, and no advertising frameworks embedded in BikeRight.</p>
+                    <p>There are currently no analytics, crash reporting, or advertising services active in BikeRight. If we ever turn on anonymous analytics, we'll update this policy first and give you a switch to turn it off in Settings.</p>
                 </section>
 
                 <section class="policy-section">
                     <h2>How the App Works</h2>
-                    <p>BikeRight generates cycling routes entirely on your device. Here's what happens when you use it:</p>
+                    <p>Here's what happens when you use BikeRight:</p>
                     <ul>
-                        <li>Your device's GPS determines your current location locally—this never leaves your phone</li>
-                        <li>Route generation and safety scoring happen on-device</li>
-                        <li>Map tiles are loaded from standard mapping services (Apple Maps / OpenStreetMap) as needed to display your route—these providers have their own privacy policies</li>
-                        <li>No data about your location, your routes, or your rides is ever sent to BikeRight's servers (we don't have any)</li>
+                        <li>Your device's GPS determines your current location on your phone or watch</li>
+                        <li>To find the bike infrastructure near you, the app requests OpenStreetMap data for the surrounding area (a map rectangle, rounded to roughly 100&nbsp;m) from the public Overpass API</li>
+                        <li>To build turn-by-turn routes, it sends start, destination, and waypoint coordinates to Google's Directions and Roads APIs</li>
+                        <li>If you type an address, Apple's address search turns it into a location</li>
+                        <li>Safety scoring, route ranking, and your ride history are handled on your device</li>
+                        <li>None of these requests carry your name, an account, or a device identifier, and nothing about your location, routes, or rides is sent to Play in Traffic (we don't have servers for it)</li>
                     </ul>
                 </section>
 
@@ -56,19 +58,20 @@ lastmod: 2026-03-01
 
                 <section class="policy-section">
                     <h2>Third-Party Services</h2>
-                    <p>BikeRight uses mapping services to display your routes on a map. These services load map imagery from their own infrastructure. We do not share any information about you or your routes with them beyond what's technically required to display a map tile:</p>
+                    <p>BikeRight relies on these services, each under its own privacy policy:</p>
                     <ul>
-                        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
-                        <li><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OpenStreetMap Foundation Privacy Policy</a></li>
+                        <li><strong>OpenStreetMap data via the Overpass API</strong>: receives the map area it's asked about. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OpenStreetMap Foundation Privacy Policy</a></li>
+                        <li><strong>Google Maps Platform</strong> (directions and road matching): receives route coordinates. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                        <li><strong>Apple</strong> (maps display and address search). <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
                     </ul>
-                    <p>BikeRight does not use any third-party analytics, advertising, or data broker services.</p>
+                    <p>BikeRight does not use any advertising or data broker services.</p>
                 </section>
 
                 <section class="policy-section">
                     <h2>Data Stored on Your Device</h2>
-                    <p>Any preferences or saved routes you keep in the app are stored locally on your device using iOS's built-in storage. This data:</p>
+                    <p>Your preferences, saved places, saved routes, and ride history are stored locally on your device using iOS's built-in storage. This data:</p>
                     <ul>
-                        <li>Never leaves your device</li>
+                        <li>Is never uploaded to Play in Traffic</li>
                         <li>Is protected by your device's built-in security and encryption</li>
                         <li>Is automatically deleted when you uninstall the app</li>
                         <li>Can be cleared at any time within app settings</li>
@@ -79,8 +82,8 @@ lastmod: 2026-03-01
                     <h2>Location Permission</h2>
                     <p>BikeRight requests access to your device's location in order to generate routes starting from where you are. When you grant this permission:</p>
                     <ul>
-                        <li>Your location is used only to calculate routes on your device</li>
-                        <li>It is never transmitted off your device</li>
+                        <li>Your location is used to fetch nearby map data and build routes, as described above</li>
+                        <li>It is never sent to Play in Traffic</li>
                         <li>You can revoke location access at any time in iOS Settings → Privacy & Security → Location Services</li>
                         <li>If you deny location access, you can still enter a starting point manually</li>
                     </ul>
@@ -88,7 +91,7 @@ lastmod: 2026-03-01
 
                 <section class="policy-section">
                     <h2>Children's Privacy</h2>
-                    <p>BikeRight does not collect personal information from anyone, including children under 13. Since we collect no data whatsoever, there is no risk of inadvertently collecting information from minors.</p>
+                    <p>BikeRight does not collect personal information from anyone, including children under 13.</p>
                 </section>
 
                 <section class="policy-section">

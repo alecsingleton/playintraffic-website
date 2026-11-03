@@ -14,19 +14,19 @@ alternates:
   - { lang: x-default, href: "/bikeright.html" }
 faqs:
   - q: "BikeRight est-il gratuit ?"
-    a: "<p>Oui, entièrement gratuit. Pas d'abonnement, pas d'achats intégrés, pas de publicité, et tout est inclus, y compris l'app Apple Watch et le mode destination.</p>"
+    a: "<p>Oui. BikeRight se télécharge gratuitement, sans publicité et sans compte.</p>"
   - q: "Comment BikeRight évalue-t-il la sécurité d'un itinéraire ?"
-    a: "<p>Chaque segment de l'itinéraire est comparé aux données d'infrastructure cyclable d'OpenStreetMap et classé : piste protégée, sentier polyvalent, rue partagée ou rue sans aménagement. L'ensemble donne une note de sécurité globale, ce qui rend l'option la plus sûre facile à repérer.</p>"
+    a: "<p>BikeRight associe chaque tronçon d'un itinéraire à OpenStreetMap et le note avec un modèle fondé sur le niveau de stress de la circulation (Level of Traffic Stress, LTS), la méthode qu'utilisent de nombreux services de transport municipaux pour juger du confort d'une rue à vélo. Il tient compte du type d'aménagement (piste séparée, piste protégée, bande avec zone tampon, bande peinte, chaussée partagée ou rien), du type de route, de la limite de vitesse et du nombre de voies.</p><p>Chaque tronçon entre dans l'une de trois catégories, protégé, partagé ou non protégé, et les grandes artères rapides sans aménagement sont signalées en plus. Les tronçons se combinent en une note par itinéraire. Voilà pourquoi une rue résidentielle tranquille peut battre une bande peinte sur une route achalandée.</p>"
   - q: "BikeRight suit-il ma position ou collecte-t-il des données ?"
-    a: "<p>Non. La génération d'itinéraires et l'évaluation de sécurité se font entièrement sur votre appareil, et vos coordonnées GPS ne sont jamais envoyées à nos serveurs (nous n'en avons pas). Pas d'analytique, pas de compte, pas de pistage.</p>"
+    a: "<p>Nous ne voyons jamais votre position ni vos sorties, et il n'y a ni compte ni publicité. Pour construire et noter les itinéraires, BikeRight demande des données cartographiques à des services externes : OpenStreetMap pour les aménagements cyclables autour de vous, Google pour les directions et Apple pour la recherche d'adresses. Ces requêtes contiennent les coordonnées nécessaires et rien qui vous identifie. Vos sorties et lieux enregistrés restent sur votre appareil. Notre <a href=\"/bikeright-privacy.html\">politique de confidentialité</a> donne les détails.</p>"
   - q: "BikeRight fonctionne-t-il sur Apple Watch ?"
     a: "<p>Oui. L'app Apple Watch autonome de BikeRight utilise les tapotements haptiques pour deux choses : la navigation, avec un motif distinct pour la gauche et la droite, et la sécurité du prochain segment — un tap pour une piste protégée, deux pour une rue partagée, trois pour une rue sans aménagement. Vous n'avez jamais besoin de consulter un écran en roulant.</p>"
   - q: "Puis-je naviguer vers une destination précise ?"
     a: "<p>Oui. Touchez « Ajouter une destination », entrez une adresse et BikeRight trouve plusieurs itinéraires, chacun noté et classé selon sa sécurité.</p>"
   - q: "Existe-t-il une version Android ?"
-    a: "<p>Pas encore. BikeRight est pour l'instant disponible uniquement sur iOS, mais si une version Android vous intéresse, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a> — savoir que des gens l'attendent nous aide à planifier la suite.</p>"
+    a: "<p>Pas encore. BikeRight est pour l'instant disponible uniquement sur iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Liste%20d'attente%20Android%20(BikeRight)\">Inscrivez-vous à la liste d'attente Android</a> et nous vous écrirons une seule fois, quand elle sera prête.</p>"
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -36,6 +36,7 @@ faqs:
                 <h1>Roulez sur des rues faites pour les vélos.</h1>
                 <p class="product-hero-desc">Dites à BikeRight où vous allez et il construit l'itinéraire autour des pistes protégées, des rues calmes et des vraies infrastructures cyclables de votre ville — puis garde vos yeux sur la route pendant que vous roulez.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/bikeright-safer-bike-routes/id6759763484", "Télécharger dans l'App Store", "bikeright") }}
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/bikeright/02_route_selection", "Sélection d'itinéraires BikeRight avec notes de sécurité", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -135,7 +136,7 @@ faqs:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>Pas de compte. Pas de pistage. Pas de pub.</p>
-                <p>Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.</p>
+                <p>Nous ne voyons jamais votre position ni vos itinéraires. Ouvrez l'app et partez.</p>
             </div>
         </div>
     </section>
@@ -150,7 +151,7 @@ faqs:
                 </div>
                 <div>
                     <span class="spec-label">Prix</span>
-                    <span class="spec-value">Gratuit</span>
+                    <span class="spec-value">Téléchargement gratuit</span>
                 </div>
                 <div>
                     <span class="spec-label">Apple Watch</span>

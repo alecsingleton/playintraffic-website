@@ -6,7 +6,7 @@ lang: fr
 title: Random Run – Générateur d'itinéraires de course gratuit pour iPhone et Apple Watch
 description: "Générateur gratuit d'itinéraires de course pour iPhone et Apple Watch. Recevez trois boucles jamais courues, suivez-les depuis votre poignet et envoyez-les automatiquement sur Strava."
 ctaHeading: "Votre prochaine course commence ici."
-lastmod: 2026-08-12
+lastmod: 2026-11-03
 alternates:
   - { lang: en, href: "/random-run.html" }
   - { lang: fr, href: "/fr/random-run.html" }
@@ -14,19 +14,21 @@ alternates:
   - { lang: x-default, href: "/random-run.html" }
 faqs:
   - q: "Random Run est-il gratuit ?"
-    a: "<p>Oui, entièrement gratuit. Pas d'abonnement, pas d'achats intégrés, pas de publicité, et toutes les fonctionnalités sont incluses dès le premier jour.</p>"
+    a: "<p>Oui. Random Run se télécharge gratuitement, sans publicité et sans compte.</p>"
   - q: "Random Run fonctionne-t-il sur Apple Watch ?"
     a: "<p>Oui. Random Run fonctionne de façon autonome sur Apple Watch : générez des itinéraires, suivez les indications virage par virage et enregistrez toute votre course depuis votre poignet, sans emporter votre téléphone.</p>"
   - q: "Random Run envoie-t-il mes courses sur Strava ?"
     a: "<p>Oui. Random Run propose une intégration Strava optionnelle sur iPhone et Apple Watch. Elle est désactivée par défaut ; une fois activée, chaque course terminée s'envoie automatiquement, et vous pouvez la désactiver à tout moment.</p>"
   - q: "Random Run suit-il ma position ou collecte-t-il mes données ?"
-    a: "<p>Votre position et vos itinéraires ne quittent jamais votre appareil. La génération d'itinéraires se fait localement, sans compte ni pistage publicitaire. Nous recueillons des signaux d'utilisation anonymes et agrégés via TelemetryDeck, sans identifiant, sans GPS et sans donnée d'itinéraire. Notre <a href=\"/privacy.html\">politique de confidentialité</a> donne tous les détails.</p>"
+    a: "<p>Nous ne voyons jamais votre position ni vos itinéraires, et il n'y a ni compte ni publicité. Pour construire les itinéraires, Random Run envoie votre point de départ et quelques points de passage au service d'itinéraires de Google, sans rien qui vous identifie. Votre historique de courses reste sur votre appareil. Nous recueillons aussi des signaux d'utilisation anonymes et agrégés via TelemetryDeck, sans identifiant, sans GPS et sans donnée d'itinéraire. Notre <a href=\"/privacy.html\">politique de confidentialité</a> donne tous les détails.</p>"
   - q: "Existe-t-il une version Android ?"
-    a: "<p>Pas encore. Random Run est pour l'instant disponible uniquement sur iOS, mais si une version Android vous intéresse, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a> — savoir que des gens l'attendent nous aide à planifier la suite.</p>"
+    a: "<p>Pas encore. Random Run est pour l'instant disponible uniquement sur iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Liste%20d'attente%20Android%20(Random%20Run)\">Inscrivez-vous à la liste d'attente Android</a> et nous vous écrirons une seule fois, quand elle sera prête.</p>"
   - q: "Comment fonctionne la génération d'itinéraires ?"
-    a: "<p>Vous dites à Random Run quelle distance ou quelle durée vous voulez courir, et l'app génère trois boucles qui commencent et se terminent à votre position. Si vous connectez Apple Santé, les durées s'appuient sur votre propre rythme de course.</p>"
+    a: "<p>Vous dites à Random Run quelle distance ou quelle durée vous voulez courir, et l'app génère trois boucles qui commencent et se terminent là où vous êtes, ou à n'importe quel point choisi sur la carte. Depuis la version 2.0, chaque boucle est une vraie boucle qui ne repasse jamais par la même rue. Si vous connectez Apple Santé, les durées s'appuient sur votre propre rythme de course.</p>"
+  - q: "Puis-je refaire un itinéraire ?"
+    a: "<p>Oui. Touchez n'importe quelle course de votre historique pour refaire cet itinéraire, et vos favoris ont leur propre rangée sur l'écran d'accueil. Un nouvel itinéraire quand vous voulez de la variété, un itinéraire éprouvé quand vous n'en voulez pas.</p>"
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -36,6 +38,8 @@ faqs:
                 <h1>Lacez vos chaussures — on s'occupe du reste.</h1>
                 <p class="product-hero-desc">Choisissez une distance ou une durée et recevez trois itinéraires que vous n'avez jamais courus, chacun commençant et se terminant là où vous êtes.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/random-run/id6755962631", "Télécharger dans l'App Store", "random-run") }}
+                <p class="hero-proof">Téléchargé plus de 1 000 fois.</p>
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/random-run/02_route_preview", "Aperçu des trois itinéraires dans Random Run", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -47,7 +51,7 @@ faqs:
     <section class="differentiator reveal">
         <div class="container">
             <div class="differentiator-inner">
-                <blockquote>Chaque course est un nouvel itinéraire — pas de répétition, pas d'historique, et pas d'algorithme qui décide de vos habitudes.</blockquote>
+                <blockquote>Chaque course peut être un nouvel itinéraire, sans algorithme qui décide de vos habitudes. Vous en avez trouvé un que vous adorez ? Recourez-le en un tap.</blockquote>
             </div>
         </div>
     </section>
@@ -67,7 +71,7 @@ faqs:
                     </div>
                     <div class="step-body">
                         <h3>Trouvez</h3>
-                        <p>Choisissez une distance ou une durée et recevez trois itinéraires jamais courus, chacun partant de là où vous êtes. Touchez celui qui vous plaît.</p>
+                        <p>Choisissez une distance ou une durée et recevez trois itinéraires jamais courus, au départ de là où vous êtes ou de n'importe quel point choisi sur la carte. Touchez celui qui vous plaît.</p>
                     </div>
                 </div>
 
@@ -133,7 +137,7 @@ faqs:
                     <span class="label">Partagez</span>
                     <h2>Vos courses terminées filent directement sur Strava.</h2>
                     <p>Connectez Strava une fois et chaque course suivante s'envoie toute seule, que vous couriez avec votre montre ou votre téléphone.</p>
-                    <p><strong>C'est désactivé par défaut, et un tap suffit pour couper.</strong> Rien ne quitte votre téléphone sans votre accord.</p>
+                    <p><strong>C'est désactivé par défaut, et un tap suffit pour couper.</strong> Vos courses vont directement de votre téléphone à Strava, jamais par nous.</p>
                 </div>
             </div>
         </div>
@@ -144,7 +148,7 @@ faqs:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>Pas de compte. Pas de pistage. Pas de pub.</p>
-                <p>Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.</p>
+                <p>Nous ne voyons jamais votre position ni vos itinéraires. Ouvrez l'app et partez.</p>
             </div>
         </div>
     </section>
@@ -159,7 +163,7 @@ faqs:
                 </div>
                 <div>
                     <span class="spec-label">Prix</span>
-                    <span class="spec-value">Gratuit</span>
+                    <span class="spec-value">Téléchargement gratuit</span>
                 </div>
                 <div>
                     <span class="spec-label">Apple Watch</span>

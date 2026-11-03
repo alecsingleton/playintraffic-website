@@ -5,6 +5,13 @@
                 </a>
 {% endmacro %}
 
+{% macro qrCode(appKey, label) %}
+                <div class="qr-download">
+                    <img src="/img/qr-{{ appKey }}.svg" alt="QR code linking to the App Store" width="88" height="88" loading="lazy">
+                    <span>{{ label }}</span>
+                </div>
+{% endmacro %}
+
 {% macro screenshot(src, alt, width, height, sizes, eager=false) %}
 <img src="{{ src }}-480.webp"
      srcset="{{ src }}-480.webp 480w, {{ src }}-960.webp 960w"

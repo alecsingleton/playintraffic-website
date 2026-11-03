@@ -14,17 +14,19 @@ alternates:
   - { lang: x-default, href: "/go-for-a-walk.html" }
 faqs:
   - q: "Go for a Walk est-il gratuit ?"
-    a: "<p>Oui, entièrement gratuit. Pas d'abonnement, pas d'achats intégrés, pas de publicité, et toutes les fonctionnalités sont incluses dès le départ.</p>"
+    a: "<p>Oui. Go for a Walk se télécharge gratuitement, sans publicité et sans compte.</p>"
   - q: "Où télécharger Go for a Walk ?"
     a: "<p>Go for a Walk est disponible gratuitement sur l'<a href=\"https://apps.apple.com/app/go-for-a-walk/id6761119312\" target=\"_blank\" rel=\"noopener\">App Store</a>.</p>"
   - q: "Go for a Walk suit-il ma position ou collecte-t-il des données ?"
-    a: "<p>Non. Votre historique de promenades, vos préférences et vos itinéraires restent sur votre appareil. Nous n'avons ni serveurs ni analytique, et nous ne collectons aucune information personnelle.</p>"
+    a: "<p>Nous ne voyons jamais votre position ni vos promenades, et il n'y a ni compte, ni publicité, ni analytique. Pour construire les itinéraires, Go for a Walk envoie des coordonnées à Google Maps Platform pour les directions, l'altitude et les lieux à proximité, sans rien qui vous identifie. Votre historique, vos préférences et vos itinéraires enregistrés restent sur votre appareil. Notre <a href=\"/go-for-a-walk-privacy.html\">politique de confidentialité</a> donne les détails.</p>"
   - q: "Puis-je personnaliser mes itinéraires de promenade ?"
     a: "<p>Oui. Réglez la distance ou la durée qui vous convient, puis ajoutez des parcs, des cafés, des parcs à chiens, des points d'intérêt ou des aires de jeux : vos itinéraires passeront par là.</p>"
+  - q: "Puis-je exporter un itinéraire vers une autre app ?"
+    a: "<p>Oui. Exportez n'importe quel itinéraire en fichier GPX et ouvrez-le dans Strava, Garmin Connect ou toute app qui lit le GPX. Le fichier est créé sur votre téléphone et va là où vous l'envoyez depuis la feuille de partage.</p>"
   - q: "Existe-t-il une version Android ?"
-    a: "<p>Pas encore. Go for a Walk est pour l'instant disponible uniquement sur iOS, mais si une version Android vous intéresse, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a> — savoir que des gens l'attendent nous aide à planifier la suite.</p>"
+    a: "<p>Pas encore. Go for a Walk est pour l'instant disponible uniquement sur iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Liste%20d'attente%20Android%20(Go%20for%20a%20Walk)\">Inscrivez-vous à la liste d'attente Android</a> et nous vous écrirons une seule fois, quand elle sera prête.</p>"
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -34,6 +36,7 @@ faqs:
                 <h1>Une meilleure promenade dans le quartier que vous croyez connaître.</h1>
                 <p class="product-hero-desc">Choisissez une distance, sélectionnez ce qui vous tente en chemin — parcs, café, points d'intérêt, aires de jeux — et recevez trois itinéraires dans des coins de votre quartier que vous n'avez jamais vus.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/go-for-a-walk/id6761119312", "Télécharger dans l'App Store", "go-for-a-walk") }}
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/go-for-a-walk/01_home", "Écran d'accueil de Go for a Walk avec options de personnalisation", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -117,7 +120,7 @@ faqs:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>Pas de compte. Pas de pistage. Pas de pub.</p>
-                <p>Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.</p>
+                <p>Nous ne voyons jamais votre position ni vos itinéraires. Ouvrez l'app et partez.</p>
             </div>
         </div>
     </section>
@@ -132,7 +135,7 @@ faqs:
                 </div>
                 <div>
                     <span class="spec-label">Prix</span>
-                    <span class="spec-value">Gratuit</span>
+                    <span class="spec-value">Téléchargement gratuit</span>
                 </div>
                 <div>
                     <span class="spec-label">Guidage vocal</span>

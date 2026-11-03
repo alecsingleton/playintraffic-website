@@ -28,6 +28,14 @@
 {%- if showFooterEmail %}
             <div class="footer-email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
 {%- endif %}
+{%- if alternates %}
+{%- set langNames = { "en": "English", "fr": "Français", "de": "Deutsch" } %}
+            <nav class="footer-langs" aria-label="{{ str.language }}">
+                {%- for alt in alternates %}{% if alt.lang != "x-default" %}
+                <a href="{{ alt.href }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}"{% if alt.lang == pageLang %} aria-current="page"{% endif %}>{{ langNames[alt.lang] }}</a>
+                {%- endif %}{% endfor %}
+            </nav>
+{%- endif %}
             <div class="footer-made-in">{{ str.madeInCanada }} 🇨🇦</div>
             <div class="footer-copy">© {{ site.copyrightYear }} {{ site.name }}.{% if footerAppData %} {{ footerAppData.footerCopy }}{% endif %}</div>
         </div>

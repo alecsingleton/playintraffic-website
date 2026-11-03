@@ -3,6 +3,7 @@ title: "How to Find the Safest Bike Route in Your City"
 heading: "How to find the safest bike route in your city"
 description: "Fastest isn't safest. Learn how to read cycling infrastructure, why Google Maps falls short for bikes, and how route safety scoring works."
 date: 2026-06-09
+lastmod: 2026-11-03
 app: bikeright
 excerpt: "Fastest isn't safest. How to read your city's cycling infrastructure and pick routes built for bikes, not just around traffic."
 ---
@@ -15,7 +16,7 @@ excerpt: "Fastest isn't safest. How to read your city's cycling infrastructure a
             <p>Not all bike-friendly streets are equal. Roughly from safest to worst:</p>
 
             <ul>
-                <li><strong>Protected bike lanes</strong> — physically separated from cars by bollards, curbs, parked cars, or planters. This is the gold standard; crash risk drops dramatically when there's something solid between you and traffic.</li>
+                <li><strong>Protected bike lanes</strong> — physically separated from cars by bollards, curbs, parked cars, or planters. This is the gold standard. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3519333/" target="_blank" rel="noopener">study of injured cyclists in Toronto and Vancouver</a> (Teschke et al., <em>American Journal of Public Health</em>, 2012) found that riding on a cycle track carried roughly a ninth of the injury risk of riding on a major street with parked cars and no bike infrastructure.</li>
                 <li><strong>Multi-use paths and trails</strong> — no cars at all, though you're sharing with pedestrians. Safe from traffic, but watch your speed around walkers and dogs.</li>
                 <li><strong>Painted bike lanes</strong> — just a line of paint. Better than nothing, but paint doesn't stop a swerving car, and in most cities these lanes double as loading zones.</li>
                 <li><strong>Quiet residential streets</strong> — often safer than painted lanes despite having no bike markings at all, because low speeds and low traffic volumes matter more than paint.</li>
@@ -32,7 +33,7 @@ excerpt: "Fastest isn't safest. How to read your city's cycling infrastructure a
 
             <h2>What route safety scoring looks like</h2>
 
-            <p>This is the approach we took with <a href="/bikeright.html">BikeRight</a>: score every candidate route by the infrastructure it uses. Each segment is checked against OpenStreetMap's cycling data and classified as protected, shared, or unprotected, and the route gets an overall safety score plus a breakdown. The difference between "Route A: 87, mostly protected" and "Route B: 64, faster but a third of it on unprotected arterials" becomes a real choice instead of a mystery.</p>
+            <p>This is the approach we took with <a href="/bikeright.html">BikeRight</a>: score every candidate route by the infrastructure it uses. Each segment is matched to OpenStreetMap's cycling data and rated with a model based on Level of Traffic Stress (LTS), the framework many city transportation departments use to judge how comfortable a street is to bike on. It weighs the type of bike facility, the kind of road, the speed limit, and the number of lanes, then classifies each segment as protected, shared, or unprotected, and the route gets an overall safety score plus a breakdown. The difference between "Route A: 87, mostly protected" and "Route B: 64, faster but a third of it on unprotected arterials" becomes a real choice instead of a mystery.</p>
 
             <p>Whatever tool you use, the questions worth asking of any proposed route are the same:</p>
 

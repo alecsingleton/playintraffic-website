@@ -12,7 +12,7 @@ alternates:
   - { lang: de, href: "/de/bikeright.html" }
   - { lang: x-default, href: "/bikeright.html" }
 ---
-{%- from "macros.njk" import appstoreBtn, screenshot -%}
+{%- from "macros.njk" import appstoreBtn, screenshot, qrCode -%}
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="product-hero">
@@ -22,6 +22,7 @@ alternates:
                 <h1>Get there on streets that were built for bikes.</h1>
                 <p class="product-hero-desc">Tell BikeRight where you're going and it builds the route around protected lanes, quiet streets, and your city's real cycling infrastructure — then keeps your eyes on the road while you ride.</p>
                 {{ appstoreBtn("https://apps.apple.com/app/bikeright-safer-bike-routes/id6759763484", "Download on the App Store", "bikeright") }}
+                {{ qrCode(app, strings[lang or "en"].qrLabel) }}
             </div>
             <div class="product-hero-screenshot reveal">
                 {{ screenshot("/screenshots/bikeright/02_route_selection", "BikeRight route selection with safety scores", 480, 1044, "(min-width: 1024px) 380px, 85vw", eager=true) }}
@@ -235,7 +236,7 @@ alternates:
         <div class="container">
             <div class="privacy-card reveal">
                 <p>No account. No tracking. No ads.</p>
-                <p>Your location never leaves your phone. Open the app and go.</p>
+                <p>We never see your location or your routes. Open the app and go.</p>
             </div>
         </div>
     </section>
@@ -250,7 +251,7 @@ alternates:
                 </div>
                 <div>
                     <span class="spec-label">Price</span>
-                    <span class="spec-value">Free</span>
+                    <span class="spec-value">Free to download</span>
                 </div>
                 <div>
                     <span class="spec-label">Apple Watch</span>
@@ -262,11 +263,11 @@ alternates:
                 </div>
                 <div>
                     <span class="spec-label">Safety scoring</span>
-                    <span class="spec-value">OpenStreetMap infrastructure data</span>
+                    <span class="spec-value">Level of Traffic Stress model on OpenStreetMap data</span>
                 </div>
                 <div>
                     <span class="spec-label">Privacy</span>
-                    <span class="spec-value">No account, no tracking</span>
+                    <span class="spec-value">No account, no ads, no analytics</span>
                 </div>
             </div>
         </div>

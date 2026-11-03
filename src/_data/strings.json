@@ -16,10 +16,12 @@
     "whatsNew": "What's new",
     "faqLabel": "Common questions",
     "faq": "FAQ",
-    "androidCta": "Our apps are iOS only for now. If you're on Android and want them, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android%20Request\">send us a note</a> — knowing people are waiting helps us plan what comes next.",
+    "androidCta": "On Android? Our apps are iOS only for now. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android%20waitlist&body=Add%20me%20to%20the%20Android%20waitlist.\">Join the Android waitlist</a> and we'll email you once, when they're ready.",
     "privacyCardLine1": "No account. No tracking. No ads.",
-    "privacyCardLine2": "Your location never leaves your phone. Open the app and go.",
-    "madeInCanada": "Proudly made in Canada."
+    "privacyCardLine2": "We never see your location or your routes. Open the app and go.",
+    "madeInCanada": "Proudly made in Canada.",
+    "qrLabel": "On a computer? Scan with your iPhone camera.",
+    "language": "Language"
   },
   "fr": {
     "ourApps": "Nos apps",
@@ -38,10 +40,12 @@
     "whatsNew": "Quoi de neuf",
     "faqLabel": "Questions fréquentes",
     "faq": "FAQ",
-    "androidCta": "Nos apps sont disponibles uniquement sur iOS pour l'instant. Si vous êtes sur Android et qu'elles vous intéressent, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">écrivez-nous</a> — savoir que des gens les attendent nous aide à planifier la suite.",
+    "androidCta": "Sur Android ? Nos apps sont pour l'instant disponibles uniquement sur iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Liste%20d'attente%20Android&body=Ajoutez-moi%20%C3%A0%20la%20liste%20d'attente%20Android.\">Inscrivez-vous à la liste d'attente Android</a> et nous vous écrirons une seule fois, quand elles seront prêtes.",
     "privacyCardLine1": "Pas de compte. Pas de pistage. Pas de pub.",
-    "privacyCardLine2": "Votre position ne quitte jamais votre téléphone. Ouvrez l'app et partez.",
-    "madeInCanada": "Fièrement conçu au Canada."
+    "privacyCardLine2": "Nous ne voyons jamais votre position ni vos itinéraires. Ouvrez l'app et partez.",
+    "madeInCanada": "Fièrement conçu au Canada.",
+    "qrLabel": "Sur un ordinateur ? Scannez avec l'appareil photo de votre iPhone.",
+    "language": "Langue"
   },
   "de": {
     "ourApps": "Unsere Apps",
@@ -60,9 +64,11 @@
     "whatsNew": "Was ist neu",
     "faqLabel": "Häufige Fragen",
     "faq": "FAQ",
-    "androidCta": "Unsere Apps gibt es vorerst nur für iOS. Wenn du Android nutzt und sie gerne hättest, <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android\">schreib uns</a> — zu wissen, dass Leute darauf warten, hilft uns bei der Planung.",
+    "androidCta": "Android? Unsere Apps gibt es vorerst nur für iOS. <a href=\"mailto:playintraffic.ca@gmail.com?subject=Android-Warteliste&body=Bitte%20setzt%20mich%20auf%20die%20Android-Warteliste.\">Trag dich in die Android-Warteliste ein</a>, und wir schreiben dir einmal, sobald sie fertig sind.",
     "privacyCardLine1": "Kein Konto. Kein Tracking. Keine Werbung.",
-    "privacyCardLine2": "Dein Standort verlässt nie dein Telefon. App öffnen und los.",
-    "madeInCanada": "Stolz in Kanada entwickelt."
+    "privacyCardLine2": "Wir sehen nie deinen Standort oder deine Strecken. App öffnen und los.",
+    "madeInCanada": "Stolz in Kanada entwickelt.",
+    "qrLabel": "Am Computer? Mit der iPhone-Kamera scannen.",
+    "language": "Sprache"
   }
 }
