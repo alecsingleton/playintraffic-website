@@ -40,6 +40,10 @@ module.exports = [
         a: "<p>Yes. Random Run runs on its own on Apple Watch, so you can generate routes, follow the turn-by-turn directions, and track the whole run from your wrist without bringing your phone along.</p>",
       },
       {
+        q: "Does Random Run work on iPhone Duo?",
+        a: '<p>Yes, since version 3.0, on both screens. Open, the map takes most of the display, with each route\'s distance and time labelled on the map and the directions beside it, and you can tap the map to choose where to start. Folded halfway, the controls take one half and the map the other, so nothing lands on the hinge. Closed, the map fills the outer screen and routes A, B and C sit in the side bar. You can open or close it at any point, even mid-run. <a href="/blog/random-run/iphone-duo.html">More on Random Run for iPhone Duo</a>.</p>',
+      },
+      {
         q: "Does Random Run upload runs to Strava?",
         a: "<p>Yes, from iPhone and Apple Watch. It's off by default: connect Strava once in Settings and every finished run uploads on its own. Runs go straight from your phone to Strava, so we never see them, and you can disconnect anytime from Settings or from Strava's app permissions page.</p>",
       },

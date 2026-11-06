@@ -858,3 +858,9 @@
     color: var(--text-secondary);
   }
 }
+
+.feature-beat-footnote a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
